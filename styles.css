@@ -707,13 +707,14 @@ body {
 .browser-frame {
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(31, 31, 30, 0.08);
+  border: none;
   box-shadow:
-    rgba(0, 0, 0, 0.01) 64px 91px 45px,
-    rgba(0, 0, 0, 0.03) 36px 51px 38px,
+    rgba(0, 0, 0, 0.06) 0 0 0 1px,
+    rgba(0, 0, 0, 0.06) 4px 6px 15px,
     rgba(0, 0, 0, 0.06) 16px 23px 28px,
-    rgba(0, 0, 0, 0.06) 4px 6px 15px;
-  transition: border-color 0.2s;
+    rgba(0, 0, 0, 0.03) 36px 51px 38px,
+    rgba(0, 0, 0, 0.01) 64px 91px 45px;
+  transition: box-shadow 0.2s;
 }
 
 .browser-container:hover .browser-frame {
