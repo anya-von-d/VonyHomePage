@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn — Vony</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html" class="logo">
+        <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" fill="#5EC47E" stroke="#ffffff" stroke-width="2"/>
+          <path d="M12 14L20 26L28 14" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="45" y="16" fill="#1a1a1a" font-family="Inter, sans-serif" font-size="18" font-weight="700">Vony</text>
+          <text x="45" y="30" fill="#666666" font-family="Inter, sans-serif" font-size="10" font-weight="400">P2P LENDING</text>
+        </svg>
+      </a>
+    </div>
+    <nav class="glass-nav" id="mainNav">
+      <div class="nav-item has-dropdown" data-panel="product"><button class="nav-link nav-btn">Product</button></div>
+      <div class="nav-item has-dropdown" data-panel="company"><button class="nav-link nav-btn">Company</button></div>
+      <div class="nav-item has-dropdown" data-panel="releases"><button class="nav-link nav-btn">Releases</button></div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      <div class="dropdown-panels">
+        <div class="dropdown-panel" data-panel="product">
+          <div class="dropdown-layout dropdown-layout-product">
+            <div class="dropdown-col">
+              <a href="index.html#product" class="dropdown-link"><span class="dropdown-title">Creating a Loan</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-title">Tracking Your Loan</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-title">Loan Documents</span></a>
+            </div>
+            <div class="dropdown-col">
+              <a href="faq.html" class="dropdown-link"><span class="dropdown-title">FAQ</span></a>
+              <a href="help.html" class="dropdown-link"><span class="dropdown-title">Help and Support</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-panel" data-panel="company">
+          <div class="dropdown-layout dropdown-layout-company">
+            <div class="dropdown-img">
+              <svg width="100%" height="100%" viewBox="0 0 160 120" fill="none"><rect width="160" height="120" rx="12" fill="#EBF5EE"/><circle cx="60" cy="50" r="18" fill="#C8E6D0"/><circle cx="100" cy="50" r="14" fill="#A8D8B4"/><rect x="30" y="82" width="100" height="6" rx="3" fill="#C8E6D0"/><rect x="50" y="94" width="60" height="4" rx="2" fill="#D8ECD8"/></svg>
+            </div>
+            <div class="dropdown-col"><a href="about.html" class="dropdown-link"><div class="dropdown-text"><span class="dropdown-title">About Vony</span><span class="dropdown-desc">Our story and mission</span></div></a></div>
+          </div>
+        </div>
+        <div class="dropdown-panel" data-panel="releases">
+          <div class="dropdown-layout dropdown-layout-releases">
+            <div class="dropdown-img">
+              <svg width="100%" height="100%" viewBox="0 0 160 140" fill="none"><rect width="160" height="140" rx="12" fill="#EEF2FA"/><rect x="24" y="24" width="52" height="36" rx="6" fill="#D4DEF0"/><rect x="84" y="24" width="52" height="36" rx="6" fill="#C4D2E8"/><rect x="24" y="72" width="112" height="8" rx="4" fill="#D4DEF0"/><rect x="24" y="90" width="80" height="6" rx="3" fill="#DDE6F2"/><rect x="24" y="106" width="60" height="6" rx="3" fill="#E4EAF4"/></svg>
+            </div>
+            <div class="dropdown-col">
+              <a href="apps.html" class="dropdown-link"><span class="dropdown-title">Apps</span></a>
+              <a href="learn.html" class="dropdown-link"><span class="dropdown-title">Learn</span></a>
+              <a href="loan-help.html" class="dropdown-link"><span class="dropdown-title">Loan Help</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="top-bar-right">
+      <a href="https://lend-with-vony.com" class="btn-signin">Sign In</a>
+      <a href="https://lend-with-vony.com" class="btn-getstarted">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Learn Hero -->
+  <section class="help-hero">
+    <h1 class="help-hero-title">Learn</h1>
+    <p class="help-hero-subtitle">Practical guides and resources to help you understand your finances, lend confidently, and borrow responsibly.</p>
+  </section>
+
+  <!-- Learn Content -->
+  <section class="help-content">
+
+    <!-- Featured Guides -->
+    <div class="learn-section">
+      <h2 class="learn-section-title">Peer Lending Essentials</h2>
+      <p class="learn-section-subtitle">Everything you need to know about lending between friends and family on Vony.</p>
+
+      <div class="learn-grid">
+        <article class="learn-card">
+          <div class="learn-card-icon" style="background: rgba(94, 196, 126, 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3a9956" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <span class="learn-card-time">4 min read</span>
+          <h3 class="learn-card-title">Setting Fair Interest Rates</h3>
+          <p class="learn-card-desc">How to set reasonable interest rates when lending to friends. Covers market benchmarks, what's considered fair between peers, and how to have the conversation without it getting awkward.</p>
+          <div class="learn-card-topics">
+            <span class="learn-tag">Interest</span>
+            <span class="learn-tag">Getting Started</span>
+          </div>
+        </article>
+
+        <article class="learn-card">
+          <div class="learn-card-icon" style="background: rgba(88, 129, 254, 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5881FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <span class="learn-card-time">5 min read</span>
+          <h3 class="learn-card-title">Writing a Loan Agreement That Works</h3>
+          <p class="learn-card-desc">The key terms every peer loan agreement should include, how to bring up the idea of a written contract naturally, and why putting it in writing actually protects the friendship.</p>
+          <div class="learn-card-topics">
+            <span class="learn-tag">Agreements</span>
+            <span class="learn-tag">Documentation</span>
+          </div>
+        </article>
+
+        <article class="learn-card">
+          <div class="learn-card-icon" style="background: rgba(232, 145, 58, 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8913A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <span class="learn-card-time">6 min read</span>
+          <h3 class="learn-card-title">When a Friend Can't Pay You Back</h3>
+          <p class="learn-card-desc">It happens. A step-by-step guide for having the difficult conversation, restructuring repayment, protecting the relationship, and knowing when to let go.</p>
+          <div class="learn-card-topics">
+            <span class="learn-tag">Relationships</span>
+            <span class="learn-tag">Repayment</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Financial Literacy -->
+    <div class="learn-section">
+      <h2 class="learn-section-title">Financial Literacy</h2>
+      <p class="learn-section-subtitle">Build a stronger understanding of personal finance, whether you're lending, borrowing, or just trying to get your money in order.</p>
+
+      <div class="learn-grid">
+        <article class="learn-card">
+          <div class="learn-card-icon" style="background: rgba(167, 157, 234, 0.15);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7B6FC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span class="learn-card-time">5 min read</span>
+          <h3 class="learn-card-title">Tax Implications of Peer Lending</h3>
+          <p class="learn-card-desc">What the IRS says about loans over $10,000, the difference between a loan and a gift, when interest income needs to be reported, and how to keep clean records.</p>
+          <div class="learn-card-topics">
+            <span class="learn-tag">Taxes</span>
+            <span class="learn-tag">Compliance</span>
+          </div>
+        </article>
+
+        <article class="learn-card">
+          <div class="learn-card-icon" style="background: rgba(220, 80, 80, 0.1);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C44040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <span class="learn-card-time">4 min read</span>
+          <h3 class="learn-card-title">The Psychology of Lending to Friends</h3>
+          <p class="learn-card-desc">Why money changes relationships, how to set healthy boundaries, managing guilt when saying no, and the mental framework for lending without resentment.</p>
+          <div class="learn-card-topics">
+            <span class="learn-tag">Psychology</span>
+            <span class="learn-tag">Boundaries</span>
+          </div>
+        </article>
+
+        <article class="learn-card">
+          <div class="learn-card-icon" style="background: rgba(94, 196, 126, 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3a9956" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="learn-card-time">3 min read</span>
+          <h3 class="learn-card-title">Building Your Lending Track Record</h3>
+          <p class="learn-card-desc">How consistent, on-time payments build your trust profile on Vony. What lenders look for, how to improve your standing, and why your Vony history matters.</p>
+          <div class="learn-card-topics">
+            <span class="learn-tag">Trust Score</span>
+            <span class="learn-tag">Reputation</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Budgeting & Money Management -->
+    <div class="learn-section">
+      <h2 class="learn-section-title">Budgeting & Money Management</h2>
+      <p class="learn-section-subtitle">Practical tools and frameworks for getting control of your finances.</p>
+
+      <div class="learn-grid">
+        <article class="learn-card">
+          <div class="learn-card-icon" style="background: rgba(88, 129, 254, 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5881FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <span class="learn-card-time">5 min read</span>
+          <h3 class="learn-card-title">The 50/30/20 Budget Rule Explained</h3>
+          <p class="learn-card-desc">A simple framework for splitting your income: 50% needs, 30% wants, 20% savings and debt repayment. How to apply it in practice, with real examples.</p>
+          <div class="learn-card-topics">
+            <span class="learn-tag">Budgeting</span>
+            <span class="learn-tag">Basics</span>
+          </div>
+        </article>
+
+        <article class="learn-card">
+          <div class="learn-card-icon" style="background: rgba(232, 145, 58, 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8913A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="learn-card-time">4 min read</span>
+          <h3 class="learn-card-title">Building an Emergency Fund</h3>
+          <p class="learn-card-desc">Why 3-6 months of expenses matters, how to start when money is tight, where to keep it, and how an emergency fund reduces your need to borrow in the first place.</p>
+          <div class="learn-card-topics">
+            <span class="learn-tag">Savings</span>
+            <span class="learn-tag">Planning</span>
+          </div>
+        </article>
+
+        <article class="learn-card">
+          <div class="learn-card-icon" style="background: rgba(167, 157, 234, 0.15);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7B6FC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <span class="learn-card-time">6 min read</span>
+          <h3 class="learn-card-title">Understanding Credit Scores</h3>
+          <p class="learn-card-desc">What makes up your credit score, why it matters for traditional loans, how peer lending on Vony is different (it doesn't affect your score), and how to improve yours over time.</p>
+          <div class="learn-card-topics">
+            <span class="learn-tag">Credit</span>
+            <span class="learn-tag">Education</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="help-cta">
+      <h3 class="help-cta-title">Need a loan but can't find a friend to lend?</h3>
+      <p class="help-cta-text">Vony can help you explore traditional loan options too.</p>
+      <a href="loan-help.html" class="founder-btn">Explore Loan Help &nbsp;&rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">
+        <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" fill="#5EC47E" stroke="#F5F4F0" stroke-width="2"/>
+          <path d="M12 14L20 26L28 14" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="45" y="16" fill="#1A1918" font-family="Inter, sans-serif" font-size="18" font-weight="700">Vony</text>
+          <text x="45" y="30" fill="#A8A7A5" font-family="Inter, sans-serif" font-size="10" font-weight="400">P2P LENDING</text>
+        </svg>
+      </a>
+      <div class="footer-legal-links">
+        <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+        <span class="footer-divider">|</span>
+        <a href="privacy.html" class="footer-legal-link">Privacy Center</a>
+        <span class="footer-divider">|</span>
+        <a href="do-not-sell.html" class="footer-legal-link">Do not sell or share my personal information</a>
+      </div>
+      <p class="footer-statement">All users of our online services are subject to our Privacy Statement and agree to be bound by the Terms of Service. Please review.</p>
+      <p class="footer-copyright">&copy; 2026 Vony Lending All rights reserved</p>
+    </div>
+  </footer>
+  <script src="nav-dropdown.js"></script>
+</body>
+</html>

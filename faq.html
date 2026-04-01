@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — Vony</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html" class="logo">
+        <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" fill="#5EC47E" stroke="#ffffff" stroke-width="2"/>
+          <path d="M12 14L20 26L28 14" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="45" y="16" fill="#1a1a1a" font-family="Inter, sans-serif" font-size="18" font-weight="700">Vony</text>
+          <text x="45" y="30" fill="#666666" font-family="Inter, sans-serif" font-size="10" font-weight="400">P2P LENDING</text>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Glass Navigation Bar with Dropdowns -->
+    <nav class="glass-nav" id="mainNav">
+      <div class="nav-item has-dropdown" data-panel="product">
+        <button class="nav-link nav-btn">Product</button>
+      </div>
+      <div class="nav-item has-dropdown" data-panel="company">
+        <button class="nav-link nav-btn">Company</button>
+      </div>
+      <div class="nav-item has-dropdown" data-panel="releases">
+        <button class="nav-link nav-btn">Releases</button>
+      </div>
+      <div class="nav-item">
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <!-- Dropdown Panels -->
+      <div class="dropdown-panels">
+        <div class="dropdown-panel" data-panel="product">
+          <div class="dropdown-layout dropdown-layout-product">
+            <div class="dropdown-col">
+              <a href="index.html#product" class="dropdown-link"><span class="dropdown-title">Creating a Loan</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-title">Tracking Your Loan</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-title">Loan Documents</span></a>
+            </div>
+            <div class="dropdown-col">
+              <a href="faq.html" class="dropdown-link"><span class="dropdown-title">FAQ</span></a>
+              <a href="help.html" class="dropdown-link"><span class="dropdown-title">Help and Support</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-panel" data-panel="company">
+          <div class="dropdown-layout dropdown-layout-company">
+            <div class="dropdown-img">
+              <svg width="100%" height="100%" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="160" height="120" rx="12" fill="#EBF5EE"/>
+                <circle cx="60" cy="50" r="18" fill="#C8E6D0"/>
+                <circle cx="100" cy="50" r="14" fill="#A8D8B4"/>
+                <rect x="30" y="82" width="100" height="6" rx="3" fill="#C8E6D0"/>
+                <rect x="50" y="94" width="60" height="4" rx="2" fill="#D8ECD8"/>
+              </svg>
+            </div>
+            <div class="dropdown-col">
+              <a href="about.html" class="dropdown-link">
+                <div class="dropdown-text">
+                  <span class="dropdown-title">About Vony</span>
+                  <span class="dropdown-desc">Our story and mission</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-panel" data-panel="releases">
+          <div class="dropdown-layout dropdown-layout-releases">
+            <div class="dropdown-img">
+              <svg width="100%" height="100%" viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="160" height="140" rx="12" fill="#EEF2FA"/>
+                <rect x="24" y="24" width="52" height="36" rx="6" fill="#D4DEF0"/>
+                <rect x="84" y="24" width="52" height="36" rx="6" fill="#C4D2E8"/>
+                <rect x="24" y="72" width="112" height="8" rx="4" fill="#D4DEF0"/>
+                <rect x="24" y="90" width="80" height="6" rx="3" fill="#DDE6F2"/>
+                <rect x="24" y="106" width="60" height="6" rx="3" fill="#E4EAF4"/>
+              </svg>
+            </div>
+            <div class="dropdown-col">
+              <a href="apps.html" class="dropdown-link"><span class="dropdown-title">Apps</span></a>
+              <a href="learn.html" class="dropdown-link"><span class="dropdown-title">Learn</span></a>
+              <a href="loan-help.html" class="dropdown-link"><span class="dropdown-title">Loan Help</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="top-bar-right">
+      <a href="https://lend-with-vony.com" class="btn-signin">Sign In</a>
+      <a href="https://lend-with-vony.com" class="btn-getstarted">Get Started</a>
+    </div>
+  </header>
+
+  <!-- FAQ Hero -->
+  <section class="faq-hero">
+    <h1 class="faq-hero-title">Frequently Asked Questions</h1>
+    <p class="faq-hero-subtitle">Everything you need to know about using Vony for peer-to-peer lending.</p>
+  </section>
+
+  <!-- FAQ Content -->
+  <section class="faq-content">
+    <div class="faq-group">
+      <h2 class="faq-group-title">Getting Started</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>What is Vony?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Vony is a peer-to-peer lending platform designed for friends, family, and communities. It helps you create clear loan agreements, track repayments, and manage lending relationships without the awkwardness.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Is Vony free to use?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Vony offers a free tier that covers basic loan creation and tracking. Premium features like advanced analytics and priority support are available through our paid plans.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>How do I create my first loan?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>After signing up, tap "Create a Loan" from your dashboard. Enter the loan amount, set the repayment schedule, and optionally add interest. Then invite your borrower to review and sign the agreement.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <h2 class="faq-group-title">Loans & Agreements</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Are Vony loan agreements legally binding?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Vony agreements are designed to document the terms both parties agreed upon. While they serve as strong evidence of the arrangement, enforceability may vary by jurisdiction. We recommend consulting a legal professional for large amounts.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Can I add interest to a loan?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. Vony supports customizable interest rates including fixed and simple interest options. Both parties can see the total repayment amount upfront before signing the agreement.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>What happens if a borrower misses a payment?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Vony sends automatic reminders to both parties before and after a payment is due. If a payment is missed, the lender receives a notification and the loan status is updated. You can also set grace periods in your loan terms.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <h2 class="faq-group-title">Security & Privacy</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Is my financial information secure?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutely. Vony uses bank-level encryption to protect your data. We never store sensitive payment information on our servers, and all communications are encrypted end-to-end.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Can other people see my loans?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>No. Your loan details are only visible to you and the other party involved in each specific loan. Vony never shares your lending activity with third parties or displays it publicly.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-cta">
+      <p class="faq-cta-text">Still have questions?</p>
+      <a href="contact.html" class="founder-btn">Contact Us &nbsp;&rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">
+        <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" fill="#5EC47E" stroke="#F5F4F0" stroke-width="2"/>
+          <path d="M12 14L20 26L28 14" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="45" y="16" fill="#1A1918" font-family="Inter, sans-serif" font-size="18" font-weight="700">Vony</text>
+          <text x="45" y="30" fill="#A8A7A5" font-family="Inter, sans-serif" font-size="10" font-weight="400">P2P LENDING</text>
+        </svg>
+      </a>
+      <div class="footer-legal-links">
+        <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+        <span class="footer-divider">|</span>
+        <a href="privacy.html" class="footer-legal-link">Privacy Center</a>
+        <span class="footer-divider">|</span>
+        <a href="do-not-sell.html" class="footer-legal-link">Do not sell or share my personal information</a>
+      </div>
+      <p class="footer-statement">All users of our online services are subject to our Privacy Statement and agree to be bound by the Terms of Service. Please review.</p>
+      <p class="footer-copyright">&copy; 2026 Vony Lending All rights reserved</p>
+    </div>
+  </footer>
+  <script src="nav-dropdown.js"></script>
+</body>
+</html>

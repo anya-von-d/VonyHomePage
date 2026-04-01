@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Help — Vony</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html" class="logo">
+        <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" fill="#5EC47E" stroke="#ffffff" stroke-width="2"/>
+          <path d="M12 14L20 26L28 14" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="45" y="16" fill="#1a1a1a" font-family="Inter, sans-serif" font-size="18" font-weight="700">Vony</text>
+          <text x="45" y="30" fill="#666666" font-family="Inter, sans-serif" font-size="10" font-weight="400">P2P LENDING</text>
+        </svg>
+      </a>
+    </div>
+    <nav class="glass-nav" id="mainNav">
+      <div class="nav-item has-dropdown" data-panel="product"><button class="nav-link nav-btn">Product</button></div>
+      <div class="nav-item has-dropdown" data-panel="company"><button class="nav-link nav-btn">Company</button></div>
+      <div class="nav-item has-dropdown" data-panel="releases"><button class="nav-link nav-btn">Releases</button></div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      <div class="dropdown-panels">
+        <div class="dropdown-panel" data-panel="product">
+          <div class="dropdown-layout dropdown-layout-product">
+            <div class="dropdown-col">
+              <a href="index.html#product" class="dropdown-link"><span class="dropdown-title">Creating a Loan</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-title">Tracking Your Loan</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-title">Loan Documents</span></a>
+            </div>
+            <div class="dropdown-col">
+              <a href="faq.html" class="dropdown-link"><span class="dropdown-title">FAQ</span></a>
+              <a href="help.html" class="dropdown-link"><span class="dropdown-title">Help and Support</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-panel" data-panel="company">
+          <div class="dropdown-layout dropdown-layout-company">
+            <div class="dropdown-img">
+              <svg width="100%" height="100%" viewBox="0 0 160 120" fill="none"><rect width="160" height="120" rx="12" fill="#EBF5EE"/><circle cx="60" cy="50" r="18" fill="#C8E6D0"/><circle cx="100" cy="50" r="14" fill="#A8D8B4"/><rect x="30" y="82" width="100" height="6" rx="3" fill="#C8E6D0"/><rect x="50" y="94" width="60" height="4" rx="2" fill="#D8ECD8"/></svg>
+            </div>
+            <div class="dropdown-col"><a href="about.html" class="dropdown-link"><div class="dropdown-text"><span class="dropdown-title">About Vony</span><span class="dropdown-desc">Our story and mission</span></div></a></div>
+          </div>
+        </div>
+        <div class="dropdown-panel" data-panel="releases">
+          <div class="dropdown-layout dropdown-layout-releases">
+            <div class="dropdown-img">
+              <svg width="100%" height="100%" viewBox="0 0 160 140" fill="none"><rect width="160" height="140" rx="12" fill="#EEF2FA"/><rect x="24" y="24" width="52" height="36" rx="6" fill="#D4DEF0"/><rect x="84" y="24" width="52" height="36" rx="6" fill="#C4D2E8"/><rect x="24" y="72" width="112" height="8" rx="4" fill="#D4DEF0"/><rect x="24" y="90" width="80" height="6" rx="3" fill="#DDE6F2"/><rect x="24" y="106" width="60" height="6" rx="3" fill="#E4EAF4"/></svg>
+            </div>
+            <div class="dropdown-col">
+              <a href="apps.html" class="dropdown-link"><span class="dropdown-title">Apps</span></a>
+              <a href="learn.html" class="dropdown-link"><span class="dropdown-title">Learn</span></a>
+              <a href="loan-help.html" class="dropdown-link"><span class="dropdown-title">Loan Help</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="top-bar-right">
+      <a href="https://lend-with-vony.com" class="btn-signin">Sign In</a>
+      <a href="https://lend-with-vony.com" class="btn-getstarted">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Loan Help Hero -->
+  <section class="help-hero">
+    <h1 class="help-hero-title">Loan Help</h1>
+    <p class="help-hero-subtitle">Borrowing from friends is often the best option. But when it's not, we'll help you find the right alternative.</p>
+  </section>
+
+  <!-- Content -->
+  <section class="help-content">
+
+    <!-- Why Peer Lending First -->
+    <div class="loan-help-intro">
+      <h2 class="learn-section-title">Why Borrow from Friends First?</h2>
+      <p class="learn-section-subtitle">Peer lending through Vony offers real advantages over traditional loans. Here's why it's worth trying first.</p>
+
+      <div class="loan-compare-grid">
+        <div class="loan-compare-card loan-compare-peer">
+          <h3 class="loan-compare-heading">Peer Lending on Vony</h3>
+          <ul class="loan-compare-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a9956" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div><strong>No credit check</strong> — borrowing from a friend doesn't show up on your credit report or affect your score</div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a9956" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div><strong>Lower interest</strong> — friends typically charge little to no interest compared to 10-36% APR from banks</div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a9956" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div><strong>Flexible terms</strong> — negotiate repayment schedules that work for both of you</div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a9956" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div><strong>No late penalties</strong> — restructure payments if life gets in the way, without fees</div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a9956" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div><strong>Fast approval</strong> — no applications, no waiting periods, no paperwork beyond Vony's simple agreement</div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a9956" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div><strong>Builds trust</strong> — successful repayment strengthens your relationships and Vony trust profile</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="loan-compare-card loan-compare-trad">
+          <h3 class="loan-compare-heading">Traditional Loans</h3>
+          <ul class="loan-compare-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C44040" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <div><strong>Hard credit inquiry</strong> — applications temporarily lower your credit score</div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C44040" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <div><strong>Higher interest rates</strong> — personal loans average 10-36% APR depending on credit</div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C44040" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <div><strong>Rigid repayment</strong> — fixed monthly payments with little room to adjust</div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8913A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <div><strong>Late fees and penalties</strong> — missed payments incur fees and damage your credit</div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8913A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <div><strong>Slower process</strong> — applications, verification, and approval can take days to weeks</div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a9956" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div><strong>Larger amounts</strong> — banks can offer higher loan amounts for major expenses</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- When Traditional Loans Make Sense -->
+    <div class="learn-section">
+      <h2 class="learn-section-title">When Traditional Loans Make Sense</h2>
+      <p class="learn-section-subtitle">Sometimes peer lending isn't the right fit. Here's when to consider other options.</p>
+
+      <div class="loan-scenarios">
+        <div class="loan-scenario-card">
+          <div class="loan-scenario-icon" style="background: rgba(88, 129, 254, 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5881FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+          </div>
+          <h3>Student Loans</h3>
+          <p>For tuition, housing, and education costs that exceed what friends or family can lend. Federal student loans offer income-driven repayment plans and potential forgiveness.</p>
+        </div>
+        <div class="loan-scenario-card">
+          <div class="loan-scenario-icon" style="background: rgba(94, 196, 126, 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3a9956" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Mortgage / Home Purchase</h3>
+          <p>The amounts involved in buying a home are typically too large for peer lending. Mortgage lenders offer 15-30 year terms with rates often lower than personal loans.</p>
+        </div>
+        <div class="loan-scenario-card">
+          <div class="loan-scenario-icon" style="background: rgba(232, 145, 58, 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8913A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h3>Debt Consolidation</h3>
+          <p>If you have high-interest credit card debt across multiple cards, a consolidation loan can simplify payments and reduce your overall interest rate.</p>
+        </div>
+        <div class="loan-scenario-card">
+          <div class="loan-scenario-icon" style="background: rgba(167, 157, 234, 0.15);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7B6FC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>Emergency Expenses</h3>
+          <p>Medical bills or urgent repairs when you don't have anyone to borrow from. Some lenders offer same-day funding for emergencies.</p>
+        </div>
+        <div class="loan-scenario-card">
+          <div class="loan-scenario-icon" style="background: rgba(220, 80, 80, 0.1);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C44040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h3>Building Credit History</h3>
+          <p>If you're establishing credit for the first time, a small personal loan with on-time payments can help build your credit score for the future.</p>
+        </div>
+        <div class="loan-scenario-card">
+          <div class="loan-scenario-icon" style="background: rgba(88, 129, 254, 0.12);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5881FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <h3>Business Start-up</h3>
+          <p>Small business loans and SBA loans are purpose-built for entrepreneurs, with terms designed for business cash flow cycles.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loan Types Explained -->
+    <div class="learn-section">
+      <h2 class="learn-section-title">Understanding Your Options</h2>
+      <p class="learn-section-subtitle">A quick guide to the most common types of traditional loans.</p>
+
+      <div class="help-accordion">
+        <div class="help-accordion-item">
+          <button class="help-accordion-btn">
+            <span>Federal Student Loans</span>
+            <svg class="help-accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="help-accordion-answer">
+            <p>Offered by the U.S. Department of Education. Fixed interest rates, income-driven repayment plans, deferment options, and potential loan forgiveness for public service. Start with FAFSA (fafsa.gov) to see what you qualify for. Subsidised loans don't accrue interest while you're in school.</p>
+          </div>
+        </div>
+        <div class="help-accordion-item">
+          <button class="help-accordion-btn">
+            <span>Private Student Loans</span>
+            <svg class="help-accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="help-accordion-answer">
+            <p>From banks and credit unions when federal loans aren't enough. Interest rates vary by credit score (typically 4-14% APR). Often require a co-signer for students. Less flexible repayment options than federal loans. Compare offers from multiple lenders.</p>
+          </div>
+        </div>
+        <div class="help-accordion-item">
+          <button class="help-accordion-btn">
+            <span>Personal Loans</span>
+            <svg class="help-accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="help-accordion-answer">
+            <p>Unsecured loans from banks, credit unions, or online lenders. Amounts from $1,000 to $50,000+, with terms of 2-7 years. APR ranges from 6-36% depending on credit. Good for debt consolidation, large purchases, or emergency expenses. No collateral required.</p>
+          </div>
+        </div>
+        <div class="help-accordion-item">
+          <button class="help-accordion-btn">
+            <span>Credit Builder Loans</span>
+            <svg class="help-accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="help-accordion-answer">
+            <p>Small loans ($300-$1,000) specifically designed to build credit history. The money is held in an account while you make payments. Once fully paid, the funds are released to you. Offered by many credit unions and online lenders. Great for first-time borrowers.</p>
+          </div>
+        </div>
+        <div class="help-accordion-item">
+          <button class="help-accordion-btn">
+            <span>Home Equity Loans & Lines of Credit (HELOC)</span>
+            <svg class="help-accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="help-accordion-answer">
+            <p>Borrow against the equity in your home. Lower interest rates than personal loans (typically 7-10% APR) because the loan is secured by your property. HELOCs work like a credit card with a draw period. Risk: if you can't repay, the lender can foreclose on your home.</p>
+          </div>
+        </div>
+        <div class="help-accordion-item">
+          <button class="help-accordion-btn">
+            <span>Small Business Loans (SBA)</span>
+            <svg class="help-accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="help-accordion-answer">
+            <p>Government-backed loans through the Small Business Administration. Lower rates and longer terms than conventional business loans. SBA 7(a) loans up to $5M, microloans up to $50K. Require a business plan and financial projections. Processing takes 2-3 months.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tips -->
+    <div class="learn-section">
+      <h2 class="learn-section-title">Before You Apply</h2>
+      <p class="learn-section-subtitle">Things to check before committing to a traditional loan.</p>
+
+      <div class="loan-tips-grid">
+        <div class="loan-tip">
+          <span class="loan-tip-num">1</span>
+          <div>
+            <strong>Try Vony first</strong>
+            <p>Ask a trusted friend or family member. You'd be surprised how often someone is willing to help, especially with clear terms and a digital agreement.</p>
+          </div>
+        </div>
+        <div class="loan-tip">
+          <span class="loan-tip-num">2</span>
+          <div>
+            <strong>Check your credit score</strong>
+            <p>Know where you stand before applying. Free tools like Credit Karma or annualcreditreport.com can give you your score and report.</p>
+          </div>
+        </div>
+        <div class="loan-tip">
+          <span class="loan-tip-num">3</span>
+          <div>
+            <strong>Compare multiple offers</strong>
+            <p>Never accept the first offer. Compare APR, fees, terms, and total cost of the loan across at least 3 lenders.</p>
+          </div>
+        </div>
+        <div class="loan-tip">
+          <span class="loan-tip-num">4</span>
+          <div>
+            <strong>Read the fine print</strong>
+            <p>Look for origination fees, prepayment penalties, late fees, and variable rate clauses. These can significantly increase the total cost.</p>
+          </div>
+        </div>
+        <div class="loan-tip">
+          <span class="loan-tip-num">5</span>
+          <div>
+            <strong>Only borrow what you need</strong>
+            <p>It's tempting to borrow more when approved for a higher amount. Stick to what you actually need to minimise interest paid.</p>
+          </div>
+        </div>
+        <div class="loan-tip">
+          <span class="loan-tip-num">6</span>
+          <div>
+            <strong>Have a repayment plan</strong>
+            <p>Before borrowing, calculate the monthly payment and make sure it fits your budget. Use the 50/30/20 rule as a guide.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="help-cta">
+      <h3 class="help-cta-title">Ready to try peer lending?</h3>
+      <p class="help-cta-text">Start with Vony. It's free, it's flexible, and it doesn't touch your credit score.</p>
+      <a href="https://lend-with-vony.com" class="founder-btn">Get Started for Free &nbsp;&rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">
+        <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" fill="#5EC47E" stroke="#F5F4F0" stroke-width="2"/>
+          <path d="M12 14L20 26L28 14" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="45" y="16" fill="#1A1918" font-family="Inter, sans-serif" font-size="18" font-weight="700">Vony</text>
+          <text x="45" y="30" fill="#A8A7A5" font-family="Inter, sans-serif" font-size="10" font-weight="400">P2P LENDING</text>
+        </svg>
+      </a>
+      <div class="footer-legal-links">
+        <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+        <span class="footer-divider">|</span>
+        <a href="privacy.html" class="footer-legal-link">Privacy Center</a>
+        <span class="footer-divider">|</span>
+        <a href="do-not-sell.html" class="footer-legal-link">Do not sell or share my personal information</a>
+      </div>
+      <p class="footer-statement">All users of our online services are subject to our Privacy Statement and agree to be bound by the Terms of Service. Please review.</p>
+      <p class="footer-copyright">&copy; 2026 Vony Lending All rights reserved</p>
+    </div>
+  </footer>
+  <script src="nav-dropdown.js"></script>
+  <script>
+    document.querySelectorAll('.help-accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const wasOpen = item.classList.contains('open');
+        item.closest('.help-accordion').querySelectorAll('.help-accordion-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>
