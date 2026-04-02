@@ -4549,3 +4549,222 @@ a.help-card {
     max-width: 100%;
   }
 }
+
+/* ═══════════════════════════════════════════════════
+   GLOBAL TYPOGRAPHY OVERHAUL
+   Page titles, section titles, subtitles, and spacing
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Page Titles (top of page, not hero) ─── */
+.about-hero-title,
+.faq-hero-title,
+.help-hero-title,
+.apps-hero-title,
+.contact-title {
+  font-size: 56px;
+}
+
+/* ─── Section Titles (within pages) ─── */
+.everyday-title,
+.contracts-title,
+.notif-title,
+.testimonials-heading,
+.about-heading,
+.about-cta-title,
+.about-features-title,
+.lh-feature-heading,
+.learn-articles-title,
+.learn-section-title,
+.help-topics-title,
+.doc-feature-heading,
+.doc-info-title,
+.doc-cta-heading,
+.apps-detail-heading,
+.memo-principles-title {
+  font-size: 56px;
+}
+
+/* ─── Subtitle/paragraph text under titles ─── */
+.about-hero-subtitle,
+.faq-hero-subtitle,
+.help-hero-subtitle,
+.apps-hero-subtitle,
+.contact-subtitle,
+.everyday-subtitle,
+.contracts-subtitle,
+.notif-subtitle,
+.about-text,
+.about-cta-subtitle,
+.about-features-subtitle,
+.lh-feature-desc,
+.learn-articles-subtitle,
+.learn-section-subtitle,
+.doc-feature-desc,
+.doc-cta-desc,
+.apps-detail-subtitle,
+.browser-subtitle {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* ─── Gap between title and subtitle: 24px ─── */
+.about-hero-title,
+.faq-hero-title,
+.help-hero-title,
+.apps-hero-title,
+.contact-title,
+.everyday-title,
+.contracts-title,
+.notif-title,
+.about-heading,
+.about-cta-title,
+.about-features-title,
+.lh-feature-heading,
+.learn-articles-title,
+.learn-section-title,
+.help-topics-title,
+.doc-feature-heading,
+.doc-info-title,
+.doc-cta-heading,
+.apps-detail-heading,
+.memo-principles-title {
+  margin-bottom: 24px;
+}
+
+/* ─── Button spacing after subtitle ─── */
+.contracts-learn-more,
+.about-cta-btn,
+.founder-btn,
+.apps-suggest-btn,
+.doc-cta-section .founder-btn,
+.faq-cta .founder-btn,
+.faq-help-btn {
+  margin-top: 56px;
+}
+
+/* ─── Nav-to-page-title spacing (Desktop) ─── */
+.about-hero,
+.faq-hero {
+  padding-top: 160px;
+}
+
+.help-hero,
+.apps-hero-section {
+  padding-top: 160px;
+}
+
+.contact-section {
+  padding-top: 160px;
+}
+
+/* ═══════════════════════════════════════════════════
+   TABLET/MOBILE (≤ 1199px)
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 1199px) {
+  /* Page Titles */
+  .about-hero-title,
+  .faq-hero-title,
+  .help-hero-title,
+  .apps-hero-title,
+  .contact-title {
+    font-size: 44px;
+  }
+
+  /* Section Titles */
+  .everyday-title,
+  .contracts-title,
+  .notif-title,
+  .testimonials-heading,
+  .about-heading,
+  .about-cta-title,
+  .about-features-title,
+  .lh-feature-heading,
+  .learn-articles-title,
+  .learn-section-title,
+  .help-topics-title,
+  .doc-feature-heading,
+  .doc-info-title,
+  .doc-cta-heading,
+  .apps-detail-heading,
+  .memo-principles-title {
+    font-size: 44px;
+  }
+
+  /* Subtitles */
+  .about-hero-subtitle,
+  .faq-hero-subtitle,
+  .help-hero-subtitle,
+  .apps-hero-subtitle,
+  .contact-subtitle,
+  .everyday-subtitle,
+  .contracts-subtitle,
+  .notif-subtitle,
+  .about-text,
+  .about-cta-subtitle,
+  .about-features-subtitle,
+  .lh-feature-desc,
+  .learn-articles-subtitle,
+  .learn-section-subtitle,
+  .doc-feature-desc,
+  .doc-cta-desc,
+  .apps-detail-subtitle,
+  .browser-subtitle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  /* Button spacing */
+  .contracts-learn-more,
+  .about-cta-btn,
+  .founder-btn,
+  .apps-suggest-btn,
+  .doc-cta-section .founder-btn,
+  .faq-cta .founder-btn,
+  .faq-help-btn {
+    margin-top: 32px;
+  }
+
+  /* Nav-to-page-title spacing */
+  .about-hero,
+  .faq-hero {
+    padding-top: 110px;
+  }
+
+  .help-hero,
+  .apps-hero-section {
+    padding-top: 110px;
+  }
+
+  .contact-section {
+    padding-top: 110px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   SMALL PHONES (< 400px) — fluid title sizes
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 400px) {
+  .about-hero-title,
+  .faq-hero-title,
+  .help-hero-title,
+  .apps-hero-title,
+  .contact-title,
+  .everyday-title,
+  .contracts-title,
+  .notif-title,
+  .testimonials-heading,
+  .about-heading,
+  .about-cta-title,
+  .about-features-title,
+  .lh-feature-heading,
+  .learn-articles-title,
+  .learn-section-title,
+  .help-topics-title,
+  .doc-feature-heading,
+  .doc-info-title,
+  .doc-cta-heading,
+  .apps-detail-heading,
+  .memo-principles-title {
+    font-size: 11vw;
+  }
+}
