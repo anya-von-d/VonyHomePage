@@ -4333,12 +4333,144 @@ a.help-card {
   color: rgba(26, 25, 24, 0.55);
 }
 
+/* Principles section standalone (on about page) */
+.memo-principles-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.memo-principles-section .memo-principles {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* ─── Founder Memo Card ─── */
+.memo-card-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+  perspective: 1200px;
+}
+
+.memo-card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.memo-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+  transform: rotate(0deg);
+  cursor: default;
+}
+
+.memo-card:hover {
+  transform: rotate(-2deg);
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.memo-card-inner {
+  padding: 48px 44px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.memo-card:hover .memo-card-inner {
+  transform: scale(0.98);
+}
+
+.memo-card-heading {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1A1918;
+  margin-bottom: 28px;
+}
+
+.memo-card-body p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #4A4A48;
+  margin-bottom: 16px;
+}
+
+.memo-card-body p:first-child {
+  font-style: italic;
+  color: #1A1918;
+}
+
+.memo-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.memo-card-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.memo-card-signature svg {
+  display: block;
+}
+
+.memo-card-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.memo-card-avatar svg {
+  display: block;
+  border-radius: 50%;
+}
+
+.memo-card-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.memo-card-author-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1918;
+}
+
+.memo-card-author-role {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #A8A7A5;
+}
+
 @media (max-width: 600px) {
   .memo-content {
     padding: 0 20px 60px;
   }
   .memo-principles-grid {
     grid-template-columns: 1fr;
+  }
+  .memo-card-section {
+    padding: 0 20px 60px;
+  }
+  .memo-card-inner {
+    padding: 32px 24px;
+  }
+  .memo-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .memo-principles-section {
+    padding: 0 20px 60px;
   }
 }
 
