@@ -4470,6 +4470,60 @@ a.help-card {
   z-index: -1;
 }
 
+/* Hero feature boxes */
+.doc-hero-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  width: calc(100vw - 80px);
+  margin: 40px auto 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.doc-hero-box {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doc-hero-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+}
+
+.doc-hero-box-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.doc-hero-box-top .doc-info-icon {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.doc-hero-box-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1A1918;
+}
+
+.doc-hero-box-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(26, 25, 24, 0.55);
+}
+
 /* Info grid */
 .doc-info-section {
   padding: 60px 40px 80px;
@@ -4576,6 +4630,11 @@ a.help-card {
 }
 
 @media (max-width: 600px) {
+  .doc-hero-boxes {
+    grid-template-columns: 1fr;
+    width: calc(100vw - 40px);
+    max-width: 480px;
+  }
   .doc-feature-section {
     padding: 40px 20px 60px;
   }
