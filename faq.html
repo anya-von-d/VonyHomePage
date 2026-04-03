@@ -145,94 +145,138 @@
 
   <!-- FAQ Content -->
   <section class="faq-content">
-    <div class="faq-group">
-      <h2 class="faq-group-title">Getting Started</h2>
 
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>What is Vony?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>Vony is a peer-to-peer lending platform designed for friends, family, and communities. It helps you create clear loan agreements, track repayments, and manage lending relationships without the awkwardness.</p>
-        </div>
+    <!-- Getting Started -->
+    <div class="faq-layout">
+      <div class="faq-group-left">
+        <h2 class="faq-group-title">Getting Started</h2>
+        <a href="about.html" class="faq-context-link">
+          <span>Our story and mission</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>Is Vony free to use?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>Vony offers a free tier that covers basic loan creation and tracking. Premium features like advanced analytics and priority support are available through our paid plans.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>How do I create my first loan?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>After signing up, tap "Create a Loan" from your dashboard. Enter the loan amount, set the repayment schedule, and optionally add interest. Then invite your borrower to review and sign the agreement.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="faq-group">
-      <h2 class="faq-group-title">Loans & Agreements</h2>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>Are Vony loan agreements legally binding?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>Vony agreements are designed to document the terms both parties agreed upon. While they serve as strong evidence of the arrangement, enforceability may vary by jurisdiction. We recommend consulting a legal professional for large amounts.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>Can I add interest to a loan?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. Vony supports customizable interest rates including fixed and simple interest options. Both parties can see the total repayment amount upfront before signing the agreement.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>What happens if a borrower misses a payment?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>Vony sends automatic reminders to both parties before and after a payment is due. If a payment is missed, the lender receives a notification and the loan status is updated. You can also set grace periods in your loan terms.</p>
+      <div class="faq-group-right">
+        <div class="faq-group-box">
+          <button class="faq-group-toggle" onclick="this.closest('.faq-group-box').classList.toggle('open')">
+            <span>3 questions</span>
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-group-items">
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>What is Vony?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Vony is a peer-to-peer lending platform designed for friends, family, and communities. It helps you create clear loan agreements, track repayments, and manage lending relationships without the awkwardness.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>Is Vony free to use?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Vony offers a free tier that covers basic loan creation and tracking. Premium features like advanced analytics and priority support are available through our paid plans.</p>
+              </div>
+            </div>
+            <div class="faq-item" style="border-bottom: none;">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>How do I create my first loan?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>After signing up, tap "Create a Loan" from your dashboard. Enter the loan amount, set the repayment schedule, and optionally add interest. Then invite your borrower to review and sign the agreement.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="faq-group">
-      <h2 class="faq-group-title">Security & Privacy</h2>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>Is my financial information secure?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>Absolutely. Vony uses bank-level encryption to protect your data. We never store sensitive payment information on our servers, and all communications are encrypted end-to-end.</p>
+    <!-- Loans & Agreements -->
+    <div class="faq-layout">
+      <div class="faq-group-left">
+        <h2 class="faq-group-title">Loans & Agreements</h2>
+        <a href="loan-documents.html" class="faq-context-link">
+          <span>How Vony documents your loans</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="faq-group-right">
+        <div class="faq-group-box">
+          <button class="faq-group-toggle" onclick="this.closest('.faq-group-box').classList.toggle('open')">
+            <span>3 questions</span>
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-group-items">
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>Are Vony loan agreements legally binding?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Vony agreements are designed to document the terms both parties agreed upon. While they serve as strong evidence of the arrangement, enforceability may vary by jurisdiction. We recommend consulting a legal professional for large amounts.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>Can I add interest to a loan?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Vony supports customizable interest rates including fixed and simple interest options. Both parties can see the total repayment amount upfront before signing the agreement.</p>
+              </div>
+            </div>
+            <div class="faq-item" style="border-bottom: none;">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>What happens if a borrower misses a payment?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Vony sends automatic reminders to both parties before and after a payment is due. If a payment is missed, the lender receives a notification and the loan status is updated. You can also set grace periods in your loan terms.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>Can other people see my loans?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>No. Your loan details are only visible to you and the other party involved in each specific loan. Vony never shares your lending activity with third parties or displays it publicly.</p>
+    <!-- Security & Privacy -->
+    <div class="faq-layout">
+      <div class="faq-group-left">
+        <h2 class="faq-group-title">Security & Privacy</h2>
+        <a href="privacy.html" class="faq-context-link">
+          <span>Read our privacy policy</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="faq-group-right">
+        <div class="faq-group-box">
+          <button class="faq-group-toggle" onclick="this.closest('.faq-group-box').classList.toggle('open')">
+            <span>2 questions</span>
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-group-items">
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>Is my financial information secure?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Absolutely. Vony uses bank-level encryption to protect your data. We never store sensitive payment information on our servers, and all communications are encrypted end-to-end.</p>
+              </div>
+            </div>
+            <div class="faq-item" style="border-bottom: none;">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                <span>Can other people see my loans?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>No. Your loan details are only visible to you and the other party involved in each specific loan. Vony never shares your lending activity with third parties or displays it publicly.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -241,16 +285,8 @@
       <h2 class="faq-cta-title">Still Have Questions?</h2>
       <p class="faq-cta-subtitle">We're here to help. Reach out to our team or browse our support resources for more answers.</p>
       <div class="faq-cta-buttons">
-        <a href="contact.html" class="faq-cta-card">
-          <span class="faq-cta-card-icon">💬</span>
-          <span class="faq-cta-card-title">Contact Us</span>
-          <span class="faq-cta-card-desc">Send us a message and we'll get back to you</span>
-        </a>
-        <a href="help.html" class="faq-cta-card">
-          <span class="faq-cta-card-icon">📖</span>
-          <span class="faq-cta-card-title">Help and Support</span>
-          <span class="faq-cta-card-desc">Browse guides, tutorials, and troubleshooting</span>
-        </a>
+        <a href="contact.html" class="founder-btn">Contact Us &nbsp;&rarr;</a>
+        <a href="help.html" class="founder-btn">Help and Support &nbsp;&rarr;</a>
       </div>
     </div>
   </section>
