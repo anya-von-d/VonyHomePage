@@ -138,20 +138,32 @@
   </header>
 
   <!-- Guide Hero -->
-  <section class="help-hero">
-    <h1 class="help-hero-title">Guides</h1>
-    <p class="help-hero-subtitle">Step-by-step tutorials to help you get the most out of Vony.</p>
+  <section class="guide-hero">
+    <h1 class="guide-hero-title">Guides</h1>
+    <p class="guide-hero-subtitle">Step-by-step tutorials to help you get the most out of Vony.</p>
   </section>
 
-  <!-- Guide Content -->
-  <section class="help-content">
-    <div class="guide-grid">
+  <!-- Guide Tabs -->
+  <section class="guide-tabs-section">
 
-      <div class="guide-card">
-        <div class="guide-card-number">01</div>
-        <h3 class="guide-card-title">Getting Started with Vony</h3>
-        <p class="guide-card-desc">Create your account, set up your profile, and make your first loan in under 5 minutes.</p>
-        <div class="guide-card-steps">
+    <!-- Tab Menu Bar -->
+    <div class="guide-tabs-bar-wrapper">
+      <div class="guide-tabs-bar">
+        <button class="guide-tab active" onclick="switchTab(0, this)">Getting Started</button>
+        <button class="guide-tab" onclick="switchTab(1, this)">Creating a Loan</button>
+        <button class="guide-tab" onclick="switchTab(2, this)">Tracking Payments</button>
+        <button class="guide-tab" onclick="switchTab(3, this)">Loan Agreements</button>
+      </div>
+    </div>
+
+    <!-- Tab Panels -->
+    <div class="guide-panels">
+
+      <div class="guide-panel active" id="guide-panel-0">
+        <div class="guide-panel-label">01</div>
+        <h2 class="guide-panel-title">Getting Started with Vony</h2>
+        <p class="guide-panel-desc">Create your account, set up your profile, and make your first loan in under 5 minutes.</p>
+        <div class="guide-panel-steps">
           <div class="guide-step">
             <span class="guide-step-num">1</span>
             <p>Download Vony and create your account using email, Apple, or Google sign-in.</p>
@@ -171,11 +183,11 @@
         </div>
       </div>
 
-      <div class="guide-card">
-        <div class="guide-card-number">02</div>
-        <h3 class="guide-card-title">Creating Your First Loan</h3>
-        <p class="guide-card-desc">A walkthrough of the loan creation process, from setting the amount to getting both parties to sign.</p>
-        <div class="guide-card-steps">
+      <div class="guide-panel" id="guide-panel-1">
+        <div class="guide-panel-label">02</div>
+        <h2 class="guide-panel-title">Creating Your First Loan</h2>
+        <p class="guide-panel-desc">A walkthrough of the loan creation process, from setting the amount to getting both parties to sign.</p>
+        <div class="guide-panel-steps">
           <div class="guide-step">
             <span class="guide-step-num">1</span>
             <p>Choose whether you're lending or borrowing, then enter the amount.</p>
@@ -195,11 +207,11 @@
         </div>
       </div>
 
-      <div class="guide-card">
-        <div class="guide-card-number">03</div>
-        <h3 class="guide-card-title">Tracking Payments & Progress</h3>
-        <p class="guide-card-desc">Learn how to monitor repayments, view history, and stay on top of upcoming due dates.</p>
-        <div class="guide-card-steps">
+      <div class="guide-panel" id="guide-panel-2">
+        <div class="guide-panel-label">03</div>
+        <h2 class="guide-panel-title">Tracking Payments & Progress</h2>
+        <p class="guide-panel-desc">Learn how to monitor repayments, view history, and stay on top of upcoming due dates.</p>
+        <div class="guide-panel-steps">
           <div class="guide-step">
             <span class="guide-step-num">1</span>
             <p>Open any loan from your dashboard to see the progress bar and remaining balance.</p>
@@ -219,11 +231,11 @@
         </div>
       </div>
 
-      <div class="guide-card">
-        <div class="guide-card-number">04</div>
-        <h3 class="guide-card-title">Managing Loan Agreements</h3>
-        <p class="guide-card-desc">How to view, modify, and share your loan contracts and digital agreements.</p>
-        <div class="guide-card-steps">
+      <div class="guide-panel" id="guide-panel-3">
+        <div class="guide-panel-label">04</div>
+        <h2 class="guide-panel-title">Managing Loan Agreements</h2>
+        <p class="guide-panel-desc">How to view, modify, and share your loan contracts and digital agreements.</p>
+        <div class="guide-panel-steps">
           <div class="guide-step">
             <span class="guide-step-num">1</span>
             <p>Tap any active loan and select "View Agreement" to see the full contract.</p>
@@ -255,6 +267,15 @@
       </div>
     </div>
   </section>
+
+  <script>
+    function switchTab(index, btn) {
+      document.querySelectorAll('.guide-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.guide-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('guide-panel-' + index).classList.add('active');
+    }
+  </script>
 
   <!-- Footer -->
   <footer class="footer">
