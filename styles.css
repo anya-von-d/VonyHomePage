@@ -5567,6 +5567,78 @@ a.help-card {
   }
 }
 
+/* ─── About — Stories & Founder Memo Cards ─── */
+.about-explore-section {
+  padding: 0 40px 80px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-explore-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.about-explore-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid rgba(26, 25, 24, 0.08);
+  border-radius: 16px;
+  padding: 32px 36px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.about-explore-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+
+.about-explore-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #5EC47E;
+}
+
+.about-explore-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1A1918;
+}
+
+.about-explore-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(26, 25, 24, 0.55);
+  flex: 1;
+}
+
+.about-explore-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1A1918;
+  border-bottom: 1.5px solid rgba(26, 25, 24, 0.2);
+  padding-bottom: 1px;
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+@media (max-width: 640px) {
+  .about-explore-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ─── Loan Help — Centered Hero Variant ─── */
 .help-hero--centered {
   text-align: center;
