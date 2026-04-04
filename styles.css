@@ -5715,56 +5715,57 @@ a.help-card {
 
 /* Container: relative, tall enough for fan + overflow visible */
 /*
-  Fan layout — cards are landscape rectangles, all anchored at center.
-  Container is 1000px wide, centered. Each card is 300×210px.
-  All cards start stacked at center (left: 350px = 700/2 - 0).
-  On fan, they translate outward symmetrically with strong rotation.
+  Fan layout — 4 landscape cards (300×200px) stacked at center, then fanned.
+  Container breaks out of parent max-width using left:50%/translateX trick.
+  Total fanned spread: ~1000px, fits inside most viewports.
 */
 .lh-fan-grid {
   position: relative;
-  width: 1000px;
-  max-width: 100%;
-  height: 320px;
-  margin: 56px auto 0;
+  /* break out of parent max-width and truly center */
+  width: 900px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 300px;
+  margin-top: 56px;
+  margin-bottom: 40px;
   overflow: visible;
 }
 
-/* Base card — landscape, all anchored at center */
+/* Base card — landscape */
 .lh-fan-card {
   position: absolute;
   width: 300px;
-  height: 210px;
-  /* center: left = (1000 - 300) / 2 = 350px */
-  left: 350px;
-  top: 40px;
+  height: 200px;
+  /* all stacked at center: (900 - 300) / 2 = 300px */
+  left: 300px;
+  top: 30px;
   background: #fff;
-  border: 1px solid rgba(26, 25, 24, 0.08);
+  border: 1px solid rgba(26, 25, 24, 0.07);
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
   overflow: hidden;
   will-change: transform;
-  /* start stacked, no rotation */
   transform: translateX(0px) translateY(0px) rotate(0deg);
 }
 
-/* Z-index layering — innermost cards on top when stacked */
+/* Z-index: inner pair sits on top during overlap */
 .lh-fan-card[data-fan="1"] { z-index: 1; transition: transform 0.8s cubic-bezier(0.34, 1.3, 0.64, 1) 0s; }
-.lh-fan-card[data-fan="2"] { z-index: 3; transition: transform 0.6s cubic-bezier(0.34, 1.2, 0.64, 1) 0.04s; }
-.lh-fan-card[data-fan="3"] { z-index: 3; transition: transform 0.6s cubic-bezier(0.34, 1.2, 0.64, 1) 0.04s; }
+.lh-fan-card[data-fan="2"] { z-index: 3; transition: transform 0.65s cubic-bezier(0.34, 1.2, 0.64, 1) 0.04s; }
+.lh-fan-card[data-fan="3"] { z-index: 3; transition: transform 0.65s cubic-bezier(0.34, 1.2, 0.64, 1) 0.04s; }
 .lh-fan-card[data-fan="4"] { z-index: 1; transition: transform 0.8s cubic-bezier(0.34, 1.3, 0.64, 1) 0s; }
 
-/* Fanned-out state — symmetric spread, outer cards rotate & travel more */
+/* Fanned — symmetric, outer cards travel 270px, inner 95px */
 .lh-fan-grid.is-fanned .lh-fan-card[data-fan="1"] {
-  transform: translateX(-340px) translateY(30px) rotate(-14deg);
+  transform: translateX(-270px) translateY(28px) rotate(-12deg);
 }
 .lh-fan-grid.is-fanned .lh-fan-card[data-fan="2"] {
-  transform: translateX(-110px) translateY(8px) rotate(-4deg);
+  transform: translateX(-95px) translateY(6px) rotate(-4deg);
 }
 .lh-fan-grid.is-fanned .lh-fan-card[data-fan="3"] {
-  transform: translateX(110px) translateY(8px) rotate(4deg);
+  transform: translateX(95px) translateY(6px) rotate(4deg);
 }
 .lh-fan-grid.is-fanned .lh-fan-card[data-fan="4"] {
-  transform: translateX(340px) translateY(30px) rotate(14deg);
+  transform: translateX(270px) translateY(28px) rotate(12deg);
 }
 
 /* Inner content */
