@@ -1640,6 +1640,13 @@ body {
   opacity: 0.5;
 }
 
+.trusted-logo img {
+  height: 36px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.45;
+}
+
 .trusted-logo span {
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
@@ -1916,6 +1923,20 @@ body {
   line-height: 1.7;
   color: #787776;
   max-width: 420px;
+}
+
+.contact-email-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #54A6CF;
+  text-decoration: none;
+}
+
+.contact-email-link:hover {
+  text-decoration: underline;
 }
 
 .contact-right {

@@ -95,7 +95,7 @@
         <p class="contact-subtitle">Have an idea for a feature you'd love to see? We're always listening. Share your suggestion and help us build something even better.</p>
       </div>
       <div class="contact-right">
-        <form class="contact-form" onsubmit="event.preventDefault();">
+        <form class="contact-form" onsubmit="(function(e){e.preventDefault();var n=document.getElementById('name').value,em=document.getElementById('email').value,f=document.getElementById('feature').value;window.location.href='mailto:hello@vony-lending.com?subject='+encodeURIComponent('Feature Suggestion from '+n)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+em+'\n\nSuggestion:\n'+f);})(event)">
           <div class="form-group">
             <label class="form-label" for="name">Name</label>
             <input class="form-input" type="text" id="name" placeholder="Your name">
