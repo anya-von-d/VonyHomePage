@@ -62,6 +62,16 @@ body {
   text-decoration: none;
 }
 
+.logo-wordmark {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 600;
+  color: #1A1918;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
 .top-bar-right {
   flex: 1;
   display: flex;
@@ -422,7 +432,7 @@ body {
   color: #1A1918;
   white-space: nowrap;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  border-left: 3px solid #5EC47E;
+  border-left: 3px solid #7EC0EA;
   opacity: 0.85;
   animation: floatSlideIn 0.7s ease-out backwards;
 }
@@ -440,7 +450,7 @@ body {
   display: inline-block;
   width: 6px;
   height: 6px;
-  background: #5EC47E;
+  background: #7EC0EA;
   border-radius: 50%;
   margin-right: 8px;
   vertical-align: middle;
@@ -472,7 +482,7 @@ body {
 .typewriter-cursor {
   font-style: normal;
   font-weight: 400;
-  color: #5EC47E;
+  color: #7EC0EA;
   animation: cursorBlink 1.06s step-end infinite;
   margin-left: 2px;
 }
@@ -503,7 +513,7 @@ body {
 /* ─── Dashboard Scroll Section ─── */
 .dashboard-section {
   position: relative;
-  padding: 0 40px 100px;
+  padding: 0 40px 80px;
   overflow: visible;
   z-index: 1;
 }
@@ -568,7 +578,7 @@ body {
 
 /* ─── Everyday Lending Section ─── */
 .everyday-section {
-  padding: 60px 40px 80px;
+  padding: 80px 40px 80px;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
@@ -810,7 +820,7 @@ body {
 .bm-logo-circle {
   width: 26px;
   height: 26px;
-  background: #5EC47E;
+  background: #7EC0EA;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1025,7 +1035,7 @@ body {
 
 .bm-progress-fill {
   height: 100%;
-  background: #5EC47E;
+  background: #7EC0EA;
   border-radius: 3px;
 }
 
@@ -1097,7 +1107,7 @@ body {
 
 .loan-progress-fill {
   height: 100%;
-  background: #5EC47E;
+  background: #7EC0EA;
   border-radius: 3px;
 }
 
@@ -1176,7 +1186,7 @@ body {
 }
 
 .notif-section {
-  padding: 60px 40px 80px;
+  padding: 80px 40px 80px;
 }
 
 .notif-inner {
@@ -1387,7 +1397,7 @@ body {
 
 /* ─── Loan Contracts Section ─── */
 .contracts-section {
-  padding: 80px 40px 120px;
+  padding: 80px 40px 80px;
 }
 
 .contracts-inner {
@@ -1429,13 +1439,13 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: #5EC47E;
+  color: #54A6CF;
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
 .contracts-learn-more:hover {
-  color: #3a9956;
+  color: #3a8ab5;
 }
 
 .contracts-right {
@@ -1580,7 +1590,7 @@ body {
 
 .trusted-label {
   font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: #A8A7A5;
   text-transform: uppercase;
@@ -1610,7 +1620,7 @@ body {
 .trusted-track {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 56px;
   white-space: nowrap;
   animation: trusted-scroll 25s linear infinite;
   width: max-content;
@@ -1624,8 +1634,8 @@ body {
 }
 
 .trusted-logo svg {
-  width: 22px;
-  height: 22px;
+  width: auto;
+  height: 44px;
   flex-shrink: 0;
   opacity: 0.5;
 }
@@ -1645,7 +1655,7 @@ body {
 
 /* ─── Testimonials Section ─── */
 .testimonials-section {
-  padding: 80px 40px 120px;
+  padding: 80px 40px 80px;
   text-align: center;
 }
 
@@ -1730,17 +1740,16 @@ body {
 }
 
 .card-header {
-  display: grid;
-  grid-template-columns: 44px 1fr;
-  grid-template-rows: auto auto;
-  gap: 2px 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
   margin-bottom: 16px;
 }
 
 .avatar-wrap {
-  grid-row: 1 / 3;
   width: 44px;
   height: 44px;
+  flex-shrink: 0;
   position: relative;
 }
 
@@ -1773,7 +1782,6 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: #1A1918;
-  align-self: end;
 }
 
 .card-handle {
@@ -1801,7 +1809,7 @@ body {
 
 /* ─── Founder Quote Section ─── */
 .founder-section {
-  padding: 100px 40px 120px;
+  padding: 80px 40px 100px;
   text-align: center;
 }
 
@@ -2009,6 +2017,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #787776;
+  white-space: nowrap;
 }
 
 /* ─── About Hero Animation ─── */
@@ -2397,7 +2406,7 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
   font-weight: 600;
-  color: #5EC47E;
+  color: #7EC0EA;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 16px;
@@ -2422,7 +2431,7 @@ body {
 }
 
 .faq-context-link:hover {
-  color: #5EC47E;
+  color: #7EC0EA;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
@@ -2538,7 +2547,7 @@ body {
 }
 
 .faq-question:hover {
-  color: #5EC47E;
+  color: #54A6CF;
 }
 
 .faq-chevron {
@@ -2570,6 +2579,95 @@ body {
   color: #5C5B5A;
 }
 
+/* FAQ Redesigned Sections */
+.faq-section-block {
+  margin-bottom: 48px;
+}
+
+.faq-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #1A1918;
+  margin-bottom: 16px;
+}
+
+.faq-questions-box {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 8px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Two-column row layout */
+.faq-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.faq-row-reverse {
+  grid-template-columns: 1fr 240px;
+}
+
+.faq-row-reverse .faq-row-side {
+  order: 2;
+}
+
+.faq-row-reverse .faq-row-main {
+  order: 1;
+}
+
+.faq-row-side {
+  position: sticky;
+  top: 100px;
+}
+
+.faq-section-block .faq-context-link {
+  background: #54A6CF;
+  border-color: #54A6CF;
+  color: #fff;
+  margin-top: 16px;
+  display: inline-flex;
+  width: auto;
+}
+
+.faq-section-block .faq-context-link:hover {
+  background: #3a8ab5;
+  border-color: #3a8ab5;
+  color: #fff;
+}
+
+.faq-section-block .faq-context-link svg {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.faq-section-block .faq-context-link:hover svg {
+  color: #fff;
+}
+
+.faq-questions-box .faq-question:hover {
+  color: #54A6CF;
+}
+
+@media (max-width: 768px) {
+  .faq-row,
+  .faq-row-reverse {
+    grid-template-columns: 1fr;
+  }
+  .faq-row-reverse .faq-row-side {
+    order: 0;
+  }
+  .faq-row-reverse .faq-row-main {
+    order: 0;
+  }
+  .faq-row-side {
+    position: static;
+  }
+}
+
 .faq-cta {
   text-align: center;
   padding-top: 48px;
@@ -2586,7 +2684,7 @@ body {
   line-height: 1.15;
   color: #1A1918;
   letter-spacing: -0.02em;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .faq-cta-subtitle {
@@ -2675,6 +2773,7 @@ body {
   padding: 60px 40px 40px;
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .help-hero-inner {
@@ -2739,7 +2838,7 @@ body {
 .lh-feature-heading {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
-  font-style: italic;
+  font-style: normal;
   font-size: clamp(28px, 3.5vw, 42px);
   line-height: 1.2;
   color: #1A1918;
@@ -2898,7 +2997,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #5EC47E;
+  color: #7EC0EA;
   padding: 16px 20px 0;
 }
 
@@ -2968,7 +3067,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #5EC47E;
+  color: #7EC0EA;
   background: rgba(94, 196, 126, 0.12);
   border-radius: 20px;
   padding: 5px 14px;
@@ -3298,7 +3397,7 @@ a.help-card {
 
 .help-accordion-item.open .help-accordion-chevron {
   transform: rotate(180deg);
-  color: #5EC47E;
+  color: #7EC0EA;
 }
 
 .help-accordion-item.open .help-accordion-btn {
@@ -3401,7 +3500,7 @@ a.help-card {
 }
 
 .legal-content a {
-  color: #3a9956;
+  color: #54A6CF;
   text-decoration: underline;
   text-decoration-color: rgba(94, 196, 126, 0.4);
   text-underline-offset: 2px;
@@ -3513,7 +3612,7 @@ a.help-card {
   height: 24px;
   border-radius: 50%;
   background: rgba(94, 196, 126, 0.12);
-  color: #3a9956;
+  color: #54A6CF;
   font-family: 'DM Sans', sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -3686,7 +3785,7 @@ a.help-card {
   height: 28px;
   border-radius: 50%;
   background: rgba(94, 196, 126, 0.12);
-  color: #3a9956;
+  color: #54A6CF;
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
   font-weight: 600;
@@ -3926,7 +4025,7 @@ a.help-card {
     transition: border-color 0.15s;
   }
   .mobile-submenu a:hover {
-    border-left-color: #5EC47E;
+    border-left-color: #7EC0EA;
   }
 
   /* Bottom CTA */
@@ -4085,7 +4184,7 @@ a.help-card {
     transition: background 0.2s, transform 0.2s;
   }
   .carousel-pills .pill.active {
-    background: #5EC47E;
+    background: #7EC0EA;
     transform: scale(1.25);
   }
   .features-grid {
@@ -4123,7 +4222,7 @@ a.help-card {
     grid-template-columns: 1fr;
   }
   .dashboard-section {
-    padding: 0 20px 100px;
+    padding: 0 20px 80px;
   }
   .about-values {
     grid-template-columns: 1fr;
@@ -4133,7 +4232,7 @@ a.help-card {
     padding: 32px 20px;
   }
   .everyday-section {
-    padding: 60px 20px 80px;
+    padding: 80px 20px 80px;
   }
   .everyday-features {
     grid-template-columns: 1fr 1fr;
@@ -4297,7 +4396,7 @@ a.help-card {
 }
 
 .loan-compare-peer {
-  border-left: 4px solid #5EC47E;
+  border-left: 4px solid #7EC0EA;
 }
 
 .loan-compare-trad {
@@ -4404,7 +4503,7 @@ a.help-card {
   height: 32px;
   border-radius: 50%;
   background: rgba(94, 196, 126, 0.12);
-  color: #3a9956;
+  color: #54A6CF;
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -4872,7 +4971,7 @@ a.help-card {
 /* ── Fan-out grid container ── */
 .memo-principles-grid {
   position: relative;
-  height: 360px;
+  height: 320px;
   overflow: visible;
   margin-top: 48px;
 }
@@ -4966,7 +5065,7 @@ a.help-card {
 .memo-principles-section {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 40px 160px;
+  padding: 0 40px 20px;
   overflow: visible;
 }
 
@@ -4981,6 +5080,32 @@ a.help-card {
   margin: 0 auto;
   padding: 0 40px 80px;
   perspective: 1200px;
+}
+
+.memo-cta {
+  text-align: center;
+  padding: 60px 40px 80px;
+  border-top: 1px solid #EBEBEA;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.memo-cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #1A1918;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.memo-cta-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
+  color: #6B6965;
+  line-height: 1.6;
+  margin-bottom: 32px;
 }
 
 .memo-card-wrapper {
@@ -5170,8 +5295,8 @@ a.help-card {
 .doc-feature-heading {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(32px, 4vw, 48px);
-  font-weight: 500;
-  font-style: italic;
+  font-weight: 600;
+  font-style: normal;
   line-height: 1.15;
   color: #1A1918;
   letter-spacing: -0.02em;
@@ -5211,29 +5336,7 @@ a.help-card {
 }
 
 .doc-accent {
-  position: absolute;
-  width: 100px;
-  height: 140px;
-  border-radius: 8px;
-  z-index: 0;
-}
-
-.doc-accent-green {
-  background: #5EC47E;
-  top: -20px;
-  right: 40px;
-}
-
-.doc-accent-orange {
-  background: #E8913A;
-  bottom: -20px;
-  left: 40px;
-}
-
-.doc-accent-blue {
-  background: #4A90D9;
-  top: -20px;
-  left: 40px;
+  display: none;
 }
 
 .doc-glass-card {
@@ -5536,7 +5639,7 @@ a.help-card {
 .doc-cta-section .founder-btn,
 .faq-cta .founder-btn,
 .faq-help-btn {
-  margin-top: 56px;
+  margin-top: 24px;
 }
 
 /* ─── Nav-to-page-title spacing (Desktop) ─── */
@@ -5640,74 +5743,68 @@ a.help-card {
 }
 
 /* ─── About — Stories & Founder Memo Cards ─── */
+/* About Story Card */
+.about-story-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 48px 52px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.about-story-card p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #3A3938;
+  margin-bottom: 20px;
+}
+
+.about-story-card p:first-child,
+.about-story-card p:nth-child(4) {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1A1918;
+  line-height: 1.4;
+}
+
+.about-story-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .about-story-card {
+    padding: 28px 24px;
+  }
+}
+
+/* About Explore Buttons */
 .about-explore-section {
   padding: 0 40px 80px;
   max-width: 960px;
   margin: 0 auto;
 }
 
-.about-explore-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+.about-explore-tight {
+  padding-top: 0;
+  padding-bottom: 60px;
 }
 
-.about-explore-card {
+.about-explore-btns {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background: #fff;
-  border: 1px solid rgba(26, 25, 24, 0.08);
-  border-radius: 16px;
-  padding: 32px 36px;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.about-explore-card:hover {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09);
-  transform: translateY(-2px);
-}
-
-.about-explore-label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #5EC47E;
-}
-
-.about-explore-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 26px;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #1A1918;
-}
-
-.about-explore-desc {
-  font-size: 14px;
-  line-height: 1.65;
-  color: rgba(26, 25, 24, 0.55);
-  flex: 1;
-}
-
-.about-explore-link {
-  font-size: 13px;
-  font-weight: 600;
-  color: #1A1918;
-  border-bottom: 1.5px solid rgba(26, 25, 24, 0.2);
-  padding-bottom: 1px;
-  align-self: flex-start;
-  margin-top: 6px;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 640px) {
-  .about-explore-inner {
-    grid-template-columns: 1fr;
+  .about-explore-btns {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -6013,8 +6110,8 @@ a.help-card {
 }
 
 .lh-learn-more:hover {
-  color: #5EC47E;
-  border-color: #5EC47E;
+  color: #7EC0EA;
+  border-color: #7EC0EA;
 }
 
 /* ─── Loan Help Responsive — Pros/Cons & Scenarios ─── */
