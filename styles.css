@@ -1057,16 +1057,39 @@ body {
 .ldd-stat-value { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; color: #1A1918; }
 .ldd-stat-sub { font-family: 'DM Sans', sans-serif; font-size: 8px; color: #787776; margin-top: 1px; }
 .ldd-chart-wrap { display: flex; flex-direction: column; gap: 0; }
-.ldd-chart-bars { display: flex; align-items: flex-end; gap: 4px; height: 72px; }
-.ldd-chart-col { display: flex; flex-direction: column; align-items: center; flex: 1; height: 100%; justify-content: flex-end; }
+.ldd-chart-area { display: flex; align-items: flex-end; gap: 6px; }
+.ldd-chart-yaxis { display: flex; flex-direction: column; justify-content: space-between; height: 80px; padding-right: 4px; flex-shrink: 0; }
+.ldd-chart-yaxis span { font-family: 'DM Sans', sans-serif; font-size: 9px; color: #787776; }
+.ldd-chart-main { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.ldd-chart-bars { display: flex; align-items: flex-end; gap: 4px; height: 80px; }
+.ldd-chart-labels { display: flex; gap: 4px; }
+.ldd-chart-col { flex: 1; }
 .ldd-chart-bar { width: 100%; border-radius: 3px 3px 0 0; }
 .ldd-chart-bar--done { background: #03ACEA; }
 .ldd-chart-bar--proj { background: rgba(84,166,207,0.28); border: 1px dashed rgba(84,166,207,0.5); border-bottom: none; box-sizing: border-box; }
+.ldd-chart-bar-partial { position: relative; width: 100%; }
+.ldd-chart-bar-partial-outer { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: rgba(3,172,234,0.08); border: 1px dashed rgba(3,172,234,0.2); box-sizing: border-box; }
+.ldd-chart-bar-partial-inner { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: #03ACEA; }
 .ldd-chart-lbl { font-family: 'DM Sans', sans-serif; font-size: 8px; color: #787776; margin-top: 4px; text-align: center; }
 .ldd-chart-lbl--active { color: #54A6CF; }
 .ldd-chart-legend { display: flex; align-items: center; gap: 10px; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 8px; margin-top: 8px; justify-content: center; flex-wrap: wrap; }
 .ldd-legend-item { display: flex; align-items: center; gap: 4px; font-family: 'DM Sans', sans-serif; font-size: 9px; color: #4B4A48; }
 .ldd-legend-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+.ldd-doc-btns { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 4px 0; }
+.ldd-doc-btn { display: inline-flex; align-items: center; gap: 6px; background: #1A1918; border-radius: 9px; padding: 7px 12px; cursor: default; }
+.ldd-doc-btn-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; color: white; }
+.ldd-doc-btn-i { width: 14px; height: 14px; border-radius: 50%; background: white; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ldd-doc-btn-i span { font-size: 9px; font-weight: 800; color: #1A1918; line-height: 1; }
+.ldd-pmt-circle-row { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 10px; background: rgba(0,0,0,0.03); }
+.ldd-pmt-circle-row + .ldd-pmt-circle-row { margin-top: 6px; }
+.ldd-pmt-info { flex: 1; min-width: 0; }
+.ldd-pmt-info-title { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; color: #4B4A48; margin: 0; }
+.ldd-pmt-info-paid { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; color: #15803D; margin: 1px 0 0; }
+.ldd-pmt-info-due { font-family: 'DM Sans', sans-serif; font-size: 10px; color: #4B4A48; margin: 1px 0 0; }
+.ldd-pmt-info-remaining { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; color: #03ACEA; margin: 1px 0 0; }
+.ldd-pmt-status { flex-shrink: 0; padding: 4px 10px; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600; }
+.ldd-pmt-status--done { background: rgba(22,163,74,0.18); color: #16A34A; }
+.ldd-pmt-status--upcoming { background: rgba(0,0,0,0.03); color: #787776; }
 .ldd-activity-list { display: flex; flex-direction: column; }
 .ldd-activity-row { display: flex; gap: 8px; align-items: flex-start; padding-bottom: 8px; }
 .ldd-activity-row:last-child { padding-bottom: 0; }
