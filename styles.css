@@ -9152,3 +9152,175 @@ a.help-card {
     opacity: 0.8;
   }
 }
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE FIXES — collected responsive overrides
+   ═══════════════════════════════════════════════════════ */
+
+/* ── 1  Digital Records: activity box fits mobile screen ── */
+@media (max-width: 600px) {
+  .vony-activity-box {
+    width: 100%;
+    max-width: 100%;
+  }
+  .vony-activity-header,
+  .vony-activity-row {
+    grid-template-columns: 60px 1fr 90px;
+  }
+  .vony-activity-desc { font-size: 11px; }
+  .vony-activity-date { font-size: 10px; }
+  .vony-activity-col-label { font-size: 9px; }
+  .vony-activity-badge { font-size: 9px; padding: 2px 6px; }
+}
+
+/* ── 2  FAQ: tighter gap between blue link and white boxes ── */
+@media (max-width: 768px) {
+  .faq-section-block.faq-row,
+  .faq-section-block.faq-row-reverse {
+    gap: 8px;
+  }
+  .faq-row-side { margin-bottom: 0; }
+}
+
+/* ── 3  About page: subtitle wraps to two lines on mobile ── */
+@media (max-width: 900px) {
+  .about-hero-subtitle {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* ── 4  Founder Memo: ensure subtitle is centered on mobile ── */
+@media (max-width: 600px) {
+  .about-hero-subtitle {
+    white-space: normal;
+    text-align: center;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ── 5  Apps: icons scale with their image ── */
+/* Desktop badges scale with viewport */
+.apps-desktop-badge {
+  width: clamp(36px, 6vw, 72px);
+  height: clamp(36px, 6vw, 72px);
+  border-radius: clamp(8px, 1vw, 14px);
+}
+.apps-desktop-badge-os {
+  bottom: clamp(-20px, -2.5vw, -10px);
+  left: clamp(-20px, -2.5vw, -10px);
+}
+.apps-desktop-badge-windows {
+  right: clamp(-20px, -2.5vw, -10px);
+}
+
+/* Phone badges scale with container */
+.apps-phone-badge {
+  width: clamp(28px, 15%, 52px);
+  height: clamp(28px, 15%, 52px);
+  border-radius: clamp(8px, 1vw, 12px);
+}
+.apps-phone-badge-gplay  { right: clamp(-18px, -8%, -10px); }
+.apps-phone-badge-appstore { left: clamp(-18px, -8%, -10px); }
+.apps-phone-badge-ios     { right: clamp(-18px, -8%, -10px); }
+
+/* Header platform icons scale */
+.apps-header-icon {
+  width: clamp(36px, 4.5vw, 56px);
+  height: clamp(36px, 4.5vw, 56px);
+  border-radius: clamp(8px, 1.2vw, 14px);
+}
+
+/* Desktop notification floater scales down on smaller screens */
+@media (max-width: 900px) {
+  .apps-desktop-notif-floater {
+    transform: scale(0.8);
+    transform-origin: top left;
+    top: 12px;
+    left: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .apps-desktop-notif-floater {
+    transform: scale(0.65);
+    top: 8px;
+    left: 8px;
+  }
+}
+
+/* Mobile notification floater scales */
+@media (max-width: 600px) {
+  .apps-notif-floater {
+    transform: scale(0.8);
+    transform-origin: bottom left;
+  }
+}
+
+/* ── 6  Learn: smaller blue-border preview cards on mobile ── */
+@media (max-width: 600px) {
+  .learn-preview-cards-wrap {
+    padding: 14px 10px 20px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .learn-preview-card {
+    padding: 12px 14px;
+  }
+  .learn-card-title { font-size: 13px; }
+  .learn-card-desc { font-size: 11px; line-height: 1.5; }
+}
+
+/* ── 7  Loan Help: center and shrink "When Traditional Loans" cards ── */
+@media (max-width: 900px) {
+  .lh-fan-grid {
+    align-items: center;
+    gap: 12px;
+  }
+  .lh-fan-card {
+    max-width: 380px;
+    width: 100%;
+  }
+  .lh-fan-card-inner {
+    padding: 14px 18px;
+  }
+  .lh-fan-desc {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+}
+
+/* ── 8  Loan Help: pros/cons cards stack under heading on mobile ── */
+@media (max-width: 600px) {
+  .lh-pros-cons-wrap {
+    gap: 0;
+  }
+  .lh-pros-card--friends,
+  .lh-pros-card--traditional {
+    max-width: 280px;
+  }
+}
+
+/* ── 9  Loan Help: overlay cards scale with image ── */
+.lh-overlay-card {
+  width: clamp(130px, 20vw, 184px);
+}
+.lh-overlay-card .lh-ov-inner {
+  padding: clamp(8px, 1.2vw, 14px);
+}
+.lh-overlay-card .lh-ov-name {
+  font-size: clamp(11px, 1.4vw, 15px);
+}
+.lh-overlay-card .lh-ov-detail {
+  font-size: clamp(8px, 1vw, 11px);
+}
+.lh-overlay-card .lh-ov-btn {
+  font-size: clamp(8px, 1vw, 11px);
+  padding: clamp(3px, 0.4vw, 6px) clamp(8px, 1vw, 14px);
+}
+@media (max-width: 600px) {
+  .lh-overlay-card--1 { right: -10px; }
+  .lh-overlay-card--2 { right: -10px; }
+}
