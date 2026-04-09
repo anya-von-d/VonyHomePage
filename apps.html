@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&family=Kristi&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=44">
+  <link rel="stylesheet" href="styles.css?v=45">
   <link rel="icon" type="image/png" href="Images/favicon.png">
 </head>
 <body>
@@ -155,29 +155,28 @@
     </ul>
   </div>
 
-  <!-- Vony for Desktop — at the very top -->
+  <!-- Page title hero -->
+  <section class="about-hero">
+    <h1 class="about-hero-title">Apps</h1>
+    <p class="about-hero-subtitle">Coming to iPhone, Android, macOS, and Windows.</p>
+  </section>
+
+  <!-- Vony for Desktop -->
   <section class="apps-desktop-stacked-section">
-    <!-- Header: icons + title + subtitle + badge — above image -->
+    <!-- Four platform icons above image -->
     <div class="apps-desktop-header">
       <div class="apps-header-icons">
         <img src="Images/icons/os.png" alt="macOS" class="apps-header-icon">
         <img src="Images/icons/windows.png" alt="Windows" class="apps-header-icon">
-      </div>
-      <div class="apps-header-center">
-        <h2 class="apps-detail-heading"><em>Vony</em> for Desktop</h2>
-        <p class="apps-detail-subtitle">Your complete lending dashboard, designed for macOS and Windows.</p>
-      </div>
-      <div class="apps-header-icons">
         <img src="Images/icons/appStore.png" alt="App Store" class="apps-header-icon">
         <img src="Images/icons/googlePlayStore.png" alt="Google Play" class="apps-header-icon">
       </div>
     </div>
-    <!-- Desktop screenshot with badge icons -->
+    <!-- Desktop screenshot -->
     <div class="apps-desktop-img-wrap">
       <img src="Images/desktop.png" alt="Vony desktop dashboard" class="apps-desktop-main-img">
       <img src="Images/icons/os.png" alt="macOS" class="apps-desktop-badge apps-desktop-badge-os">
       <img src="Images/icons/windows.png" alt="Windows" class="apps-desktop-badge apps-desktop-badge-windows">
-      <!-- Desktop notification floater — top left corner -->
       <div class="apps-desktop-notif-floater">
         <img src="Images/favicon.png" alt="Vony" class="apps-notif-icon">
         <div class="apps-notif-body">
@@ -188,6 +187,11 @@
           <span class="apps-notif-msg">Jordan accepted your loan offer</span>
         </div>
       </div>
+    </div>
+    <!-- Title and subtitle below image -->
+    <div class="apps-desktop-below-title">
+      <h2 class="apps-detail-heading"><em>Vony</em> for Desktop</h2>
+      <p class="apps-detail-subtitle">Your complete lending dashboard, designed for macOS and Windows.</p>
     </div>
   </section>
 
@@ -200,17 +204,21 @@
         <span class="apps-coming-soon">Coming Soon</span>
       </div>
       <div class="apps-detail-visual">
-        <div class="doc-accent doc-accent-green"></div>
-        <div class="apps-mobile-notif-wrap">
-          <div class="apps-mobile-mockup-card">
-            <img src="Images/mobile.png" alt="Vony mobile app dashboard" style="width:100%;display:block;border-radius:18px;">
+        <div class="apps-mobile-visual-wrap">
+          <!-- Store icons above the phone frame -->
+          <div class="apps-phone-icons-above">
+            <img src="Images/icons/googlePlayStore.png" alt="Google Play" class="apps-phone-icon-above">
+            <img src="Images/icons/appStore.png" alt="App Store" class="apps-phone-icon-above">
+            <img src="Images/icons/ios.png" alt="iOS" class="apps-phone-icon-above">
           </div>
-          <!-- Store icons overlaid on phone -->
-          <img src="Images/icons/googlePlayStore.png" alt="Google Play Store" class="apps-phone-badge apps-phone-badge-gplay">
-          <img src="Images/icons/appStore.png" alt="App Store" class="apps-phone-badge apps-phone-badge-appstore">
-          <img src="Images/icons/ios.png" alt="iOS" class="apps-phone-badge apps-phone-badge-ios">
+          <!-- iPhone frame -->
+          <div class="apps-iphone-frame">
+            <div class="apps-iphone-screen">
+              <img src="Images/mobile.png" alt="Vony mobile app dashboard">
+            </div>
+          </div>
           <!-- Notification floater -->
-          <div class="apps-notif-floater">
+          <div class="apps-notif-floater apps-notif-floater--phone">
             <img src="Images/favicon.png" alt="Vony" class="apps-notif-icon">
             <div class="apps-notif-body">
               <div class="apps-notif-header">

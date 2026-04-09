@@ -9434,3 +9434,135 @@ a.help-card {
     order: 1;
   }
 }
+
+/* ── Apps page: title below desktop image ── */
+.apps-desktop-below-title {
+  text-align: center;
+  max-width: 520px;
+  margin: 44px auto 0;
+}
+
+.apps-desktop-below-title .apps-detail-heading {
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 10px;
+}
+
+.apps-desktop-below-title .apps-detail-subtitle {
+  margin: 0;
+  color: rgba(26, 25, 24, 0.55);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ── Apps page: desktop header four icons only ── */
+.apps-desktop-header {
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.apps-desktop-header .apps-header-icons {
+  gap: 18px;
+}
+
+/* ── Apps page: mobile iPhone frame ── */
+.apps-mobile-visual-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.apps-phone-icons-above {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.apps-phone-icon-above {
+  width: clamp(36px, 4vw, 48px);
+  height: clamp(36px, 4vw, 48px);
+  border-radius: 11px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.07);
+  object-fit: contain;
+}
+
+.apps-iphone-frame {
+  position: relative;
+  width: clamp(180px, 22vw, 230px);
+  background: #1C1B1A;
+  border-radius: 44px;
+  padding: 52px 8px 0;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.07),
+    0 0 0 1px rgba(0,0,0,0.3),
+    0 28px 64px rgba(0,0,0,0.22),
+    0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* Dynamic island */
+.apps-iphone-frame::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 20px;
+  background: #111;
+  border-radius: 12px;
+  z-index: 10;
+}
+
+/* Volume button (left side) */
+.apps-iphone-frame::after {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 100px;
+  width: 3px;
+  height: 40px;
+  background: #2e2d2c;
+  border-radius: 2px 0 0 2px;
+}
+
+.apps-iphone-screen {
+  position: relative;
+  border-radius: 36px 36px 0 0;
+  overflow: hidden;
+}
+
+.apps-iphone-screen img {
+  width: 100%;
+  display: block;
+}
+
+/* Bottom fade into page background */
+.apps-iphone-screen::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background: linear-gradient(to bottom, rgba(245,244,240,0) 0%, #F5F4F0 80%);
+  pointer-events: none;
+}
+
+/* Reposition notif floater for new phone layout */
+.apps-notif-floater--phone {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  margin-top: -16px;
+  align-self: flex-start;
+  margin-left: -20px;
+}
+
+@media (max-width: 900px) {
+  .apps-notif-floater--phone {
+    margin-left: 0;
+    align-self: center;
+  }
+}
