@@ -394,47 +394,188 @@
   <section class="dashboard-section" id="product">
     <div class="dashboard-container">
       <div class="dashboard-grid">
-        <!-- Row 1 -->
-        <div class="card card-small">
-          <div class="card-label">Loan Summary</div>
-        </div>
-        <div class="card card-wide">
-          <div class="card-label">Payment Schedule</div>
-        </div>
-        <div class="card card-small">
-          <div class="card-label">Balance</div>
-        </div>
-        <div class="card card-small">
-          <div class="card-label">Friends</div>
-        </div>
 
-        <!-- Row 2 -->
-        <div class="card card-tall">
-          <div class="card-label">Activity Feed</div>
-        </div>
-        <div class="card card-wide">
-          <div class="card-label">Lending History</div>
-        </div>
-        <div class="card card-small">
-          <div class="card-label">Reminders</div>
-        </div>
-        <div class="card card-tall">
-          <div class="card-label">Repayment Chart</div>
-        </div>
+        <!-- Portal dashboard grey box -->
+        <div class="pdb-box">
+          <div class="pdb-layout">
 
-        <!-- Row 3 -->
-        <div class="card card-small">
-          <div class="card-label">Notifications</div>
-        </div>
-        <div class="card card-small">
-          <div class="card-label">Trust Score</div>
-        </div>
-        <div class="card card-wide">
-          <div class="card-label">Agreements</div>
-        </div>
-        <div class="card card-small">
-          <div class="card-label">Quick Actions</div>
-        </div>
+            <!-- LEFT SECTION -->
+            <div class="pdb-left">
+
+              <!-- Inbox bar -->
+              <div class="pdb-inbox">
+                <div class="pdb-inbox-icon">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                </div>
+                <span class="pdb-inbox-text">You're all caught up</span>
+              </div>
+
+              <!-- Next payment due + Next payment incoming -->
+              <div class="pdb-pair">
+                <!-- Next Payment Due -->
+                <div class="pdb-card pdb-card--blue">
+                  <div class="pdb-card-header pdb-card-header--blue">NEXT PAYMENT DUE</div>
+                  <div class="pdb-card-body">
+                    <div class="pdb-card-inner">
+                      <div class="pdb-date-row">
+                        <span class="pdb-date">Apr 15</span>
+                        <span class="pdb-badge pdb-badge--neutral">7d</span>
+                      </div>
+                      <div class="pdb-sub">$150 to Alex</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Next Payment Incoming -->
+                <div class="pdb-card pdb-card--blue">
+                  <div class="pdb-card-header pdb-card-header--blue">NEXT PAYMENT INCOMING</div>
+                  <div class="pdb-card-body">
+                    <div class="pdb-card-inner">
+                      <div class="pdb-date-row">
+                        <span class="pdb-date">Apr 20</span>
+                        <span class="pdb-badge pdb-badge--neutral">12d</span>
+                      </div>
+                      <div class="pdb-sub">$200 from Sam</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Upcoming payments + Loans over time -->
+              <div class="pdb-pair">
+                <!-- Upcoming Payments -->
+                <div class="pdb-card">
+                  <div class="pdb-card-header">UPCOMING PAYMENTS <span class="pdb-header-right">Full schedule</span></div>
+                  <div class="pdb-card-body pdb-card-body--pad">
+                    <div class="pdb-upcoming-row">
+                      <span class="pdb-badge pdb-badge--neutral">7d</span>
+                      <div class="pdb-upcoming-info"><div class="pdb-upcoming-name">Pay Alex</div><div class="pdb-upcoming-desc">for rent</div></div>
+                      <span class="pdb-upcoming-amt">-$150</span>
+                    </div>
+                    <div class="pdb-upcoming-row">
+                      <span class="pdb-badge pdb-badge--late">2d late</span>
+                      <div class="pdb-upcoming-info"><div class="pdb-upcoming-name">Jordan pays you</div><div class="pdb-upcoming-desc">Apr 5</div></div>
+                      <span class="pdb-upcoming-amt pdb-upcoming-amt--in">+$80</span>
+                    </div>
+                    <div class="pdb-upcoming-row">
+                      <span class="pdb-badge pdb-badge--neutral">12d</span>
+                      <div class="pdb-upcoming-info"><div class="pdb-upcoming-name">Sam pays you</div><div class="pdb-upcoming-desc">Apr 20</div></div>
+                      <span class="pdb-upcoming-amt pdb-upcoming-amt--in">+$200</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Loans Over Time -->
+                <div class="pdb-card">
+                  <div class="pdb-card-header">LOANS OVER TIME <span class="pdb-header-right">6 months</span></div>
+                  <div class="pdb-card-body pdb-card-body--pad">
+                    <div class="pdb-chart">
+                      <div class="pdb-chart-bars">
+                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:35%"></div><div class="pdb-bar pdb-bar--owe" style="height:20%"></div></div>
+                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:55%"></div><div class="pdb-bar pdb-bar--owe" style="height:30%"></div></div>
+                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:70%"></div><div class="pdb-bar pdb-bar--owe" style="height:45%"></div></div>
+                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:60%"></div><div class="pdb-bar pdb-bar--owe" style="height:55%"></div></div>
+                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:80%"></div><div class="pdb-bar pdb-bar--owe" style="height:35%"></div></div>
+                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:65%"></div><div class="pdb-bar pdb-bar--owe" style="height:25%"></div></div>
+                      </div>
+                      <div class="pdb-chart-labels">
+                        <span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span class="pdb-chart-label--current">Apr</span>
+                      </div>
+                      <div class="pdb-chart-legend">
+                        <span class="pdb-legend-item"><span class="pdb-legend-dot pdb-legend-dot--owed"></span>Owed to you</span>
+                        <span class="pdb-legend-item"><span class="pdb-legend-dot pdb-legend-dot--owe"></span>You owe</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Your Active Loans -->
+              <div class="pdb-card">
+                <div class="pdb-card-header">YOUR ACTIVE LOANS <span class="pdb-header-right">Manage</span></div>
+                <div class="pdb-card-body pdb-card-body--pad">
+                  <div class="pdb-loan-row">
+                    <div class="pdb-loan-top"><span class="pdb-loan-label">You lent Alex $600</span><span class="pdb-loan-pct">75%</span></div>
+                    <div class="pdb-progress-track pdb-progress-track--lent"><div class="pdb-progress-fill pdb-progress-fill--lent" style="width:75%"></div></div>
+                    <div class="pdb-loan-detail">$450 of $600 repaid</div>
+                  </div>
+                  <div class="pdb-loan-row">
+                    <div class="pdb-loan-top"><span class="pdb-loan-label">Jordan lent you $500</span><span class="pdb-loan-pct">30%</span></div>
+                    <div class="pdb-progress-track pdb-progress-track--borrow"><div class="pdb-progress-fill pdb-progress-fill--borrow" style="width:30%"></div></div>
+                    <div class="pdb-loan-detail">$150 of $500 paid back</div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /pdb-left -->
+
+            <!-- RIGHT COLUMN -->
+            <div class="pdb-right">
+
+              <!-- Owed to You -->
+              <div class="pdb-card">
+                <div class="pdb-card-header">OWED TO YOU</div>
+                <div class="pdb-card-body">
+                  <div class="pdb-card-inner">
+                    <div class="pdb-amount pdb-amount--blue">$850</div>
+                    <div class="pdb-sub">between 2 loans</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- You Owe -->
+              <div class="pdb-card">
+                <div class="pdb-card-header">YOU OWE</div>
+                <div class="pdb-card-body">
+                  <div class="pdb-card-inner">
+                    <div class="pdb-amount pdb-amount--dark">$350</div>
+                    <div class="pdb-sub">between 1 loan</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- How April is Going -->
+              <div class="pdb-card">
+                <div class="pdb-card-header">HOW APRIL IS GOING</div>
+                <div class="pdb-card-body pdb-card-body--pad">
+                  <div class="pdb-month-grid">
+                    <div class="pdb-month-col pdb-month-col--left">
+                      <div class="pdb-month-label">RECEIVED</div>
+                      <div class="pdb-month-amt pdb-month-amt--blue">$200</div>
+                      <div class="pdb-mini-track pdb-mini-track--blue"><div class="pdb-mini-fill pdb-mini-fill--blue" style="width:50%"></div></div>
+                      <div class="pdb-month-exp">of $400 expected</div>
+                    </div>
+                    <div class="pdb-month-col pdb-month-col--right">
+                      <div class="pdb-month-label">PAID OUT</div>
+                      <div class="pdb-month-amt pdb-month-amt--dark">$150</div>
+                      <div class="pdb-mini-track pdb-mini-track--light"><div class="pdb-mini-fill pdb-mini-fill--light" style="width:50%"></div></div>
+                      <div class="pdb-month-exp">of $300 expected</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recent Activity -->
+              <div class="pdb-card">
+                <div class="pdb-card-header">RECENT ACTIVITY <span class="pdb-header-right">View all</span></div>
+                <div class="pdb-card-body pdb-card-body--pad">
+                  <div class="pdb-activity-row">
+                    <div class="pdb-activity-icon" style="background:rgba(84,166,207,0.12)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#54A6CF" stroke-width="2" stroke-linecap="round"><polyline points="7 13 12 18 17 13"></polyline><line x1="12" y1="18" x2="12" y2="6"></line></svg></div>
+                    <div class="pdb-activity-info"><div class="pdb-activity-desc">You made a $150 payment to Alex</div><div class="pdb-activity-date">Apr 1</div></div>
+                  </div>
+                  <div class="pdb-activity-row">
+                    <div class="pdb-activity-icon" style="background:rgba(22,163,74,0.12)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                    <div class="pdb-activity-info"><div class="pdb-activity-desc">Sam accepted your $200 loan</div><div class="pdb-activity-date">Mar 28</div></div>
+                  </div>
+                  <div class="pdb-activity-row">
+                    <div class="pdb-activity-icon" style="background:rgba(124,58,237,0.12)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><polyline points="17 11 12 6 7 11"></polyline><line x1="12" y1="6" x2="12" y2="18"></line></svg></div>
+                    <div class="pdb-activity-info"><div class="pdb-activity-desc">Received $80 payment from Jordan</div><div class="pdb-activity-date">Mar 25</div></div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /pdb-right -->
+          </div><!-- /pdb-layout -->
+        </div><!-- /pdb-box -->
+
       </div>
     </div>
   </section>

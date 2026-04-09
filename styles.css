@@ -529,16 +529,13 @@ body {
 .dashboard-container {
   max-width: 1100px;
   margin: 0 auto;
-  min-height: 150vh;
   overflow: visible;
 }
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   gap: 16px;
-  position: sticky;
-  top: 100px;
 }
 
 .card {
@@ -582,6 +579,461 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 16px;
+}
+
+/* ─── Portal Dashboard Box (homepage) ─── */
+.pdb-box {
+  grid-column: 1 / -1;
+  background: #E5E2DF;
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.pdb-layout {
+  display: grid;
+  grid-template-columns: 2fr 0.82fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.pdb-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pdb-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Inbox bar */
+.pdb-inbox {
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+}
+
+.pdb-inbox-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: rgba(3,172,234,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pdb-inbox-text {
+  font-size: 13px;
+  color: #787776;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Paired row */
+.pdb-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Card shell */
+.pdb-card {
+  background: #F4F4F5;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0px 20px 40px rgba(0,0,0,0.08), 0px 3px 10px rgba(0,0,0,0.12);
+}
+
+.pdb-card--blue {
+  background: #03ACEA;
+}
+
+.pdb-card-header {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  color: #9B9A98;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pdb-card-header--blue {
+  color: rgba(255,255,255,0.75);
+}
+
+.pdb-header-right {
+  font-size: 9px;
+  font-weight: 500;
+  color: #9B9A98;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.pdb-card-body {
+  background: #fff;
+  margin: 0 5px 5px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pdb-card-body--pad {
+  padding: 12px 14px 14px;
+}
+
+.pdb-card-inner {
+  padding: 14px 14px 18px;
+  position: relative;
+}
+
+/* Date + badge row */
+.pdb-date-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.pdb-date {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #1A1918;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.pdb-badge {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 2px 6px;
+  white-space: nowrap;
+}
+
+.pdb-badge--neutral {
+  color: #5C5B5A;
+  background: rgba(0,0,0,0.05);
+}
+
+.pdb-badge--late {
+  color: #E8726E;
+  background: rgba(232,114,110,0.12);
+}
+
+.pdb-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #9B9A98;
+  position: absolute;
+  bottom: 6px;
+  right: 14px;
+}
+
+/* Amount display */
+.pdb-amount {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.pdb-amount--blue { color: #54A6CF; }
+.pdb-amount--dark { color: #1A1918; }
+
+/* Upcoming payments rows */
+.pdb-upcoming-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 0.5px solid rgba(0,0,0,0.05);
+}
+
+.pdb-upcoming-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pdb-upcoming-row:first-child {
+  padding-top: 0;
+}
+
+.pdb-upcoming-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.pdb-upcoming-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1A1918;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pdb-upcoming-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  color: #9B9A98;
+  margin-top: 1px;
+}
+
+.pdb-upcoming-amt {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1A1918;
+  flex-shrink: 0;
+}
+
+.pdb-upcoming-amt--in { color: #54A6CF; }
+
+/* Bar chart */
+.pdb-chart { display: flex; flex-direction: column; gap: 8px; }
+
+.pdb-chart-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 80px;
+  gap: 4px;
+}
+
+.pdb-bar-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  flex: 1;
+}
+
+.pdb-bar {
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+}
+
+.pdb-bar--owed { background: #54A6CF; }
+.pdb-bar--owe  { background: #7EC0EA; }
+
+.pdb-chart-labels {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  color: #787776;
+}
+
+.pdb-chart-label--current { font-weight: 700; color: #5C5B5A; }
+
+.pdb-chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.pdb-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  color: #787776;
+}
+
+.pdb-legend-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pdb-legend-dot--owed { background: #54A6CF; }
+.pdb-legend-dot--owe  { background: #7EC0EA; }
+
+/* Active loans */
+.pdb-loan-row {
+  margin-bottom: 14px;
+}
+
+.pdb-loan-row:last-child { margin-bottom: 0; }
+
+.pdb-loan-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.pdb-loan-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1A1918;
+}
+
+.pdb-loan-pct {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #787776;
+}
+
+.pdb-progress-track {
+  width: 100%;
+  height: 7px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pdb-progress-track--lent   { background: rgba(84,166,207,0.18); }
+.pdb-progress-track--borrow { background: rgba(126,192,234,0.22); }
+
+.pdb-progress-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.pdb-progress-fill--lent   { background: #54A6CF; }
+.pdb-progress-fill--borrow { background: #7EC0EA; }
+
+.pdb-loan-detail {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  color: #787776;
+  margin-top: 5px;
+}
+
+/* Month grid */
+.pdb-month-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pdb-month-col {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.pdb-month-col--left { border-right: 1px solid rgba(0,0,0,0.06); }
+
+.pdb-month-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  color: #9B9A98;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.pdb-month-amt {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.pdb-month-amt--blue { color: #54A6CF; }
+.pdb-month-amt--dark { color: #1A1918; }
+
+.pdb-mini-track {
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.pdb-mini-track--blue  { background: rgba(84,166,207,0.15); }
+.pdb-mini-track--light { background: rgba(126,192,234,0.20); }
+
+.pdb-mini-fill {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.pdb-mini-fill--blue  { background: #54A6CF; }
+.pdb-mini-fill--light { background: #7EC0EA; }
+
+.pdb-month-exp {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  color: #9B9A98;
+  margin-top: 4px;
+}
+
+/* Recent activity */
+.pdb-activity-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 0.5px solid rgba(0,0,0,0.05);
+}
+
+.pdb-activity-row:first-child { padding-top: 0; }
+.pdb-activity-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+.pdb-activity-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pdb-activity-info { flex: 1; min-width: 0; }
+
+.pdb-activity-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1A1918;
+}
+
+.pdb-activity-date {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  color: #787776;
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pdb-layout {
+    grid-template-columns: 1fr;
+  }
+  .pdb-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .pdb-pair {
+    grid-template-columns: 1fr;
+  }
+  .pdb-right {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ─── Everyday Lending Section ─── */
@@ -4947,7 +5399,7 @@ a.help-card {
 
 @media (max-width: 600px) {
   .stories-content {
-    padding: 0 20px 60px;
+    padding: 0 16px 60px;
   }
   .story-card {
     padding: 24px;
