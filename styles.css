@@ -7760,6 +7760,50 @@ a.help-card {
 }
 
 /* ═══════════════════════════════════════════════════
+   MOBILE IMAGE & CONTENT OVERFLOW PREVENTION (≤ 900px)
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  /* Prevent any bare <img> from spilling past the screen edge */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Section-level overflow guard */
+  .feature-section,
+  .notif-section,
+  .contracts-section,
+  .everyday-section,
+  .trusted-section {
+    overflow-x: hidden;
+  }
+
+  /* Center the hero title text on small screens */
+  .hero-title {
+    text-align: center;
+  }
+
+  /* Center the contracts / promissory-note image */
+  .contracts-right img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Keep the notif-card from straining its flex parent
+     (freeze-scale handles dynamic scaling; this is a CSS safety net) */
+  .notif-card {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  /* Apps page — phone + badges wrap should not exceed its column */
+  .apps-mobile-notif-wrap {
+    max-width: 100%;
+    overflow: visible;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
    SMALL PHONES (< 400px) — fluid title sizes
    ═══════════════════════════════════════════════════ */
 @media (max-width: 400px) {
