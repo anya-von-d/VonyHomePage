@@ -1630,6 +1630,129 @@ body {
   justify-content: flex-end;
 }
 
+/* ─── Mini calendar (Payments at a Glance) ─── */
+.feature-image {
+  align-items: flex-end;
+  gap: 0;
+  position: relative;
+}
+
+.mini-cal {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+  box-shadow: 0px 20px 40px rgba(0,0,0,0.08), 0px 3px 10px rgba(0,0,0,0.12);
+  width: 190px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  margin-right: -18px;
+  margin-bottom: 40px;
+}
+
+.mini-cal-month {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1A1918;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.mini-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  margin-bottom: 2px;
+}
+
+.mini-cal-header span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  color: #787776;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.mini-cal-day {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  color: #1A1918;
+  text-align: center;
+  padding: 4px 2px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.mini-cal-today {
+  background: #54A6CF;
+  color: #fff;
+  font-weight: 700;
+}
+
+.mini-cal-day--in {
+  background: rgba(84,166,207,0.08);
+}
+
+.mini-cal-day--in::after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #54A6CF;
+  margin: 1px auto 0;
+}
+
+.mini-cal-day--pay {
+  background: rgba(126,192,234,0.1);
+}
+
+.mini-cal-day--pay::after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #7EC0EA;
+  margin: 1px auto 0;
+}
+
+.mini-cal-day--late {
+  color: #E8726E;
+  font-weight: 600;
+}
+
+.mini-cal-legend {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.mini-cal-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  color: #787776;
+}
+
+.mini-cal-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.mini-cal-dot--in  { background: #54A6CF; }
+.mini-cal-dot--pay { background: #7EC0EA; }
+
 /* ─── Upcoming payment cards (Payments at a Glance) ─── */
 .upcard-stack {
   display: flex;
