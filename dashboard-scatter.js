@@ -34,7 +34,7 @@
   var observer = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
-        var shouldSettle = entry.isIntersecting && entry.intersectionRatio >= 0.25;
+        var shouldSettle = entry.isIntersecting && entry.intersectionRatio >= 0.08;
 
         if (shouldSettle && !settled) {
           box.classList.add('cards-settled');
@@ -45,7 +45,7 @@
         }
       });
     },
-    { threshold: [0, 0.1, 0.25, 0.4] }
+    { threshold: [0, 0.05, 0.08, 0.15, 0.25] }
   );
 
   observer.observe(section);
