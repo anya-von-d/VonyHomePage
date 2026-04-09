@@ -9113,3 +9113,42 @@ a.help-card {
 @media (max-width: 600px) {
   .apps-header-center .apps-detail-heading { font-size: 32px; }
 }
+
+/* ── Hero: opaque background so scattered cards hide behind it ── */
+.hero {
+  background-color: #F5F4F0;
+  background-image: url('Images/tile.png.jpeg');
+  background-repeat: repeat;
+  background-size: 50px 50px;
+}
+
+/* ── Dashboard scatter-to-grid animation ── */
+.pdb-box .pdb-card,
+.pdb-box .pdb-inbox {
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              opacity 0.6s ease;
+  transition-delay: var(--scatter-delay, 0s);
+  will-change: transform, opacity;
+}
+
+/* Scattered state: cards shrunk, rotated, pushed up toward hero */
+.pdb-box:not(.cards-settled) .pdb-card,
+.pdb-box:not(.cards-settled) .pdb-inbox {
+  transform: rotate(var(--scatter-rotate, 0deg)) scale(0.55) translateY(-80px);
+  opacity: 0.7;
+}
+
+/* Settled state: organized grid */
+.pdb-box.cards-settled .pdb-card,
+.pdb-box.cards-settled .pdb-inbox {
+  transform: rotate(0deg) scale(1) translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .pdb-box:not(.cards-settled) .pdb-card,
+  .pdb-box:not(.cards-settled) .pdb-inbox {
+    transform: rotate(var(--scatter-rotate, 0deg)) scale(0.7) translateY(-30px);
+    opacity: 0.8;
+  }
+}
