@@ -7244,7 +7244,7 @@ a.help-card {
     direction: ltr;
   }
   .doc-feature-visual {
-    order: -1;
+    order: 1;
   }
   .doc-info-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -9323,4 +9323,112 @@ a.help-card {
 @media (max-width: 600px) {
   .lh-overlay-card--1 { right: -10px; }
   .lh-overlay-card--2 { right: -10px; }
+}
+
+/* ── Digital Records: hero image fan stack ── */
+.ldd-hero-wide {
+  max-width: 900px;
+  padding-bottom: 0;
+}
+
+.ldd-hero-stack {
+  position: relative;
+  height: 260px;
+  margin-top: 48px;
+}
+
+.ldd-stack-item {
+  position: absolute;
+  width: 190px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.16);
+  left: 50%;
+}
+
+.ldd-stack-item img {
+  width: 100%;
+  display: block;
+}
+
+.ldd-stack-left {
+  transform: translateX(calc(-50% - 150px)) rotate(-11deg) translateY(28px);
+  z-index: 1;
+}
+
+.ldd-stack-center {
+  transform: translateX(-50%) rotate(0deg);
+  z-index: 3;
+}
+
+.ldd-stack-right {
+  transform: translateX(calc(-50% + 150px)) rotate(9deg) translateY(16px);
+  z-index: 2;
+}
+
+/* Mini activity card (third stack item) */
+.ldd-mini-activity {
+  background: #fff;
+  padding: 14px 12px 10px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.ldd-mini-act-header {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1A1918;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.ldd-mini-act-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ldd-mini-act-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #1A1918;
+}
+
+.ldd-mini-act-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile: stack fan smaller, centered */
+@media (max-width: 700px) {
+  .ldd-hero-stack {
+    height: 180px;
+    margin-top: 32px;
+  }
+  .ldd-stack-item {
+    width: 130px;
+  }
+  .ldd-stack-left {
+    transform: translateX(calc(-50% - 100px)) rotate(-11deg) translateY(18px);
+  }
+  .ldd-stack-right {
+    transform: translateX(calc(-50% + 100px)) rotate(9deg) translateY(10px);
+  }
+}
+
+/* Digital Records mobile: visuals go under text */
+@media (max-width: 900px) {
+  .doc-feature-visual {
+    order: 1;
+  }
 }
