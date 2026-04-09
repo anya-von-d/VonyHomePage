@@ -642,7 +642,67 @@
         <p class="contracts-subtitle">Keep track of every upcoming payment in one place, so you never have to chase friends or digging through messages.</p>
       </div>
       <div class="feature-image">
-        <img src="Images/MainPage/Upcoming.png" alt="Upcoming payments view" style="max-width:520px; width:100%; border-radius:16px; box-shadow: 0 12px 40px rgba(0,0,0,0.08);">
+        <div class="upcard-stack">
+          <!-- Overdue card (blue) -->
+          <div class="upcard upcard--blue">
+            <div class="upcard-header upcard-header--blue">
+              <span>OVERDUE</span>
+              <span class="upcard-header-right upcard-header-right--blue">1 payment · $80</span>
+            </div>
+            <div class="upcard-body">
+              <div class="upcard-row">
+                <span class="upcard-badge upcard-badge--late">3d late</span>
+                <div class="upcard-info">
+                  <div class="upcard-name">Jordan pays you</div>
+                  <div class="upcard-date">due 5th Apr</div>
+                </div>
+                <span class="upcard-amt upcard-amt--in">+$80</span>
+              </div>
+            </div>
+          </div>
+          <!-- Next 7 Days card (blue) -->
+          <div class="upcard upcard--blue">
+            <div class="upcard-header upcard-header--blue">
+              <span>NEXT 7 DAYS</span>
+              <span class="upcard-header-right upcard-header-right--blue">2 payments · $230</span>
+            </div>
+            <div class="upcard-body">
+              <div class="upcard-row">
+                <span class="upcard-badge upcard-badge--neutral">2d</span>
+                <div class="upcard-info">
+                  <div class="upcard-name">Pay Alex for rent</div>
+                  <div class="upcard-date">due 10th Apr</div>
+                </div>
+                <span class="upcard-amt">-$150</span>
+              </div>
+              <div class="upcard-row">
+                <span class="upcard-badge upcard-badge--neutral">5d</span>
+                <div class="upcard-info">
+                  <div class="upcard-name">Sam pays you</div>
+                  <div class="upcard-date">due 13th Apr</div>
+                </div>
+                <span class="upcard-amt upcard-amt--in">+$80</span>
+              </div>
+            </div>
+          </div>
+          <!-- Coming Later card (grey) -->
+          <div class="upcard">
+            <div class="upcard-header">
+              <span>COMING LATER</span>
+              <span class="upcard-header-right">1 payment · $200</span>
+            </div>
+            <div class="upcard-body">
+              <div class="upcard-row">
+                <span class="upcard-badge upcard-badge--neutral">12d</span>
+                <div class="upcard-info">
+                  <div class="upcard-name">Sam pays you</div>
+                  <div class="upcard-date">due 20th Apr</div>
+                </div>
+                <span class="upcard-amt upcard-amt--in">+$200</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -1630,6 +1630,135 @@ body {
   justify-content: flex-end;
 }
 
+/* ─── Upcoming payment cards (Payments at a Glance) ─── */
+.upcard-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.upcard {
+  background: #F4F4F5;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0px 20px 40px rgba(0,0,0,0.08), 0px 3px 10px rgba(0,0,0,0.12);
+}
+
+.upcard--blue {
+  background: #03ACEA;
+}
+
+.upcard-header {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  color: #9B9A98;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.upcard-header--blue {
+  color: rgba(255,255,255,0.75);
+}
+
+.upcard-header-right {
+  font-size: 9px;
+  font-weight: 500;
+  color: #9B9A98;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.upcard-header-right--blue {
+  color: rgba(255,255,255,0.85);
+}
+
+.upcard-body {
+  background: #fff;
+  margin: 0 5px 5px;
+  border-radius: 10px;
+  padding: 4px 16px 10px;
+}
+
+.upcard-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 0.5px solid rgba(0,0,0,0.05);
+}
+
+.upcard-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.upcard-row:first-child {
+  padding-top: 8px;
+}
+
+.upcard-badge {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 2px 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 40px;
+  text-align: center;
+}
+
+.upcard-badge--neutral {
+  color: #5C5B5A;
+  background: rgba(0,0,0,0.05);
+}
+
+.upcard-badge--late {
+  color: #E8726E;
+  background: rgba(232,114,110,0.12);
+}
+
+.upcard-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.upcard-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1A1918;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.upcard-date {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  color: #9B9A98;
+  margin-top: 1px;
+}
+
+.upcard-amt {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1A1918;
+  flex-shrink: 0;
+}
+
+.upcard-amt--in {
+  color: #54A6CF;
+}
+
 .feature-stacked {
   max-width: 1100px;
   margin: 0 auto;
