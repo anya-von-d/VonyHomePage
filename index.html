@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=48">
+  <link rel="stylesheet" href="styles.css?v=51">
   <link rel="icon" type="image/png" href="Images/favicon.png">
 </head>
 <body>
@@ -405,7 +405,7 @@
               <!-- Inbox bar -->
               <div class="pdb-inbox">
                 <div class="pdb-inbox-icon">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
                 </div>
                 <span class="pdb-inbox-text">You're all caught up</span>
               </div>
@@ -758,278 +758,133 @@
     <div class="feature-stacked">
       <h2 class="contracts-title" style="text-align:center;">Track Your Loan Progress</h2>
       <p class="contracts-subtitle" style="text-align:center; margin: 0 auto;">See every loan's status at a glance: payments made, upcoming milestones, and how close you are to being fully repaid.</p>
-      <div class="feature-stacked-image">
-        <div class="ldd-float-wrap">
-          <div class="ldd-browser-chrome">
+      <!-- Card fan: 4 overlapping cards -->
+      <div class="tylp-fan">
 
-        <div class="ldd-box" style="width:100%; border-radius:0;">
-          <div class="ldd-main">
+        <!-- Payment Progress (donut) + Payment History stacked on left -->
+        <div class="pdb-card tylp-card tylp-card--progress">
+          <div class="pdb-card-header">PAYMENT PROGRESS</div>
+          <div class="pdb-card-body" style="padding:10px 12px 12px; text-align:center;">
+            <svg width="120" height="120" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="46" fill="none" stroke="#E5E4E2" stroke-width="8" stroke-linecap="round"/>
+              <circle cx="60" cy="60" r="46" fill="none" stroke="#03ACEA" stroke-width="8" stroke-dasharray="187.87 101.16" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+              <text x="60" y="54" text-anchor="middle" dominant-baseline="middle" style="font-size:18px;font-weight:700;fill:#1A1918;font-family:'DM Sans',sans-serif;">65%</text>
+              <text x="60" y="71" text-anchor="middle" dominant-baseline="middle" style="font-size:10px;font-weight:500;fill:#787776;font-family:'DM Sans',sans-serif;">repaid</text>
+            </svg>
+            <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:#1A1918;margin-top:2px;"><span style="font-weight:700;">$390.00</span> <span style="color:#787776;">of $600.00 repaid</span></p>
+          </div>
+        </div>
 
-            <!-- Loan header row -->
-            <div class="ldd-loan-header">
-              <div class="ldd-loan-header-icon">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <!-- Payment History (bar chart) — under Payment Progress -->
+        <div class="pdb-card tylp-card tylp-card--history">
+          <div class="pdb-card-header">PAYMENT HISTORY</div>
+          <div class="pdb-card-body pdb-card-body--pad">
+            <div class="ldd-chart-area">
+              <div class="ldd-chart-yaxis">
+                <span>$150</span>
+                <span>$75</span>
+                <span>$0</span>
               </div>
-              <span class="ldd-loan-header-text">Borrowed $600 from Jordan for rent</span>
+              <div class="ldd-chart-main">
+                <div class="ldd-chart-bars">
+                  <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--done" style="height:80px;"></div></div>
+                  <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--done" style="height:80px;"></div></div>
+                  <div class="ldd-chart-col">
+                    <div class="ldd-chart-bar-partial" style="height:80px;">
+                      <div class="ldd-chart-bar-partial-outer" style="height:80px;"></div>
+                      <div class="ldd-chart-bar-partial-inner" style="height:48px;"></div>
+                    </div>
+                  </div>
+                  <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--proj" style="height:80px;"></div></div>
+                </div>
+                <div class="ldd-chart-labels">
+                  <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#787776;">P1</span>
+                  <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#787776;">P2</span>
+                  <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#54A6CF;">P3</span>
+                  <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#54A6CF;">P4</span>
+                </div>
+              </div>
             </div>
-
-            <!-- 2-column grid -->
-            <div class="ldd-content-grid">
-
-              <!-- LEFT COLUMN -->
-              <div class="ldd-col">
-
-                <!-- Payment Progress + Next Payment stacked -->
-                <div class="ldd-progress-row">
-                  <!-- Donut chart card -->
-                  <div class="pdb-card">
-                    <div class="pdb-card-header">PAYMENT PROGRESS</div>
-                    <div class="pdb-card-body" style="padding:10px 12px 12px; text-align:center;">
-                      <!-- 2π×46=289.03, 65%→187.87 -->
-                      <svg width="120" height="120" viewBox="0 0 120 120">
-                        <circle cx="60" cy="60" r="46" fill="none" stroke="#E5E4E2" stroke-width="8" stroke-linecap="round"/>
-                        <circle cx="60" cy="60" r="46" fill="none" stroke="#03ACEA" stroke-width="8" stroke-dasharray="187.87 101.16" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-                        <text x="60" y="54" text-anchor="middle" dominant-baseline="middle" style="font-size:18px;font-weight:700;fill:#1A1918;font-family:'DM Sans',sans-serif;">65%</text>
-                        <text x="60" y="71" text-anchor="middle" dominant-baseline="middle" style="font-size:10px;font-weight:500;fill:#787776;font-family:'DM Sans',sans-serif;">repaid</text>
-                      </svg>
-                      <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:#1A1918;margin-top:2px;"><span style="font-weight:700;">$390.00</span> <span style="color:#787776;">of $600.00 repaid</span></p>
-                    </div>
-                  </div>
-
-                  <!-- Stacked: next payment cards + record button -->
-                  <div class="ldd-stacked">
-                    <!-- Full blue card: Next Payment Incoming -->
-                    <div class="pdb-card pdb-card--blue">
-                      <div class="pdb-card-header pdb-card-header--blue">NEXT PAYMENT DUE</div>
-                      <div class="pdb-card-body" style="padding:8px 12px 10px;display:flex;align-items:center;justify-content:space-between;">
-                        <div style="font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;color:#1A1918;letter-spacing:-0.02em;">Apr 15</div>
-                        <span style="font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;color:#54A6CF;background:rgba(84,166,207,0.1);border-radius:5px;padding:2px 6px;">7d</span>
-                      </div>
-                    </div>
-                    <!-- Full blue card: Next Payment Amount -->
-                    <div class="pdb-card pdb-card--blue">
-                      <div class="pdb-card-header pdb-card-header--blue">NEXT PAYMENT AMOUNT</div>
-                      <div class="pdb-card-body" style="padding:8px 12px 10px;display:flex;align-items:center;justify-content:space-between;">
-                        <div style="font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;color:#1A1918;letter-spacing:-0.02em;">$60</div>
-                        <div style="font-family:'DM Sans',sans-serif;font-size:10px;color:#787776;">to Jordan</div>
-                      </div>
-                    </div>
-                    <div style="display:flex;justify-content:center;">
-                      <div class="ldd-record-btn"><span class="ldd-record-btn-label">Record Payment</span></div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Payment History bar chart -->
-                <div class="pdb-card">
-                  <div class="pdb-card-header">PAYMENT HISTORY</div>
-                  <div class="pdb-card-body pdb-card-body--pad">
-                    <div class="ldd-chart-area">
-                      <!-- Y-axis -->
-                      <div class="ldd-chart-yaxis">
-                        <span>$150</span>
-                        <span>$75</span>
-                        <span>$0</span>
-                      </div>
-                      <!-- Bars + labels in a stacked column -->
-                      <div class="ldd-chart-main">
-                        <div class="ldd-chart-bars">
-                          <!-- P1 completed -->
-                          <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--done" style="height:80px;"></div></div>
-                          <!-- P2 completed -->
-                          <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--done" style="height:80px;"></div></div>
-                          <!-- P3 partial: 60% paid ($90 of $150) — two-layer -->
-                          <div class="ldd-chart-col">
-                            <div class="ldd-chart-bar-partial" style="height:80px;">
-                              <div class="ldd-chart-bar-partial-outer" style="height:80px;"></div>
-                              <div class="ldd-chart-bar-partial-inner" style="height:48px;"></div>
-                            </div>
-                          </div>
-                          <!-- P4 upcoming/expected -->
-                          <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--proj" style="height:80px;"></div></div>
-                        </div>
-                        <div class="ldd-chart-labels">
-                          <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#787776;">P1</span>
-                          <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#787776;">P2</span>
-                          <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#54A6CF;">P3</span>
-                          <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#54A6CF;">P4</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ldd-chart-legend">
-                      <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:#03ACEA;"></div>Completed</div>
-                      <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:rgba(3,172,234,0.08);border:1px dashed rgba(3,172,234,0.2);"></div>Partial</div>
-                      <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:rgba(84,166,207,0.28);border:1px dashed rgba(84,166,207,0.5);"></div>Expected</div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Activity Timeline -->
-                <div class="pdb-card">
-                  <div class="pdb-card-header">ACTIVITY</div>
-                  <div class="pdb-card-body pdb-card-body--pad">
-                    <div class="ldd-activity-list">
-                      <div class="ldd-activity-row">
-                        <div class="ldd-activity-dot" style="background:rgba(3,172,234,0.12);"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2" stroke-linecap="round"><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg></div>
-                        <div><div class="ldd-activity-desc">Loan created between you and Jordan</div><div class="ldd-activity-date">Jan 8, 2026</div></div>
-                      </div>
-                      <div class="ldd-activity-row">
-                        <div class="ldd-activity-dot" style="background:rgba(124,58,237,0.12);"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg></div>
-                        <div><div class="ldd-activity-desc">You signed the loan agreement</div><div class="ldd-activity-date">Jan 8, 2026</div></div>
-                      </div>
-                      <div class="ldd-activity-row">
-                        <div class="ldd-activity-dot" style="background:rgba(22,163,74,0.12);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/></svg></div>
-                        <div><div class="ldd-activity-desc">You made a $150.00 payment to Jordan</div><div class="ldd-activity-date">Feb 8, 2026</div></div>
-                      </div>
-                      <div class="ldd-activity-row">
-                        <div class="ldd-activity-dot" style="background:rgba(22,163,74,0.12);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/></svg></div>
-                        <div><div class="ldd-activity-desc">You made a $150.00 payment to Jordan</div><div class="ldd-activity-date">Mar 8, 2026</div></div>
-                      </div>
-                      <div class="ldd-activity-row">
-                        <div class="ldd-activity-dot" style="background:rgba(245,158,11,0.12);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/></svg></div>
-                        <div><div class="ldd-activity-desc">You made a partial $90.00 payment to Jordan</div><div class="ldd-activity-date">Apr 8, 2026</div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div><!-- /ldd-col left -->
-
-              <!-- RIGHT COLUMN -->
-              <div class="ldd-col">
-
-                <!-- Loan Terms -->
-                <div class="pdb-card">
-                  <div class="pdb-card-header">LOAN TERMS</div>
-                  <div class="pdb-card-body pdb-card-body--pad">
-                    <div class="ldd-stat-grid">
-                      <div class="ldd-stat-item"><div class="ldd-stat-label">Loan Amount</div><div class="ldd-stat-value">$600</div></div>
-                      <div class="ldd-stat-item"><div class="ldd-stat-label">Interest Rate</div><div class="ldd-stat-value">0%</div></div>
-                      <div class="ldd-stat-item"><div class="ldd-stat-label">Term</div><div class="ldd-stat-value">4 months</div></div>
-                      <div class="ldd-stat-item"><div class="ldd-stat-label">Frequency</div><div class="ldd-stat-value">Monthly</div></div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Document buttons -->
-                <div class="ldd-doc-btns">
-                  <div class="ldd-doc-btn">
-                    <span class="ldd-doc-btn-label">Promissory Note</span>
-                    <div class="ldd-doc-btn-i"><span>i</span></div>
-                  </div>
-                  <div class="ldd-doc-btn">
-                    <span class="ldd-doc-btn-label">Amortization Schedule</span>
-                    <div class="ldd-doc-btn-i"><span>i</span></div>
-                  </div>
-                  <div class="ldd-doc-btn">
-                    <span class="ldd-doc-btn-label">Loan Summary</span>
-                  </div>
-                </div>
-
-                <!-- Loan Progress -->
-                <div class="pdb-card">
-                  <div class="pdb-card-header">LOAN PROGRESS</div>
-                  <div class="pdb-card-body pdb-card-body--pad">
-                    <div class="ldd-stat-grid">
-                      <div class="ldd-stat-item"><div class="ldd-stat-label">Total Owed</div><div class="ldd-stat-value">$600.00</div></div>
-                      <div class="ldd-stat-item"><div class="ldd-stat-label">Amount Paid</div><div class="ldd-stat-value">$390.00</div></div>
-                      <div class="ldd-stat-item"><div class="ldd-stat-label">Payments Made</div><div class="ldd-stat-value">2/4</div><div class="ldd-stat-sub">full payments</div></div>
-                      <div class="ldd-stat-item"><div class="ldd-stat-label">Monthly Payments</div><div class="ldd-stat-value">$150.00</div><div class="ldd-stat-sub">to Jordan</div></div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Payments with circle numbers -->
-                <div class="pdb-card">
-                  <div class="pdb-card-header">PAYMENTS</div>
-                  <div class="pdb-card-body pdb-card-body--pad">
-                    <!-- P1 completed: circ=81.68, 100%=81.68 -->
-                    <div class="ldd-pmt-circle-row">
-                      <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
-                        <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
-                        <circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/>
-                        <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">1</text>
-                      </svg>
-                      <div class="ldd-pmt-info">
-                        <p class="ldd-pmt-info-title">Amount Due for Payment 1: $150.00</p>
-                        <p class="ldd-pmt-info-paid">You paid: $150.00</p>
-                        <p class="ldd-pmt-info-due">Due: Feb 8, 2026</p>
-                      </div>
-                      <span class="ldd-pmt-status ldd-pmt-status--done">Completed</span>
-                    </div>
-                    <!-- P2 completed -->
-                    <div class="ldd-pmt-circle-row">
-                      <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
-                        <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
-                        <circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/>
-                        <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">2</text>
-                      </svg>
-                      <div class="ldd-pmt-info">
-                        <p class="ldd-pmt-info-title">Amount Due for Payment 2: $150.00</p>
-                        <p class="ldd-pmt-info-paid">You paid: $150.00</p>
-                        <p class="ldd-pmt-info-due">Due: Mar 8, 2026</p>
-                      </div>
-                      <span class="ldd-pmt-status ldd-pmt-status--done">Completed</span>
-                    </div>
-                    <!-- P3 partial: 60% = dash 49.01 of 81.68 -->
-                    <div class="ldd-pmt-circle-row">
-                      <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
-                        <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
-                        <circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="49.01 32.67" stroke-linecap="round" transform="rotate(-90 16 16)"/>
-                        <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">3</text>
-                      </svg>
-                      <div class="ldd-pmt-info">
-                        <p class="ldd-pmt-info-title">Amount Due for Payment 3: $150.00</p>
-                        <p class="ldd-pmt-info-paid">You paid: $90.00</p>
-                        <p class="ldd-pmt-info-remaining">Remaining: $60.00</p>
-                        <p class="ldd-pmt-info-due">Due: Apr 8, 2026</p>
-                      </div>
-                      <span class="ldd-pmt-status" style="background:rgba(3,172,234,0.18);color:#0288CE;">Partial</span>
-                    </div>
-                    <!-- P4 upcoming: no fill ring -->
-                    <div class="ldd-pmt-circle-row">
-                      <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
-                        <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
-                        <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">4</text>
-                      </svg>
-                      <div class="ldd-pmt-info">
-                        <p class="ldd-pmt-info-title">Amount Due for Payment 4: $150.00</p>
-                        <p class="ldd-pmt-info-due">Due: May 8, 2026</p>
-                      </div>
-                      <span class="ldd-pmt-status ldd-pmt-status--upcoming">Upcoming</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div><!-- /ldd-col right -->
-
-            </div><!-- /ldd-content-grid -->
-          </div><!-- /ldd-main -->
-        </div><!-- /ldd-box -->
-          </div><!-- /ldd-browser-chrome -->
-
-          <!-- Bottom-edge notification floaters -->
-          <div class="ldd-floater ldd-bottom-floater ldd-bottom-floater--1">
-            <div class="ldd-floater-icon" style="background:rgba(84,166,207,0.12); color:#54A6CF;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg>
+            <div class="ldd-chart-legend">
+              <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:#03ACEA;"></div>Completed</div>
+              <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:rgba(3,172,234,0.08);border:1px dashed rgba(3,172,234,0.2);"></div>Partial</div>
+              <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:rgba(84,166,207,0.28);border:1px dashed rgba(84,166,207,0.5);"></div>Expected</div>
             </div>
-            <span class="ldd-floater-text">You sent Alex $150.00</span>
           </div>
-          <div class="ldd-floater ldd-bottom-floater ldd-bottom-floater--2">
-            <div class="ldd-floater-icon" style="background:rgba(22,163,74,0.12); color:#16A34A;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <span class="ldd-floater-text">Jordan confirmed your $80 payment</span>
-          </div>
-          <div class="ldd-floater ldd-bottom-floater ldd-bottom-floater--3">
-            <div class="ldd-floater-icon" style="background:rgba(3,172,234,0.12); color:#03ACEA;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <span class="ldd-floater-text">Payment due today to Alex</span>
-          </div>
+        </div>
 
-        </div><!-- /ldd-float-wrap -->
-      </div>
+        <!-- Payments (circle rows) — center, largest -->
+        <div class="pdb-card tylp-card tylp-card--payments">
+          <div class="pdb-card-header">PAYMENTS</div>
+          <div class="pdb-card-body pdb-card-body--pad">
+            <div class="ldd-pmt-circle-row">
+              <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
+                <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
+                <circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/>
+                <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">1</text>
+              </svg>
+              <div class="ldd-pmt-info">
+                <p class="ldd-pmt-info-title">Amount Due for Payment 1: $150.00</p>
+                <p class="ldd-pmt-info-paid">You paid: $150.00</p>
+                <p class="ldd-pmt-info-due">Due: Feb 8, 2026</p>
+              </div>
+              <span class="ldd-pmt-status ldd-pmt-status--done">Completed</span>
+            </div>
+            <div class="ldd-pmt-circle-row">
+              <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
+                <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
+                <circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/>
+                <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">2</text>
+              </svg>
+              <div class="ldd-pmt-info">
+                <p class="ldd-pmt-info-title">Amount Due for Payment 2: $150.00</p>
+                <p class="ldd-pmt-info-paid">You paid: $150.00</p>
+                <p class="ldd-pmt-info-due">Due: Mar 8, 2026</p>
+              </div>
+              <span class="ldd-pmt-status ldd-pmt-status--done">Completed</span>
+            </div>
+            <div class="ldd-pmt-circle-row">
+              <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
+                <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
+                <circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="49.01 32.67" stroke-linecap="round" transform="rotate(-90 16 16)"/>
+                <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">3</text>
+              </svg>
+              <div class="ldd-pmt-info">
+                <p class="ldd-pmt-info-title">Amount Due for Payment 3: $150.00</p>
+                <p class="ldd-pmt-info-paid">You paid: $90.00</p>
+                <p class="ldd-pmt-info-remaining">Remaining: $60.00</p>
+                <p class="ldd-pmt-info-due">Due: Apr 8, 2026</p>
+              </div>
+              <span class="ldd-pmt-status" style="background:rgba(3,172,234,0.18);color:#0288CE;">Partial</span>
+            </div>
+            <div class="ldd-pmt-circle-row">
+              <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
+                <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
+                <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">4</text>
+              </svg>
+              <div class="ldd-pmt-info">
+                <p class="ldd-pmt-info-title">Amount Due for Payment 4: $150.00</p>
+                <p class="ldd-pmt-info-due">Due: May 8, 2026</p>
+              </div>
+              <span class="ldd-pmt-status ldd-pmt-status--upcoming">Upcoming</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loan Progress — top right, overlapping Payments -->
+        <div class="pdb-card tylp-card tylp-card--loan-progress">
+          <div class="pdb-card-header">LOAN PROGRESS</div>
+          <div class="pdb-card-body pdb-card-body--pad">
+            <div class="ldd-stat-grid">
+              <div class="ldd-stat-item"><div class="ldd-stat-label">Total Owed</div><div class="ldd-stat-value">$600.00</div></div>
+              <div class="ldd-stat-item"><div class="ldd-stat-label">Amount Paid</div><div class="ldd-stat-value">$390.00</div></div>
+              <div class="ldd-stat-item"><div class="ldd-stat-label">Payments Made</div><div class="ldd-stat-value">2/4</div><div class="ldd-stat-sub">full payments</div></div>
+              <div class="ldd-stat-item"><div class="ldd-stat-label">Monthly Payments</div><div class="ldd-stat-value">$150.00</div><div class="ldd-stat-sub">to Jordan</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /tylp-fan -->
     </div>
   </section>
 

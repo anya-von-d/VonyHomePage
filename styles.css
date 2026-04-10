@@ -611,17 +611,22 @@ body {
 /* Inbox bar */
 .pdb-inbox {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 14px;
+  padding: 6px 10px;
+  height: 40px;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.04),
+    0 0 18px rgba(0,0,0,0.13),
+    0 2px 8px rgba(0,0,0,0.09);
 }
 
 .pdb-inbox-icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
   background: rgba(3,172,234,0.12);
   display: flex;
   align-items: center;
@@ -630,9 +635,10 @@ body {
 }
 
 .pdb-inbox-text {
-  font-size: 13px;
-  color: #787776;
   font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(6, 18, 54, 0.79);
 }
 
 /* Paired row */
@@ -819,10 +825,12 @@ body {
   align-items: flex-end;
   gap: 3px;
   flex: 1;
+  height: 100%;
 }
 
 .pdb-bar {
   flex: 1;
+  min-width: 8px;
   border-radius: 3px 3px 0 0;
 }
 
@@ -2221,11 +2229,11 @@ body {
 .notification-item {
   background: #fff;
   border-radius: 8px;
-  padding: 10px;
+  padding: 6px 10px;
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
-  height: 50px;
+  height: 40px;
   flex-shrink: 0;
   width: 100%;
   box-shadow:
@@ -2235,15 +2243,15 @@ body {
 }
 
 .notif-avatar {
-  width: 42px;
-  height: 42px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   flex-shrink: 0;
   background: #ECEAE6;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .notif-content {
@@ -2414,7 +2422,7 @@ body {
   width: 100%;
 }
 
-/* Standalone floating icons — no box, no label */
+/* Standalone floating icons — glass box style */
 .doc-float-icon {
   position: absolute;
   width: 42px;
@@ -2422,7 +2430,14 @@ body {
   object-fit: contain;
   pointer-events: none;
   z-index: 4;
-  filter: drop-shadow(0 4px 14px rgba(0,0,0,0.22));
+  border-radius: 11px;
+  background: rgba(255,255,255,0.45);
+  padding: 7px;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  backdrop-filter: blur(16px) saturate(1.5);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.07),
+    inset 0 0 0 1px rgba(255,255,255,0.65), inset 0 1px 0 rgba(255,255,255,0.85);
 }
 
 /* Promissory Note: left side 1/4 down, right side 3/4 down */
@@ -5866,7 +5881,7 @@ a.help-card {
 
 /* ── Apps desktop stacked section ── */
 .apps-desktop-stacked-section {
-  padding: 80px 40px;
+  padding: 20px 40px 80px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -6217,17 +6232,7 @@ a.help-card {
   position: absolute;
   bottom: -18px;
   left: -22px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(20px) saturate(1.6);
-  -webkit-backdrop-filter: blur(20px) saturate(1.6);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  border-radius: 16px;
-  padding: 10px 14px 10px 10px;
-  max-width: 260px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.07);
+  max-width: 290px;
   z-index: 10;
 }
 
@@ -8617,11 +8622,66 @@ a.help-card {
 
 /* ── Track Your Loan Progress — bottom-edge notification floaters ── */
 .ldd-bottom-floater {
+  display: none;
+}
+
+/* ── Track Your Loan: notification floaters matching home style ── */
+.ldd-notif-floater {
   position: absolute;
-  bottom: 3%;
   z-index: 10;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  height: 40px;
   white-space: nowrap;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.04),
+    0 0 18px rgba(0,0,0,0.13),
+    0 2px 8px rgba(0,0,0,0.09);
+}
+.ldd-notif-floater-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ldd-notif-floater-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(6, 18, 54, 0.79);
+  white-space: nowrap;
+}
+.ldd-notif-floater--topleft {
+  top: -20px;
+  left: -30px;
+}
+.ldd-notif-floater--bottomleft {
+  bottom: -20px;
+  left: -30px;
+}
+.ldd-notif-floater--bottomright {
+  bottom: -20px;
+  right: -30px;
+}
+
+/* Shadow bleeding out from under the grey box */
+.feature-section-stacked .ldd-browser-chrome {
+  box-shadow:
+    0 16px 64px rgba(0,0,0,0.22),
+    0 32px 80px rgba(0,0,0,0.12),
+    0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Dummy rule to keep old selector from breaking */
+.ldd-bottom-floater--keep {
   display: flex;
   align-items: center;
   gap: clamp(8px, 0.9vw, 12px);
@@ -8656,21 +8716,20 @@ a.help-card {
   overflow: visible;
 }
 
-/* Fade bottom of browser chrome into page background, add strong side shadows */
+/* Browser chrome: shadow all around the screenshot */
 .lh-screenshot-section .ldd-browser-chrome {
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  box-shadow:
-    -40px 0 70px rgba(0,0,0,0.13),
-     40px 0 70px rgba(0,0,0,0.13),
-     0 12px 60px rgba(0,0,0,0.18),
-     0 2px 8px  rgba(0,0,0,0.08);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  filter:
+    drop-shadow(0 20px 50px rgba(0,0,0,0.22))
+    drop-shadow(0 4px 16px rgba(0,0,0,0.14));
+  box-shadow: none;
 }
 
 /* Overlay loan cards on the screenshot */
 .lh-overlay-card {
   position: absolute;
-  width: 184px;
+  width: 17%;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0,0,0,0.14), 0 4px 14px rgba(0,0,0,0.10);
@@ -8678,14 +8737,24 @@ a.help-card {
   pointer-events: none;
 }
 .lh-overlay-card--1 {
-  top: 22%;
-  right: -18px;
+  top: 18%;
+  right: -2%;
   transform: rotate(4deg);
 }
 .lh-overlay-card--2 {
-  bottom: 20%;
-  right: -18px;
+  bottom: 14%;
+  right: -2%;
   transform: rotate(-3deg);
+}
+.lh-overlay-card--3 {
+  top: 18%;
+  left: -2%;
+  transform: rotate(-4deg);
+}
+.lh-overlay-card--4 {
+  bottom: 14%;
+  left: -2%;
+  transform: rotate(3deg);
 }
 
 /* Overlay card inner structure */
@@ -8812,7 +8881,7 @@ a.help-card {
 .lh-compare-inner {
   display: grid;
   grid-template-columns: 2fr 3fr;
-  gap: 60px;
+  gap: 100px;
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
@@ -8824,6 +8893,19 @@ a.help-card {
 .lh-compare-section .lh-feature-heading,
 .lh-compare-section .lh-feature-desc {
   text-align: left;
+}
+@media (max-width: 900px) {
+  .lh-compare-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .lh-compare-heading-wrap {
+    text-align: center;
+  }
+  .lh-compare-section .lh-feature-heading,
+  .lh-compare-section .lh-feature-desc {
+    text-align: center;
+  }
 }
 
 /* ── Activity box: match Vony portal structure ── */
@@ -8882,23 +8964,111 @@ a.help-card {
   margin-bottom: 12px;
 }
 
+/* ── Apps: notification bar (matches home page ticker item, scaled up) ── */
+.apps-notif-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 14px;
+  height: 50px;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.04),
+    0 0 18px rgba(0,0,0,0.13),
+    0 2px 8px rgba(0,0,0,0.09);
+}
+.apps-notif-bar-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.apps-notif-bar-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(6, 18, 54, 0.79);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* ── Apps: desktop notification floater — top left corner ── */
 .apps-desktop-notif-floater {
   position: absolute;
   top: 18px;
   left: 18px;
+  max-width: 310px;
+  z-index: 10;
+}
+
+/* ── Apps: Apple-style push notification — top right corner ── */
+.apps-desktop-notif-topright {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 10;
+}
+.apps-notif-push {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(20px) saturate(1.6);
-  -webkit-backdrop-filter: blur(20px) saturate(1.6);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  border-radius: 16px;
-  padding: 10px 14px 10px 10px;
-  max-width: 280px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.08);
-  z-index: 10;
+  background: rgba(255,255,255,0.45);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  backdrop-filter: blur(16px) saturate(1.5);
+  border-radius: 12px;
+  padding: 10px 14px;
+  max-width: 240px;
+  box-shadow:
+    0 0 18px rgba(0,0,0,0.12),
+    0 2px 8px rgba(0,0,0,0.08),
+    inset 0 0 0 1px rgba(255,255,255,0.65),
+    inset 0 1px 0 rgba(255,255,255,0.85);
+}
+.apps-notif-push-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.apps-notif-push-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.apps-notif-push-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.apps-notif-push-app {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #1A1918;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.apps-notif-push-time {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #9B9A98;
+  white-space: nowrap;
+}
+.apps-notif-push-msg {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(6, 18, 54, 0.79);
+  line-height: 1.35;
 }
 
 /* ── Learn: border — thin solid (2px), thick gradient (20 rings) ── */
@@ -8928,15 +9098,7 @@ a.help-card {
     0 0 0 20px #F5F4F0;
 }
 
-/* ── Loan Help: learn-help image — shadow on all sides ── */
-.lh-screenshot-section .ldd-browser-chrome {
-  box-shadow:
-    -50px 0 80px rgba(0,0,0,0.16),
-     50px 0 80px rgba(0,0,0,0.16),
-     0 -20px 60px rgba(0,0,0,0.08),
-     0 16px 70px rgba(0,0,0,0.20),
-     0 2px 10px rgba(0,0,0,0.08);
-}
+/* ── Loan Help: image shadow override (already set above) ── */
 
 /* ── Loan Help: card--2 — bottom right corner of image ── */
 .lh-overlay-card--2 {
@@ -8967,13 +9129,39 @@ a.help-card {
 }
 
 /* ── Apps: desktop header — icons flanking title above image ── */
-.apps-desktop-header {
+/* ── Apps hero corner icons ── */
+.apps-hero-with-icons {
+  position: relative;
+  overflow: visible;
+}
+/* Corner icon wrapper */
+.apps-corner-icon-wrap {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  margin-bottom: 52px;
-  text-align: center;
+  background: rgba(255,255,255,0.45);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  backdrop-filter: blur(16px) saturate(1.5);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.07),
+    inset 0 0 0 1px rgba(255,255,255,0.65), inset 0 1px 0 rgba(255,255,255,0.85);
+}
+.apps-corner-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.apps-corner-icon--tl { top: 50%; transform: translateY(-50%); left: -50px; }
+.apps-corner-icon--tr { top: 50%; transform: translateY(-50%); right: -50px; }
+.apps-corner-icon--bl { bottom: 12px; left: -50px; }
+.apps-corner-icon--br { bottom: 12px; right: -50px; }
+
+.apps-desktop-header {
+  display: none;
 }
 
 .apps-header-icons {
@@ -9114,42 +9302,73 @@ a.help-card {
   .apps-header-center .apps-detail-heading { font-size: 32px; }
 }
 
-/* ── Hero: opaque background so scattered cards hide behind it ── */
-.hero {
-  background-color: #F5F4F0;
-  background-image: url('Images/tile.png.jpeg');
-  background-repeat: repeat;
-  background-size: 50px 50px;
-}
+/* ── Hero: transparent so scattered dashboard cards show through ── */
 
 /* ── Dashboard scatter-to-grid animation ── */
 .pdb-box .pdb-card,
 .pdb-box .pdb-inbox {
-  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1),
-              opacity 0.7s ease;
+  transition: transform 1.6s cubic-bezier(0.25, 1, 0.5, 1),
+              opacity 1s ease,
+              background 1.2s ease,
+              backdrop-filter 1.2s ease,
+              -webkit-backdrop-filter 1.2s ease,
+              box-shadow 1.2s ease;
   transition-delay: var(--scatter-delay, 0s);
   will-change: transform, opacity;
 }
 
-/* Scattered state: cards shrunk, hidden behind hero bottom cards */
-.pdb-box:not(.cards-settled) .pdb-card,
-.pdb-box:not(.cards-settled) .pdb-inbox {
-  transform: rotate(var(--scatter-rotate, 0deg)) scale(0.3) translateY(-420px);
+/* Hide card content in scattered state, reveal in settled */
+.pdb-box .pdb-card > *,
+.pdb-box .pdb-inbox > * {
+  transition: opacity 0.6s ease;
+  transition-delay: var(--scatter-delay, 0s);
+}
+.pdb-box:not(.cards-settled) .pdb-card > *,
+.pdb-box:not(.cards-settled) .pdb-inbox > * {
   opacity: 0;
 }
-
-/* Settled state: organized grid */
-.pdb-box.cards-settled .pdb-card,
-.pdb-box.cards-settled .pdb-inbox {
-  transform: rotate(0deg) scale(1) translateY(0);
+.pdb-box.cards-settled .pdb-card > *,
+.pdb-box.cards-settled .pdb-inbox > * {
   opacity: 1;
+  transition-delay: calc(var(--scatter-delay, 0s) + 0.6s);
+}
+
+/* Scattered state: glassmorphism cards at bottom-left/right corners */
+.pdb-box:not(.cards-settled) .pdb-card,
+.pdb-box:not(.cards-settled) .pdb-inbox {
+  transform: rotate(var(--scatter-rotate, 0deg)) scale(0.42) translateX(var(--scatter-x, 0px)) translateY(-480px);
+  opacity: 0.55;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  backdrop-filter: blur(16px) saturate(1.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+/* Settled state: organized grid with original styling */
+.pdb-box.cards-settled .pdb-card {
+  transform: rotate(0deg) scale(1) translateX(0) translateY(0);
+  opacity: 1;
+  background: #F4F4F5;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: 0px 20px 40px rgba(0,0,0,0.08), 0px 3px 10px rgba(0,0,0,0.12);
+}
+.pdb-box.cards-settled .pdb-card--blue {
+  background: #03ACEA;
+}
+.pdb-box.cards-settled .pdb-inbox {
+  transform: rotate(0deg) scale(1) translateX(0) translateY(0);
+  opacity: 1;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 @media (max-width: 900px) {
   .pdb-box:not(.cards-settled) .pdb-card,
   .pdb-box:not(.cards-settled) .pdb-inbox {
-    transform: rotate(var(--scatter-rotate, 0deg)) scale(0.35) translateY(-250px);
-    opacity: 0;
+    transform: rotate(var(--scatter-rotate, 0deg)) scale(0.38) translateX(var(--scatter-x, 0px)) translateY(-320px);
+    opacity: 0.5;
   }
 }
 
@@ -9206,7 +9425,15 @@ a.help-card {
 .apps-desktop-badge {
   width: clamp(36px, 6vw, 72px);
   height: clamp(36px, 6vw, 72px);
-  border-radius: clamp(8px, 1vw, 14px);
+  border-radius: 11px;
+  background: rgba(255,255,255,0.45);
+  padding: 8px;
+  box-sizing: border-box;
+  object-fit: contain;
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  backdrop-filter: blur(16px) saturate(1.5);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.07),
+    inset 0 0 0 1px rgba(255,255,255,0.65), inset 0 1px 0 rgba(255,255,255,0.85);
 }
 .apps-desktop-badge-os {
   bottom: clamp(-20px, -2.5vw, -10px);
@@ -9303,26 +9530,30 @@ a.help-card {
   }
 }
 
-/* ── 9  Loan Help: overlay cards scale with image ── */
-.lh-overlay-card {
-  width: clamp(130px, 20vw, 184px);
-}
+/* ── Loan Help: overlay cards — text scales with card (17% of wrap) ── */
 .lh-overlay-card .lh-ov-inner {
-  padding: clamp(8px, 1.2vw, 14px);
+  padding: clamp(6px, 1vw, 11px);
 }
 .lh-overlay-card .lh-ov-name {
-  font-size: clamp(11px, 1.4vw, 15px);
+  font-size: clamp(9px, 1.1vw, 12px);
+}
+.lh-overlay-card .lh-ov-tagline {
+  font-size: clamp(7px, 0.8vw, 9px);
 }
 .lh-overlay-card .lh-ov-detail {
-  font-size: clamp(8px, 1vw, 11px);
+  font-size: clamp(7px, 0.8vw, 9px);
 }
 .lh-overlay-card .lh-ov-btn {
-  font-size: clamp(8px, 1vw, 11px);
-  padding: clamp(3px, 0.4vw, 6px) clamp(8px, 1vw, 14px);
+  font-size: clamp(7px, 0.8vw, 10px);
+  padding: clamp(3px, 0.3vw, 4px) clamp(6px, 0.8vw, 10px);
 }
-@media (max-width: 600px) {
-  .lh-overlay-card--1 { right: -10px; }
-  .lh-overlay-card--2 { right: -10px; }
+@media (max-width: 700px) {
+  .lh-overlay-card--1, .lh-overlay-card--2 { right: -1%; }
+  .lh-overlay-card--3, .lh-overlay-card--4 { left: -1%; }
+}
+@media (max-width: 500px) {
+  .lh-overlay-card--3, .lh-overlay-card--4 { display: none; }
+  .lh-overlay-card--1, .lh-overlay-card--2 { right: -8px; }
 }
 
 /* ── Digital Records: hero image fan stack ── */
@@ -9333,14 +9564,14 @@ a.help-card {
 
 .ldd-hero-stack {
   position: relative;
-  height: 300px;
+  height: 340px;
   margin-top: 56px;
 }
 
 /* Base item — center (narrow portrait) */
 .ldd-stack-item {
   position: absolute;
-  width: 170px;
+  width: 190px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(0,0,0,0.16);
@@ -9352,15 +9583,20 @@ a.help-card {
   display: block;
 }
 
-/* Left and right are wider long rectangles */
-.ldd-stack-left,
+/* Left (activity) wider, right (amortization schedule) narrower */
+.ldd-stack-left {
+  width: 220px;
+}
 .ldd-stack-right {
-  width: 260px;
+  width: 220px;
 }
 
+/* Activity on left: overflow visible so card content shows, no box-shadow (card has its own) */
 .ldd-stack-left {
-  transform: translateX(calc(-50% - 210px)) rotate(-10deg) translateY(36px);
+  transform: translateX(calc(-50% - 230px)) rotate(-10deg) translateY(36px);
   z-index: 2;
+  overflow: visible;
+  box-shadow: none;
 }
 
 .ldd-stack-center {
@@ -9368,37 +9604,41 @@ a.help-card {
   z-index: 3;
 }
 
-/* Activity: z-index 1 so it can slide under the promissory note */
+/* Amortization schedule on right: normal image card */
 .ldd-stack-right {
-  transform: translateX(calc(-50% + 130px)) rotate(9deg) translateY(20px);
+  transform: translateX(calc(-50% + 140px)) rotate(9deg) translateY(20px);
   z-index: 1;
-  overflow: visible;
 }
 
-/* Restore border-radius on the inner activity card */
-.ldd-stack-right .ldd-mini-activity {
-  border-radius: 12px;
+/* Fan activity: scale the full activity card down to fit */
+.ldd-fan-activity-wrap {
+  transform: scale(0.58);
+  transform-origin: top left;
+  width: max-content;
+  border-radius: 18px;
   overflow: hidden;
 }
 
 /* Large screens: slightly bigger fan */
 @media (min-width: 1100px) {
   .ldd-hero-stack {
-    height: 340px;
+    height: 380px;
     margin-top: 64px;
   }
   .ldd-stack-item {
-    width: 200px;
-  }
-  .ldd-stack-left,
-  .ldd-stack-right {
-    width: 300px;
+    width: 210px;
   }
   .ldd-stack-left {
-    transform: translateX(calc(-50% - 250px)) rotate(-10deg) translateY(44px);
+    width: 250px;
   }
   .ldd-stack-right {
-    transform: translateX(calc(-50% + 150px)) rotate(9deg) translateY(26px);
+    width: 250px;
+  }
+  .ldd-stack-left {
+    transform: translateX(calc(-50% - 270px)) rotate(-10deg) translateY(44px);
+  }
+  .ldd-stack-right {
+    transform: translateX(calc(-50% + 160px)) rotate(9deg) translateY(26px);
   }
 }
 
@@ -9450,35 +9690,29 @@ a.help-card {
 /* Mobile: stack fan smaller */
 @media (max-width: 700px) {
   .ldd-hero-stack {
-    height: 200px;
+    height: 230px;
     margin-top: 36px;
   }
   .ldd-stack-item {
     width: 120px;
   }
-  .ldd-stack-left,
+  .ldd-stack-left {
+    width: 180px;
+    overflow: visible;
+    box-shadow: none;
+  }
   .ldd-stack-right {
-    width: 170px;
+    width: 140px;
   }
   .ldd-stack-left {
-    transform: translateX(calc(-50% - 130px)) rotate(-11deg) translateY(22px);
+    transform: translateX(calc(-50% - 140px)) rotate(-11deg) translateY(22px);
   }
-  /* Activity shifted slightly right on mobile */
   .ldd-stack-right {
-    transform: translateX(calc(-50% + 115px)) rotate(9deg) translateY(12px);
+    transform: translateX(calc(-50% + 120px)) rotate(9deg) translateY(12px);
   }
-  /* Left-side gradient fades the activity card into the background */
-  .ldd-stack-right::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 52px;
-    height: 100%;
-    background: linear-gradient(to right, #F5F4F0 0%, transparent 100%);
-    z-index: 5;
-    pointer-events: none;
-    border-radius: 12px 0 0 12px;
+  .ldd-fan-activity-wrap {
+    transform: scale(0.42);
+    transform-origin: top left;
   }
 }
 
@@ -9508,6 +9742,13 @@ a.help-card {
   line-height: 1.7;
 }
 
+.apps-desktop-desc {
+  margin-top: 16px;
+  color: rgba(26, 25, 24, 0.45);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 /* ── Apps page: desktop header four icons only ── */
 .apps-desktop-header {
   justify-content: center;
@@ -9526,25 +9767,64 @@ a.help-card {
   position: relative;
 }
 
-.apps-phone-icons-above {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+.apps-phone-with-icons {
+  position: relative;
+  margin: 0 36px;
 }
 
 .apps-phone-icon-above {
   width: clamp(36px, 4vw, 48px);
   height: clamp(36px, 4vw, 48px);
   border-radius: 11px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.07);
+  background: rgba(255,255,255,0.45);
+  padding: 7px;
+  box-sizing: border-box;
   object-fit: contain;
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  backdrop-filter: blur(16px) saturate(1.5);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.07),
+    inset 0 0 0 1px rgba(255,255,255,0.65), inset 0 1px 0 rgba(255,255,255,0.85);
+}
+
+/* Glass wrapper for phone floating icons */
+.apps-phone-icon-wrap {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.45);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  backdrop-filter: blur(16px) saturate(1.5);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.07),
+    inset 0 0 0 1px rgba(255,255,255,0.65), inset 0 1px 0 rgba(255,255,255,0.85);
+}
+.apps-phone-icon-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* Icon positions around the phone */
+.apps-phone-icon--appstore {
+  top: 18px;
+  left: -26px;
+}
+.apps-phone-icon--ios {
+  top: 55px;
+  right: -26px;
+}
+.apps-phone-icon--google {
+  top: 38%;
+  left: -26px;
 }
 
 .apps-iphone-frame {
   position: relative;
-  width: clamp(180px, 22vw, 230px);
+  width: clamp(220px, 28vw, 300px);
   background: #D8D6D3;
   border-radius: 38px;
   padding: 7px 5px 0;
@@ -9554,6 +9834,8 @@ a.help-card {
     0 1px 3px rgba(0,0,0,0.06),
     0 20px 56px rgba(0,0,0,0.14),
     0 6px 18px rgba(0,0,0,0.08);
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 90%);
+  mask-image: linear-gradient(to bottom, black 55%, transparent 90%);
 }
 
 /* Dynamic island */
@@ -9620,5 +9902,91 @@ a.help-card {
   .apps-notif-floater--phone {
     margin-left: 0;
     align-self: center;
+  }
+}
+
+/* ── Track Your Loan Progress: overlapping card fan ── */
+.tylp-fan {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  height: 500px;
+  margin: 40px auto 0;
+}
+
+.tylp-card {
+  position: absolute;
+  border-radius: 14px;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.10),
+    0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* Payments — center, largest */
+.tylp-card--payments {
+  width: 300px;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%) rotate(-1deg);
+  z-index: 3;
+}
+
+/* Payment Progress (donut) — left */
+.tylp-card--progress {
+  width: 200px;
+  left: 12%;
+  top: 10px;
+  transform: rotate(3deg);
+  z-index: 2;
+}
+
+/* Payment History (bar chart) — under Payment Progress */
+.tylp-card--history {
+  width: 220px;
+  left: 14%;
+  top: 230px;
+  transform: rotate(-2deg);
+  z-index: 1;
+}
+
+/* Loan Progress — scaled strip, top-right corner of Payments */
+.tylp-card--loan-progress {
+  width: 420px;
+  left: 44%;
+  top: -10px;
+  transform: scale(0.76) rotate(3deg);
+  transform-origin: top left;
+  z-index: 4;
+}
+
+/* Loan Progress card: single-row strip, 4 columns */
+.tylp-card--loan-progress .ldd-stat-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Mobile: stack cards vertically */
+@media (max-width: 700px) {
+  .tylp-fan {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .tylp-card {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 340px;
+  }
+  .tylp-card--loan-progress {
+    max-width: 100%;
+  }
+  .tylp-card--loan-progress .ldd-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

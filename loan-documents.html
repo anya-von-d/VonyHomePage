@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=48">
+  <link rel="stylesheet" href="styles.css?v=51">
   <link rel="icon" type="image/png" href="Images/favicon.png">
 </head>
 <body>
@@ -174,41 +174,82 @@
     <!-- Three overlapping document previews -->
     <div class="ldd-hero-stack">
       <div class="ldd-stack-item ldd-stack-left">
-        <img src="Images/amortizationSchedule.png" alt="Amortization Schedule">
+        <div class="ldd-fan-activity-wrap">
+          <div class="vony-activity-box">
+            <div class="vony-activity-card">
+              <div class="vony-activity-label">Activity</div>
+              <div class="vony-activity-white">
+                <div class="vony-activity-inner">
+                  <div class="vony-activity-header">
+                    <span class="vony-activity-col-label">Date</span>
+                    <span class="vony-activity-col-label">Category</span>
+                    <span class="vony-activity-col-label">Status</span>
+                  </div>
+                  <div class="vony-activity-rows">
+                    <div class="vony-activity-row">
+                      <span class="vony-activity-date">Mar 8, 2026</span>
+                      <div class="vony-activity-cat">
+                        <div class="vony-activity-icon" style="background:rgba(34,197,94,0.13);">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                        </div>
+                        <span class="vony-activity-desc">You accepted $50 loan from Emma</span>
+                      </div>
+                      <div class="vony-activity-status"></div>
+                    </div>
+                    <div class="vony-activity-row">
+                      <span class="vony-activity-date">Mar 8, 2026</span>
+                      <div class="vony-activity-cat">
+                        <div class="vony-activity-icon" style="background:rgba(84,166,207,0.14);">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#54A6CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+                        </div>
+                        <span class="vony-activity-desc">Sent $50 loan offer to Charles</span>
+                      </div>
+                      <div class="vony-activity-status">
+                        <span class="vony-activity-badge vony-activity-badge--blue">Awaiting Signature</span>
+                      </div>
+                    </div>
+                    <div class="vony-activity-row">
+                      <span class="vony-activity-date">Mar 7, 2026</span>
+                      <div class="vony-activity-cat">
+                        <div class="vony-activity-icon" style="background:rgba(34,197,94,0.13);">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10"/><path d="M17 7v10H7"/></svg>
+                        </div>
+                        <span class="vony-activity-desc">Received $3 payment from Alex</span>
+                      </div>
+                      <div class="vony-activity-status"></div>
+                    </div>
+                    <div class="vony-activity-row">
+                      <span class="vony-activity-date">Mar 7, 2026</span>
+                      <div class="vony-activity-cat">
+                        <div class="vony-activity-icon" style="background:rgba(84,166,207,0.14);">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#54A6CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                        </div>
+                        <span class="vony-activity-desc">You made a $20 payment to Lewis</span>
+                      </div>
+                      <div class="vony-activity-status"></div>
+                    </div>
+                    <div class="vony-activity-row">
+                      <span class="vony-activity-date">Mar 3, 2026</span>
+                      <div class="vony-activity-cat">
+                        <div class="vony-activity-icon" style="background:rgba(84,166,207,0.14);">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#54A6CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                        </div>
+                        <span class="vony-activity-desc">You made a $50 payment to Nico</span>
+                      </div>
+                      <div class="vony-activity-status"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="ldd-stack-item ldd-stack-center">
         <img src="Images/promissoryNote.png" alt="Promissory Note">
       </div>
       <div class="ldd-stack-item ldd-stack-right">
-        <div class="ldd-mini-activity">
-          <div class="ldd-mini-act-header">Activity</div>
-          <div class="ldd-mini-act-rows">
-            <div class="ldd-mini-act-row">
-              <div class="ldd-mini-act-dot" style="background:rgba(34,197,94,0.13);">
-                <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              </div>
-              <span>Accepted $50 from Emma</span>
-            </div>
-            <div class="ldd-mini-act-row">
-              <div class="ldd-mini-act-dot" style="background:rgba(84,166,207,0.14);">
-                <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#54A6CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/></svg>
-              </div>
-              <span>Sent offer to Charles</span>
-            </div>
-            <div class="ldd-mini-act-row">
-              <div class="ldd-mini-act-dot" style="background:rgba(34,197,94,0.13);">
-                <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10"/><path d="M17 7v10H7"/></svg>
-              </div>
-              <span>Received $3 from Alex</span>
-            </div>
-            <div class="ldd-mini-act-row">
-              <div class="ldd-mini-act-dot" style="background:rgba(84,166,207,0.14);">
-                <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#54A6CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </div>
-              <span>Paid $20 to Lewis</span>
-            </div>
-          </div>
-        </div>
+        <img src="Images/amortizationSchedule.png" alt="Amortization Schedule">
       </div>
     </div>
   </section>

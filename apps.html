@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&family=Kristi&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=48">
+  <link rel="stylesheet" href="styles.css?v=52">
   <link rel="icon" type="image/png" href="Images/favicon.png">
 </head>
 <body>
@@ -155,36 +155,31 @@
     </ul>
   </div>
 
-  <!-- Page title hero -->
-  <section class="about-hero">
+  <!-- Page title hero with corner icons -->
+  <section class="about-hero apps-hero-with-icons">
+    <div class="apps-corner-icon-wrap apps-corner-icon--tl"><img src="Images/icons/windows.png" alt="Windows" class="apps-corner-icon"></div>
+    <div class="apps-corner-icon-wrap apps-corner-icon--tr"><img src="Images/icons/os.png" alt="macOS" class="apps-corner-icon"></div>
     <h1 class="about-hero-title">Apps</h1>
     <p class="about-hero-subtitle">Coming to iPhone, Android, macOS, and Windows.</p>
+    <div class="apps-corner-icon-wrap apps-corner-icon--bl"><img src="Images/icons/googlePlayStore.png" alt="Google Play" class="apps-corner-icon"></div>
+    <div class="apps-corner-icon-wrap apps-corner-icon--br"><img src="Images/icons/appStore.png" alt="App Store" class="apps-corner-icon"></div>
   </section>
 
   <!-- Vony for Desktop -->
   <section class="apps-desktop-stacked-section">
-    <!-- Four platform icons above image -->
-    <div class="apps-desktop-header">
-      <div class="apps-header-icons">
-        <img src="Images/icons/os.png" alt="macOS" class="apps-header-icon">
-        <img src="Images/icons/windows.png" alt="Windows" class="apps-header-icon">
-        <img src="Images/icons/appStore.png" alt="App Store" class="apps-header-icon">
-        <img src="Images/icons/googlePlayStore.png" alt="Google Play" class="apps-header-icon">
-      </div>
-    </div>
     <!-- Desktop screenshot -->
     <div class="apps-desktop-img-wrap">
       <img src="Images/desktop.png" alt="Vony desktop dashboard" class="apps-desktop-main-img">
       <img src="Images/icons/os.png" alt="macOS" class="apps-desktop-badge apps-desktop-badge-os">
       <img src="Images/icons/windows.png" alt="Windows" class="apps-desktop-badge apps-desktop-badge-windows">
-      <div class="apps-desktop-notif-floater">
-        <img src="Images/favicon.png" alt="Vony" class="apps-notif-icon">
-        <div class="apps-notif-body">
-          <div class="apps-notif-header">
-            <span class="apps-notif-app">Vony</span>
-            <span class="apps-notif-time">2min ago</span>
+      <div class="apps-desktop-notif-topright apps-notif-push">
+        <img src="Images/favicon.png" alt="Vony" class="apps-notif-push-logo">
+        <div class="apps-notif-push-body">
+          <div class="apps-notif-push-header">
+            <span class="apps-notif-push-app">Vony</span>
+            <span class="apps-notif-push-time">32min ago</span>
           </div>
-          <span class="apps-notif-msg">Jordan accepted your loan offer</span>
+          <span class="apps-notif-push-msg">Alex's payment is due tomorrow</span>
         </div>
       </div>
     </div>
@@ -192,6 +187,8 @@
     <div class="apps-desktop-below-title">
       <h2 class="apps-detail-heading"><em>Vony</em> for Desktop</h2>
       <p class="apps-detail-subtitle">Your complete lending dashboard, designed for macOS and Windows.</p>
+      <p class="apps-desktop-desc">Track every loan, payment, and friend from one place. Get push notifications the moment something needs your attention, without ever opening a browser.</p>
+      <span class="apps-coming-soon">Coming Soon</span>
     </div>
   </section>
 
@@ -205,27 +202,36 @@
       </div>
       <div class="apps-detail-visual">
         <div class="apps-mobile-visual-wrap">
-          <!-- Store icons above the phone frame -->
-          <div class="apps-phone-icons-above">
-            <img src="Images/icons/googlePlayStore.png" alt="Google Play" class="apps-phone-icon-above">
-            <img src="Images/icons/appStore.png" alt="App Store" class="apps-phone-icon-above">
-            <img src="Images/icons/ios.png" alt="iOS" class="apps-phone-icon-above">
-          </div>
-          <!-- iPhone frame -->
-          <div class="apps-iphone-frame">
-            <div class="apps-iphone-screen">
-              <img src="Images/mobile.png" alt="Vony mobile app dashboard">
+          <!-- Phone + floating icons wrapper -->
+          <div class="apps-phone-with-icons">
+            <!-- iPhone frame -->
+            <div class="apps-iphone-frame">
+              <div class="apps-iphone-screen">
+                <img src="Images/mobile.png" alt="Vony mobile app dashboard">
+              </div>
+            </div>
+            <!-- App Store: top-left corner -->
+            <div class="apps-phone-icon-wrap apps-phone-icon--appstore">
+              <img src="Images/icons/appStore.png" alt="App Store" class="apps-phone-icon-img">
+            </div>
+            <!-- iOS: right side at the blue section -->
+            <div class="apps-phone-icon-wrap apps-phone-icon--ios">
+              <img src="Images/icons/ios.png" alt="iOS" class="apps-phone-icon-img">
+            </div>
+            <!-- Google Play: left side where blue meets grey -->
+            <div class="apps-phone-icon-wrap apps-phone-icon--google">
+              <img src="Images/icons/googleplaystore.png" alt="Google Play" class="apps-phone-icon-img">
             </div>
           </div>
           <!-- Notification floater -->
-          <div class="apps-notif-floater apps-notif-floater--phone">
-            <img src="Images/favicon.png" alt="Vony" class="apps-notif-icon">
-            <div class="apps-notif-body">
-              <div class="apps-notif-header">
-                <span class="apps-notif-app">Vony</span>
-                <span class="apps-notif-time">32min ago</span>
+          <div class="apps-notif-floater apps-notif-floater--phone apps-notif-push">
+            <img src="Images/favicon.png" alt="Vony" class="apps-notif-push-logo">
+            <div class="apps-notif-push-body">
+              <div class="apps-notif-push-header">
+                <span class="apps-notif-push-app">Vony</span>
+                <span class="apps-notif-push-time">now</span>
               </div>
-              <span class="apps-notif-msg">You have a payment due today</span>
+              <span class="apps-notif-push-msg">You have a payment due today</span>
             </div>
           </div>
         </div>
