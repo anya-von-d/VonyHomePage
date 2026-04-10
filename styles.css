@@ -5185,16 +5185,12 @@ a.help-card {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.08s ease-in-out;
+    background: rgba(245, 244, 240, 0.97);
+    -webkit-backdrop-filter: blur(18px) saturate(1.5);
+    backdrop-filter: blur(18px) saturate(1.5);
   }
   .mobile-nav-panel::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 0;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(18px) saturate(1.5);
-    -webkit-backdrop-filter: blur(18px) saturate(1.5);
-    z-index: -1;
+    display: none;
   }
   .mobile-nav-panel.open {
     opacity: 1;
