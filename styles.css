@@ -9905,6 +9905,35 @@ a.help-card {
   }
 }
 
+@media (max-width: 900px) {
+  .apps-detail-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .apps-detail-reversed .apps-detail-inner {
+    direction: ltr;
+  }
+  .apps-detail-text {
+    max-width: 100%;
+  }
+  .apps-detail-visual {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .apps-mobile-visual-wrap {
+    align-items: center;
+  }
+  .apps-phone-with-icons {
+    margin: 0 auto;
+    width: clamp(220px, 65vw, 300px);
+  }
+  .apps-iphone-frame {
+    width: 100%;
+  }
+}
+
 /* ── Track Your Loan Progress: overlapping card fan ── */
 .tylp-fan {
   position: relative;
