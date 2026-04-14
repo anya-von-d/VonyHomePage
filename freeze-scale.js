@@ -76,9 +76,9 @@
         innerEl.style.transform       = 'scale(' + scale + ')';
 
         /* 4 — Collapse section height so the shrunken content leaves no gap
-         *     Add 20px buffer to avoid clipping at the bottom edge     */
+         *     Add 40px buffer to avoid clipping at the bottom edge     */
         sectionEl.style.overflow = 'hidden';
-        sectionEl.style.height   = (pt + naturalH * scale + pb + 20) + 'px';
+        sectionEl.style.height   = (pt + naturalH * scale + pb + 40) + 'px';
 
       } else {
 
@@ -222,7 +222,7 @@
       if (featureImg)  payOvr.push({ el: featureImg,  prop: 'order', val: '-1' });
       if (featureText) payOvr.push({ el: featureText, prop: 'display', val: 'none' });
 
-      freeze(paymentsSection, featureInner, 900, 500, payOvr);
+      freeze(paymentsSection, featureInner, 900, 420, payOvr);
     }
 
     /* ── 4. Notifications — notif-left ─────────────────────────
