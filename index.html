@@ -835,16 +835,10 @@
           </div>
         </div>
 
-        <!-- Section 2: Payment History + Docs | Payments + Activity -->
+        <!-- Section 2: Payment History + Docs + Activity | Payments + Loan Progress -->
         <div class="tylp-two-col">
-          <!-- Left: Doc buttons (top) + Payment History -->
+          <!-- Left: Payment History + Doc buttons + Activity -->
           <div class="tylp-left-stack">
-            <!-- Document buttons (above Payment History) -->
-            <div class="tylp-doc-buttons">
-              <span class="tylp-doc-btn">Promissory Note</span>
-              <span class="tylp-doc-btn">Amortization Schedule</span>
-              <span class="tylp-doc-btn">Loan Summary</span>
-            </div>
             <div class="pdb-card tylp-detail-card">
               <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payment History</span></div>
               <div class="ldd-chart-area" style="height:140px;">
@@ -874,37 +868,13 @@
                 <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:rgba(3,172,234,0.18);border:1px dashed rgba(3,172,234,0.5);border-radius:2px;"></div>Expected</div>
               </div>
             </div>
-          </div>
-
-          <!-- Right: Payments + Activity stacked -->
-          <div class="tylp-left-stack">
-            <div class="pdb-card tylp-detail-card">
-              <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payments</span></div>
-              <div class="tylp-pmt-list">
-                <div class="tylp-pmt-row">
-                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">1</text></svg>
-                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 1: $150.00</p><p class="tylp-pmt-paid">Paid: $150.00</p></div>
-                  <span class="tylp-pmt-badge tylp-pmt-badge--done">Completed</span>
-                </div>
-                <div class="tylp-pmt-row">
-                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">2</text></svg>
-                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 2: $150.00</p><p class="tylp-pmt-paid">Paid: $150.00</p></div>
-                  <span class="tylp-pmt-badge tylp-pmt-badge--done">Completed</span>
-                </div>
-                <div class="tylp-pmt-row">
-                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="49.01 32.67" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">3</text></svg>
-                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 3: $150.00</p><p class="tylp-pmt-paid">Paid: $90.00</p><p class="tylp-pmt-remaining">Remaining: $60.00</p></div>
-                  <span class="tylp-pmt-badge tylp-pmt-badge--partial">Partial</span>
-                </div>
-                <div class="tylp-pmt-row">
-                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">4</text></svg>
-                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 4: $150.00</p><p class="tylp-pmt-due">Due: May 8, 2026</p></div>
-                  <span class="tylp-pmt-badge tylp-pmt-badge--upcoming">Upcoming</span>
-                </div>
-              </div>
+            <!-- Document buttons (below Payment History) -->
+            <div class="tylp-doc-buttons">
+              <span class="tylp-doc-btn">Promissory Note</span>
+              <span class="tylp-doc-btn">Amortization Schedule</span>
+              <span class="tylp-doc-btn">Loan Summary</span>
             </div>
-
-            <!-- Activity timeline (moved up next to Payments) -->
+            <!-- Activity timeline (below doc buttons) -->
             <div class="pdb-card tylp-detail-card">
               <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Activity</span></div>
               <div class="tylp-timeline">
@@ -935,16 +905,44 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Section 3: Loan Progress (full-width strip) -->
-        <div class="pdb-card tylp-detail-card">
-          <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Loan Progress</span></div>
-          <div class="tylp-stat-grid">
-            <div class="tylp-stat"><div class="tylp-stat-label">Total Owed</div><div class="tylp-stat-val">$600.00</div></div>
-            <div class="tylp-stat"><div class="tylp-stat-label">Amount Paid</div><div class="tylp-stat-val">$390.00</div></div>
-            <div class="tylp-stat"><div class="tylp-stat-label">Payments Made</div><div class="tylp-stat-val">2/4</div><div class="tylp-stat-sub">full payments</div></div>
-            <div class="tylp-stat"><div class="tylp-stat-label">Monthly</div><div class="tylp-stat-val">$150.00</div><div class="tylp-stat-sub">to Jordan</div></div>
+          <!-- Right: Payments + Loan Progress -->
+          <div class="tylp-left-stack">
+            <div class="pdb-card tylp-detail-card">
+              <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payments</span></div>
+              <div class="tylp-pmt-list">
+                <div class="tylp-pmt-row">
+                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">1</text></svg>
+                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 1: $150.00</p><p class="tylp-pmt-paid">Paid: $150.00</p></div>
+                  <span class="tylp-pmt-badge tylp-pmt-badge--done">Completed</span>
+                </div>
+                <div class="tylp-pmt-row">
+                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">2</text></svg>
+                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 2: $150.00</p><p class="tylp-pmt-paid">Paid: $150.00</p></div>
+                  <span class="tylp-pmt-badge tylp-pmt-badge--done">Completed</span>
+                </div>
+                <div class="tylp-pmt-row">
+                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="49.01 32.67" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">3</text></svg>
+                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 3: $150.00</p><p class="tylp-pmt-paid">Paid: $90.00</p><p class="tylp-pmt-remaining">Remaining: $60.00</p></div>
+                  <span class="tylp-pmt-badge tylp-pmt-badge--partial">Partial</span>
+                </div>
+                <div class="tylp-pmt-row">
+                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">4</text></svg>
+                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 4: $150.00</p><p class="tylp-pmt-due">Due: May 8, 2026</p></div>
+                  <span class="tylp-pmt-badge tylp-pmt-badge--upcoming">Upcoming</span>
+                </div>
+              </div>
+            </div>
+            <!-- Loan Progress (moved here from bottom) -->
+            <div class="pdb-card tylp-detail-card">
+              <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Loan Progress</span></div>
+              <div class="tylp-stat-grid">
+                <div class="tylp-stat"><div class="tylp-stat-label">Total Owed</div><div class="tylp-stat-val">$600.00</div></div>
+                <div class="tylp-stat"><div class="tylp-stat-label">Amount Paid</div><div class="tylp-stat-val">$390.00</div></div>
+                <div class="tylp-stat"><div class="tylp-stat-label">Payments Made</div><div class="tylp-stat-val">2/4</div><div class="tylp-stat-sub">full payments</div></div>
+                <div class="tylp-stat"><div class="tylp-stat-label">Monthly</div><div class="tylp-stat-val">$150.00</div><div class="tylp-stat-sub">to Jordan</div></div>
+              </div>
+            </div>
           </div>
         </div>
 
