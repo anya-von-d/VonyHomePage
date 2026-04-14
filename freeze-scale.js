@@ -76,9 +76,20 @@
         innerEl.style.transform       = 'scale(' + scale + ')';
 
         /* 4 — Collapse section height so the shrunken content leaves no gap
-         *     Add 40px buffer to avoid clipping at the bottom edge     */
+         *     Include any sibling elements inside the section (e.g. outer
+         *     title wrappers) that aren't part of the scaled innerEl.
+         *     Add 40px buffer to avoid clipping at the bottom edge.    */
+        var siblingsH = 0;
+        Array.from(sectionEl.children).forEach(function (child) {
+          if (child !== innerEl && getComputedStyle(child).display !== 'none') {
+            var cs = getComputedStyle(child);
+            var mt = parseFloat(cs.marginTop) || 0;
+            var mb = parseFloat(cs.marginBottom) || 0;
+            siblingsH += child.offsetHeight + mt + mb;
+          }
+        });
         sectionEl.style.overflow = 'hidden';
-        sectionEl.style.height   = (pt + naturalH * scale + pb + 40) + 'px';
+        sectionEl.style.height   = (pt + siblingsH + naturalH * scale + pb + 40) + 'px';
 
       } else {
 
