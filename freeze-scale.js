@@ -226,12 +226,12 @@
       var featureImg   = featureInner.querySelector('.feature-image');
       var payOvr = [
         { el: featureInner, prop: 'gridTemplateColumns', val: '1fr' },
-        { el: featureInner, prop: 'gap',                 val: '32px' }
+        { el: featureInner, prop: 'gap',                 val: '0px' }
       ];
       if (featureImg)  payOvr.push({ el: featureImg,  prop: 'order', val: '-1' });
-      if (featureText) payOvr.push({ el: featureText, prop: 'textAlign', val: 'center' });
+      if (featureText) payOvr.push({ el: featureText, prop: 'display', val: 'none' });
 
-      freeze(paymentsSection, featureInner, 900, 640, payOvr);
+      freeze(paymentsSection, featureInner, 900, 500, payOvr);
     }
 
     /* ── 4. Notifications — notif-left ─────────────────────────
