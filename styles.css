@@ -1381,6 +1381,19 @@ body {
 .ldd-chart-bar { width: 100%; border-radius: 3px 3px 0 0; }
 .ldd-chart-bar--done { background: #03ACEA; }
 .ldd-chart-bar--proj { background: rgba(3,172,234,0.28); box-sizing: border-box; }
+.ldd-chart-bar--pending {
+  background: #03ACEA;
+  border-top: 1.5px dashed rgba(255,255,255,0.7);
+  border-left: 1.5px dashed rgba(3,172,234,0.4);
+  border-right: 1.5px dashed rgba(3,172,234,0.4);
+  box-sizing: border-box;
+}
+.ldd-chart-bar--expected {
+  background: rgba(3,172,234,0.18);
+  border: 1.5px dashed rgba(3,172,234,0.5);
+  border-bottom: none;
+  box-sizing: border-box;
+}
 .ldd-chart-bar-partial { position: relative; width: 100%; }
 .ldd-chart-bar-partial-outer { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: rgba(245,158,11,0.35); box-sizing: border-box; }
 .ldd-chart-bar-partial-inner { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: #F59E0B; }
