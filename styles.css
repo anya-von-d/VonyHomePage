@@ -2332,31 +2332,37 @@ body {
 }
 
 .upcard {
-  background: #F4F4F5;
+  background: rgba(255,255,255,0.85);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  backdrop-filter: blur(12px) saturate(1.4);
   border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.07);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  padding: 14px 18px;
   overflow: hidden;
-  box-shadow: 0px 20px 40px rgba(0,0,0,0.08), 0px 3px 10px rgba(0,0,0,0.12);
 }
 
 .upcard--blue {
-  background: #03ACEA;
+  background: rgba(255,255,255,0.85);
 }
 
 .upcard-header {
   font-family: 'DM Sans', sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   color: #9B9A98;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 6px 14px 5px;
+  padding: 0 0 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .upcard-header--blue {
-  color: rgba(255,255,255,0.75);
+  color: #9B9A98;
 }
 
 .upcard-header-right {
@@ -2368,13 +2374,13 @@ body {
 }
 
 .upcard-header-right--blue {
-  color: rgba(255,255,255,0.85);
+  color: #9B9A98;
 }
 
 .upcard-body {
-  background: #fff;
-  margin: 0 5px 5px;
-  border-radius: 10px;
+  background: transparent;
+  margin: 0;
+  border-radius: 0;
   padding: 4px 16px 10px;
 }
 
