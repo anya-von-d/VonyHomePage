@@ -1129,8 +1129,8 @@ body {
   border-radius: 3px 3px 0 0;
 }
 
-.pdb-bar--owed { background: #54A6CF; }
-.pdb-bar--owe  { background: #7EC0EA; }
+.pdb-bar--owed { background: #03ACEA; }
+.pdb-bar--owe  { background: #1D5B94; }
 
 .pdb-chart-labels {
   display: flex;
@@ -1166,8 +1166,8 @@ body {
   flex-shrink: 0;
 }
 
-.pdb-legend-dot--owed { background: #54A6CF; }
-.pdb-legend-dot--owe  { background: #7EC0EA; }
+.pdb-legend-dot--owed { background: #03ACEA; }
+.pdb-legend-dot--owe  { background: #1D5B94; }
 
 /* Active loans */
 .pdb-loan-row {
@@ -1209,16 +1209,16 @@ body {
   overflow: hidden;
 }
 
-.pdb-progress-track--lent   { background: rgba(84,166,207,0.18); }
-.pdb-progress-track--borrow { background: rgba(126,192,234,0.22); }
+.pdb-progress-track--lent   { background: rgba(3,172,234,0.1); }
+.pdb-progress-track--borrow { background: rgba(29,91,148,0.1); }
 
 .pdb-progress-fill {
   height: 100%;
   border-radius: 4px;
 }
 
-.pdb-progress-fill--lent   { background: #54A6CF; }
-.pdb-progress-fill--borrow { background: #7EC0EA; }
+.pdb-progress-fill--lent   { background: #03ACEA; }
+.pdb-progress-fill--borrow { background: #1D5B94; }
 
 .pdb-loan-detail {
   font-family: 'DM Sans', sans-serif;
