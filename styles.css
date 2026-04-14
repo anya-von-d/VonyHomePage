@@ -690,13 +690,13 @@ body {
   z-index: 1;
   padding: 14px 20px;
   border-radius: 14px;
-  background: linear-gradient(160deg, rgba(255,255,255,0.97) 0%, rgba(245,251,255,0.93) 100%);
-  border: 1.5px solid rgba(255,255,255,0.9);
-  box-shadow: 0 2px 16px rgba(29,91,148,0.10), inset 0 1px 0 rgba(255,255,255,1), inset 0 -1px 0 rgba(200,220,240,0.3);
+  background: white;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
 }
 .pdb-aurora--incoming .pdb-aurora-inner {
-  background: linear-gradient(160deg, rgba(255,255,255,0.97) 0%, rgba(240,252,255,0.93) 100%);
-  box-shadow: 0 2px 16px rgba(3,172,234,0.10), inset 0 1px 0 rgba(255,255,255,1), inset 0 -1px 0 rgba(180,230,245,0.3);
+  background: white;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
 }
 
 /* Section headers (new portal style) */
@@ -10284,6 +10284,26 @@ a.help-card {
   padding: 20px;
   border: 1px solid rgba(0,0,0,0.06);
   box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  overflow: hidden;
+}
+.tylp-top-row > *,
+.tylp-two-col > *,
+.tylp-np-grid > *,
+.tylp-terms-grid > *,
+.tylp-left-stack > *,
+.tylp-stat-grid > * {
+  min-width: 0;
+  overflow: hidden;
+}
+.tylp-top-left {
+  min-width: 0;
+  overflow: hidden;
+}
+.tylp-np-grid {
+  min-width: 0;
+}
+.tylp-terms-grid {
+  min-width: 0;
 }
 
 /* Card header (portal style: uppercase, border-bottom) */
@@ -10307,7 +10327,7 @@ a.help-card {
 /* Section 1: top row 2fr 1fr */
 .tylp-top-row {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   gap: 16px;
   align-items: stretch;
 }
@@ -10387,7 +10407,7 @@ a.help-card {
 /* Section 2 & 3: 2-column */
 .tylp-two-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 24px;
   align-items: start;
 }
@@ -10510,18 +10530,71 @@ a.help-card {
 .tylp-stat-val { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; color: #1A1918; margin: 0; }
 .tylp-stat-sub { font-family: 'DM Sans', sans-serif; font-size: 9px; color: #787776; margin-top: 2px; }
 
-/* Responsive */
+/* Responsive: shrink to fit, never stack */
 @media (max-width: 700px) {
-  .tylp-top-row,
+  .tylp-detail-box {
+    padding: 10px;
+    gap: 12px;
+  }
+  .tylp-top-row {
+    gap: 8px;
+  }
   .tylp-two-col {
-    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .tylp-detail-card {
+    padding: 8px 10px;
+  }
+  .tylp-card-hdr {
+    padding-bottom: 6px;
+    margin-bottom: 2px;
+  }
+  .tylp-card-hdr-text {
+    font-size: 7px;
+  }
+  .tylp-np-date {
+    font-size: 11px;
+  }
+  .tylp-term-label {
+    font-size: 7px;
+  }
+  .tylp-term-val {
+    font-size: 10px;
   }
   .tylp-terms-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    padding: 8px 10px;
   }
-  .tylp-stat-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  .tylp-donut-wrap svg {
+    width: 80px;
+    height: 80px;
+  }
+  .tylp-pmt-row {
+    padding: 4px;
+    gap: 6px;
+  }
+  .tylp-pmt-title {
+    font-size: 10px;
+  }
+  .tylp-pmt-badge {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+  .tylp-timeline-desc {
+    font-size: 10px;
+  }
+  .tylp-timeline-date {
+    font-size: 9px;
+  }
+  .tylp-stat-label {
+    font-size: 7px;
+  }
+  .tylp-stat-val {
+    font-size: 10px;
+  }
+  .tylp-doc-btn {
+    font-size: 9px;
+    padding: 6px 10px;
   }
 }
 
