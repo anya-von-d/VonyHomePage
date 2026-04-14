@@ -54,16 +54,19 @@
         innerEl.style.transformOrigin = '';
         void innerEl.offsetHeight;           /* force layout recalc */
 
-        /* Use the tallest visible child's full height (scrollHeight),
-         * since the grid container's scrollHeight may not capture
-         * children that overflow their grid cell.                  */
+        /* Walk all visible descendants to find the true content height,
+         * since grid/flex containers may clip scrollHeight.           */
         var naturalH = innerEl.scrollHeight;
-        Array.from(innerEl.children).forEach(function (child) {
-          if (getComputedStyle(child).display !== 'none') {
-            var h = Math.max(child.scrollHeight, child.offsetHeight);
-            if (h > naturalH) naturalH = h;
-          }
-        });
+        function walkChildren(el) {
+          Array.from(el.children).forEach(function (child) {
+            if (getComputedStyle(child).display !== 'none') {
+              var h = Math.max(child.scrollHeight, child.offsetHeight);
+              if (h > naturalH) naturalH = h;
+              walkChildren(child);
+            }
+          });
+        }
+        walkChildren(innerEl);
 
         /* 3 — Scale down to fit available content width */
         var availW = sectionEl.offsetWidth - pl - pr;
@@ -72,9 +75,10 @@
         innerEl.style.transformOrigin = 'top left';
         innerEl.style.transform       = 'scale(' + scale + ')';
 
-        /* 4 — Collapse section height so the shrunken content leaves no gap */
+        /* 4 — Collapse section height so the shrunken content leaves no gap
+         *     Add 20px buffer to avoid clipping at the bottom edge     */
         sectionEl.style.overflow = 'hidden';
-        sectionEl.style.height   = (pt + naturalH * scale + pb) + 'px';
+        sectionEl.style.height   = (pt + naturalH * scale + pb + 20) + 'px';
 
       } else {
 
