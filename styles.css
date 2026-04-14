@@ -5686,14 +5686,15 @@ a.help-card {
   }
   .notif-inner {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 32px;
+  }
+  .notif-right {
+    order: -1;
+    text-align: center;
+    align-items: center;
   }
   .notif-left {
     justify-content: center;
-  }
-  .notif-right {
-    text-align: center;
-    align-items: center;
   }
   .contracts-inner {
     grid-template-columns: 1fr;
