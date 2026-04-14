@@ -202,7 +202,7 @@
         );
       });
 
-      freeze(loanSection, loanInner, 940, 700, loanOvr);
+      freeze(loanSection, loanInner, 940, 500, loanOvr);
     }
 
     /* ── 3. Payments at a Glance ─────────────────────────────────
