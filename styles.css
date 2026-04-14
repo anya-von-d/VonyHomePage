@@ -584,9 +584,11 @@ body {
 /* ─── Portal Dashboard Box (homepage) ─── */
 .pdb-box {
   grid-column: 1 / -1;
-  background: #E5E2DF;
+  background: #ffffff;
   border-radius: 18px;
-  padding: 16px;
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
 }
 
 .pdb-layout {
@@ -648,12 +650,264 @@ body {
   gap: 16px;
 }
 
+/* ── New VonyPortal home layout ── */
+
+/* Top: 3 summary cards */
+.pdb-summary-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+/* Aurora glow cards */
+.pdb-aurora {
+  position: relative !important;
+  background: transparent !important;
+  overflow: visible !important;
+}
+.pdb-aurora-glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 20px);
+  height: calc(100% + 16px);
+  filter: blur(8px) saturate(1.1);
+  opacity: 0.28;
+  border-radius: 20px;
+  z-index: 0;
+  pointer-events: none;
+}
+.pdb-aurora-glow--due {
+  background: linear-gradient(135deg, rgb(3,172,234) 0%, rgb(99,102,241) 25%, rgb(139,92,246) 50%, rgb(124,58,237) 75%, rgb(29,91,148) 100%);
+}
+.pdb-aurora-glow--incoming {
+  background: linear-gradient(135deg, rgb(3,172,234) 0%, rgb(6,182,212) 30%, rgb(20,184,166) 60%, rgb(3,172,234) 100%);
+}
+.pdb-aurora-inner {
+  position: relative;
+  z-index: 1;
+  padding: 14px 20px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, rgba(255,255,255,0.97) 0%, rgba(245,251,255,0.93) 100%);
+  border: 1.5px solid rgba(255,255,255,0.9);
+  box-shadow: 0 2px 16px rgba(29,91,148,0.10), inset 0 1px 0 rgba(255,255,255,1), inset 0 -1px 0 rgba(200,220,240,0.3);
+}
+.pdb-aurora--incoming .pdb-aurora-inner {
+  background: linear-gradient(160deg, rgba(255,255,255,0.97) 0%, rgba(240,252,255,0.93) 100%);
+  box-shadow: 0 2px 16px rgba(3,172,234,0.10), inset 0 1px 0 rgba(255,255,255,1), inset 0 -1px 0 rgba(180,230,245,0.3);
+}
+
+/* Section headers (new portal style) */
+.pdb-section-hdr {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+.pdb-section-icon {
+  width: 20px; height: 20px;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.pdb-section-icon--blue { background: rgba(29,91,148,0.12); }
+.pdb-section-icon--cyan { background: rgba(3,172,234,0.12); }
+.pdb-section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  color: #9B9A98;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.pdb-section-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #9B9A98;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Portal card header with border-bottom */
+.pdb-card-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+/* Notification bar */
+.pdb-notif-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 9px;
+  background: rgba(3,172,234,0.06);
+  border: 1px solid rgba(3,172,234,0.15);
+  margin-bottom: 16px;
+}
+.pdb-notif-bar .pdb-section-icon {
+  width: 20px; height: 20px;
+}
+.pdb-notif-bar-text {
+  flex: 1;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1A1918;
+}
+.pdb-notif-bar-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #03ACEA;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: white;
+  border: 1px solid rgba(3,172,234,0.2);
+  flex-shrink: 0;
+}
+
+/* Overview card */
+.pdb-overview-card {
+  padding: 14px 20px;
+  background: white !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04) !important;
+  border: 1px solid rgba(0,0,0,0.05) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pdb-overview-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.pdb-overview-metric {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.pdb-overview-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #787776;
+}
+.pdb-overview-val {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.pdb-overview-val--cyan { color: #03ACEA; }
+.pdb-overview-val--dark { color: #1A1918; }
+
+/* Masonry 2-column layout */
+.pdb-masonry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.pdb-masonry-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Progress section (How month is going) */
+.pdb-progress-section {
+  padding: 6px 0;
+}
+.pdb-progress-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #1A1918;
+}
+.pdb-progress-val {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.pdb-progress-val--cyan { color: #03ACEA; }
+.pdb-progress-val--navy { color: #1D5B94; }
+
+/* Predicted bars */
+.pdb-bar--predicted { opacity: 0.3; }
+.pdb-legend-dot--predicted { background: rgba(3,172,234,0.25); }
+.pdb-chart-label--future { color: #C5C3C0; }
+
+/* Date row tweak for aurora cards */
+.pdb-sub--right {
+  margin-left: auto;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 13px;
+  color: #787776;
+}
+
+/* Avatar circles */
+.pdb-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+.pdb-avatar--purple { background: #7C3AED; }
+.pdb-avatar--blue { background: #3B82F6; }
+.pdb-avatar--pink { background: #EC4899; }
+.pdb-avatar--green { background: #16A34A; }
+
+/* Upcoming purpose text */
+.pdb-upcoming-purpose {
+  color: #9B9A98;
+}
+
+/* Badge cyan variant */
+.pdb-badge--cyan {
+  background: rgba(3,172,234,0.10);
+  color: #03ACEA;
+}
+
+/* Responsive: summary row stacks on mobile */
+@media (max-width: 900px) {
+  .pdb-summary-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .pdb-masonry {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Card shell */
 .pdb-card {
-  background: #F4F4F5;
+  background: rgba(255,255,255,0.85);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  backdrop-filter: blur(12px) saturate(1.4);
   border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.07);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  padding: 14px 18px;
   overflow: hidden;
-  box-shadow: 0px 20px 40px rgba(0,0,0,0.08), 0px 3px 10px rgba(0,0,0,0.12);
 }
 
 .pdb-card--blue {
@@ -678,7 +932,7 @@ body {
 }
 
 .pdb-header-right {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 500;
   color: #9B9A98;
   text-transform: none;
@@ -686,14 +940,14 @@ body {
 }
 
 .pdb-card-body {
-  background: #fff;
-  margin: 0 5px 5px;
+  background: transparent;
+  margin: 0;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .pdb-card-body--pad {
-  padding: 12px 14px 14px;
+  padding: 0;
 }
 
 .pdb-card-inner {
@@ -9345,13 +9599,19 @@ a.help-card {
 .pdb-box.cards-settled .pdb-card {
   transform: rotate(0deg) scale(1) translateX(0) translateY(0);
   opacity: 1;
-  background: #F4F4F5;
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
-  box-shadow: 0px 20px 40px rgba(0,0,0,0.08), 0px 3px 10px rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.85);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  backdrop-filter: blur(12px) saturate(1.4);
+  border: 1px solid rgba(0,0,0,0.07);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
 }
 .pdb-box.cards-settled .pdb-card--blue {
   background: #03ACEA;
+}
+.pdb-box.cards-settled .pdb-aurora {
+  background: transparent;
+  overflow: visible;
+  box-shadow: none;
 }
 .pdb-box.cards-settled .pdb-inbox {
   transform: rotate(0deg) scale(1) translateX(0) translateY(0);
@@ -9930,7 +10190,260 @@ a.help-card {
   }
 }
 
-/* ── Track Your Loan Progress: overlapping card fan ── */
+/* ── Track Your Loan Progress: detail box layout ── */
+.tylp-detail-box {
+  max-width: 900px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+}
+
+/* Card header (portal style: uppercase, border-bottom) */
+.tylp-card-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.tylp-card-hdr-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #9B9A98;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Section 1: top row 2fr 1fr */
+.tylp-top-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+.tylp-top-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tylp-np-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.tylp-np-hdr {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+.tylp-np-val {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.tylp-np-date {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #1A1918;
+  letter-spacing: -0.02em;
+}
+.tylp-np-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #9B9A98;
+  margin-left: auto;
+}
+/* Loan terms 4-col */
+.tylp-terms-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  background: rgba(255,255,255,0.85);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  backdrop-filter: blur(12px) saturate(1.4);
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.07);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  padding: 12px 14px;
+}
+.tylp-term { text-align: center; }
+.tylp-term-label { font-family: 'DM Sans', sans-serif; font-size: 10px; color: #787776; font-weight: 500; margin-bottom: 2px; }
+.tylp-term-val { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; color: #1A1918; }
+
+/* Donut card */
+.tylp-donut-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tylp-donut-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 8px 0;
+}
+.tylp-donut-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #1A1918;
+  margin: 6px 0 0;
+}
+
+/* Section 2 & 3: 2-column */
+.tylp-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.tylp-left-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tylp-detail-card {
+  padding: 14px 18px;
+}
+
+/* Document buttons */
+.tylp-doc-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tylp-doc-btn {
+  background: #1A1918;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Payment rows (portal style) */
+.tylp-pmt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.tylp-pmt-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.03);
+}
+.tylp-pmt-info { flex: 1; min-width: 0; }
+.tylp-pmt-title { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; color: #4B4A48; margin: 0; }
+.tylp-pmt-paid { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; color: #15803D; margin: 1px 0 0; }
+.tylp-pmt-remaining { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; color: #03ACEA; margin: 1px 0 0; }
+.tylp-pmt-due { font-family: 'DM Sans', sans-serif; font-size: 11px; color: #4B4A48; margin: 1px 0 0; }
+
+/* Payment badges */
+.tylp-pmt-badge {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+}
+.tylp-pmt-badge--done { background: rgba(22,163,74,0.18); color: #16A34A; }
+.tylp-pmt-badge--partial { background: rgba(3,172,234,0.18); color: #0288CE; }
+.tylp-pmt-badge--upcoming { background: rgba(0,0,0,0.03); color: #787776; }
+
+/* Activity timeline */
+.tylp-timeline {
+  display: flex;
+  flex-direction: column;
+}
+.tylp-timeline-item {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  position: relative;
+  padding-bottom: 12px;
+}
+.tylp-timeline-item:last-child { padding-bottom: 0; }
+.tylp-timeline-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  margin-top: 2px;
+  box-shadow: 0 0 0 3px white;
+}
+.tylp-timeline-line {
+  position: absolute;
+  left: 12px;
+  top: 26px;
+  width: 1px;
+  height: calc(100% - 14px);
+  background: rgba(84,166,207,0.2);
+  z-index: 1;
+}
+.tylp-timeline-item:last-child .tylp-timeline-line { display: none; }
+.tylp-timeline-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 3px;
+}
+.tylp-timeline-desc { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; color: #1A1918; line-height: 1.4; }
+.tylp-timeline-date { font-family: 'DM Sans', sans-serif; font-size: 11px; color: #5C5B5A; }
+
+/* Loan Progress stat grid (portal style) */
+.tylp-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.tylp-stat { text-align: center; }
+.tylp-stat-label { font-family: 'DM Sans', sans-serif; font-size: 10px; color: #787776; font-weight: 500; margin-bottom: 2px; }
+.tylp-stat-val { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; color: #1A1918; margin: 0; }
+.tylp-stat-sub { font-family: 'DM Sans', sans-serif; font-size: 9px; color: #787776; margin-top: 2px; }
+
+/* Responsive */
+@media (max-width: 700px) {
+  .tylp-top-row,
+  .tylp-two-col {
+    grid-template-columns: 1fr;
+  }
+  .tylp-terms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tylp-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+/* ── Track Your Loan Progress: overlapping card fan (legacy) ── */
 .tylp-fan {
   position: relative;
   width: 100%;

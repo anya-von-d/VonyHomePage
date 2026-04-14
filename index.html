@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=51">
+  <link rel="stylesheet" href="styles.css?v=53">
   <link rel="icon" type="image/png" href="Images/favicon.png">
 </head>
 <body>
@@ -395,185 +395,192 @@
     <div class="dashboard-container">
       <div class="dashboard-grid">
 
-        <!-- Portal dashboard grey box -->
+        <!-- Portal dashboard box -->
         <div class="pdb-box">
-          <div class="pdb-layout">
 
-            <!-- LEFT SECTION -->
-            <div class="pdb-left">
-
-              <!-- Inbox bar -->
-              <div class="pdb-inbox">
-                <div class="pdb-inbox-icon">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <!-- Top: 3 summary cards -->
+          <div class="pdb-summary-row">
+            <!-- Next Payment Due (aurora glow) -->
+            <div class="pdb-card pdb-aurora pdb-aurora--due">
+              <div class="pdb-aurora-glow pdb-aurora-glow--due"></div>
+              <div class="pdb-aurora-inner">
+                <div class="pdb-section-hdr">
+                  <div class="pdb-section-icon pdb-section-icon--blue"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1D5B94" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
+                  <span class="pdb-section-label">Next Payment Due</span>
                 </div>
-                <span class="pdb-inbox-text">You're all caught up</span>
-              </div>
-
-              <!-- Next payment due + Next payment incoming -->
-              <div class="pdb-pair">
-                <!-- Next Payment Due -->
-                <div class="pdb-card pdb-card--blue">
-                  <div class="pdb-card-header pdb-card-header--blue">NEXT PAYMENT DUE</div>
-                  <div class="pdb-card-body">
-                    <div class="pdb-card-inner">
-                      <div class="pdb-date-row">
-                        <span class="pdb-date">Apr 15</span>
-                        <span class="pdb-badge pdb-badge--neutral">7d</span>
-                      </div>
-                      <div class="pdb-sub">$150 to Alex</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Next Payment Incoming -->
-                <div class="pdb-card pdb-card--blue">
-                  <div class="pdb-card-header pdb-card-header--blue">NEXT PAYMENT INCOMING</div>
-                  <div class="pdb-card-body">
-                    <div class="pdb-card-inner">
-                      <div class="pdb-date-row">
-                        <span class="pdb-date">Apr 20</span>
-                        <span class="pdb-badge pdb-badge--neutral">12d</span>
-                      </div>
-                      <div class="pdb-sub">$200 from Sam</div>
-                    </div>
-                  </div>
+                <div class="pdb-date-row">
+                  <span class="pdb-date">Apr 15</span>
+                  <span class="pdb-badge pdb-badge--neutral">7d</span>
+                  <span class="pdb-sub pdb-sub--right">$150 to Alex</span>
                 </div>
               </div>
+            </div>
 
-              <!-- Upcoming payments + Loans over time -->
-              <div class="pdb-pair">
-                <!-- Upcoming Payments -->
-                <div class="pdb-card">
-                  <div class="pdb-card-header">UPCOMING PAYMENTS <span class="pdb-header-right">Full schedule</span></div>
-                  <div class="pdb-card-body pdb-card-body--pad">
-                    <div class="pdb-upcoming-row">
-                      <span class="pdb-badge pdb-badge--neutral">7d</span>
-                      <div class="pdb-upcoming-info"><div class="pdb-upcoming-name">Pay Alex</div><div class="pdb-upcoming-desc">for rent</div></div>
-                      <span class="pdb-upcoming-amt">-$150</span>
-                    </div>
-                    <div class="pdb-upcoming-row">
-                      <span class="pdb-badge pdb-badge--late">2d late</span>
-                      <div class="pdb-upcoming-info"><div class="pdb-upcoming-name">Jordan pays you</div><div class="pdb-upcoming-desc">Apr 5</div></div>
-                      <span class="pdb-upcoming-amt pdb-upcoming-amt--in">+$80</span>
-                    </div>
-                    <div class="pdb-upcoming-row">
-                      <span class="pdb-badge pdb-badge--neutral">12d</span>
-                      <div class="pdb-upcoming-info"><div class="pdb-upcoming-name">Sam pays you</div><div class="pdb-upcoming-desc">Apr 20</div></div>
-                      <span class="pdb-upcoming-amt pdb-upcoming-amt--in">+$200</span>
-                    </div>
-                  </div>
+            <!-- Next Payment Incoming (aurora glow) -->
+            <div class="pdb-card pdb-aurora pdb-aurora--incoming">
+              <div class="pdb-aurora-glow pdb-aurora-glow--incoming"></div>
+              <div class="pdb-aurora-inner">
+                <div class="pdb-section-hdr">
+                  <div class="pdb-section-icon pdb-section-icon--cyan"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2.5" stroke-linecap="round"><polyline points="17 11 12 6 7 11"/><line x1="12" y1="6" x2="12" y2="18"/></svg></div>
+                  <span class="pdb-section-label">Next Payment Incoming</span>
                 </div>
-                <!-- Loans Over Time -->
-                <div class="pdb-card">
-                  <div class="pdb-card-header">LOANS OVER TIME <span class="pdb-header-right">6 months</span></div>
-                  <div class="pdb-card-body pdb-card-body--pad">
-                    <div class="pdb-chart">
-                      <div class="pdb-chart-bars">
-                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:35%"></div><div class="pdb-bar pdb-bar--owe" style="height:20%"></div></div>
-                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:55%"></div><div class="pdb-bar pdb-bar--owe" style="height:30%"></div></div>
-                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:70%"></div><div class="pdb-bar pdb-bar--owe" style="height:45%"></div></div>
-                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:60%"></div><div class="pdb-bar pdb-bar--owe" style="height:55%"></div></div>
-                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:80%"></div><div class="pdb-bar pdb-bar--owe" style="height:35%"></div></div>
-                        <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:65%"></div><div class="pdb-bar pdb-bar--owe" style="height:25%"></div></div>
-                      </div>
-                      <div class="pdb-chart-labels">
-                        <span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span class="pdb-chart-label--current">Apr</span>
-                      </div>
-                      <div class="pdb-chart-legend">
-                        <span class="pdb-legend-item"><span class="pdb-legend-dot pdb-legend-dot--owed"></span>Owed to you</span>
-                        <span class="pdb-legend-item"><span class="pdb-legend-dot pdb-legend-dot--owe"></span>You owe</span>
-                      </div>
-                    </div>
-                  </div>
+                <div class="pdb-date-row">
+                  <span class="pdb-date">Apr 20</span>
+                  <span class="pdb-badge pdb-badge--cyan">12d</span>
+                  <span class="pdb-sub pdb-sub--right">$200 from Sam</span>
                 </div>
               </div>
+            </div>
 
-              <!-- Your Active Loans -->
+            <!-- Overview -->
+            <div class="pdb-card pdb-overview-card">
+              <div class="pdb-section-hdr">
+                <div class="pdb-section-icon pdb-section-icon--cyan"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+                <span class="pdb-section-label">Overview</span>
+              </div>
+              <div class="pdb-overview-row">
+                <div class="pdb-overview-metric"><span class="pdb-overview-label">Owed to you</span> <span class="pdb-overview-val pdb-overview-val--cyan">$850</span></div>
+                <div class="pdb-overview-metric"><span class="pdb-overview-label">You owe</span> <span class="pdb-overview-val pdb-overview-val--dark">$350</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: 2-column masonry -->
+          <div class="pdb-masonry">
+            <!-- Left column -->
+            <div class="pdb-masonry-col">
+
+              <!-- Upcoming -->
               <div class="pdb-card">
-                <div class="pdb-card-header">YOUR ACTIVE LOANS <span class="pdb-header-right">Manage</span></div>
-                <div class="pdb-card-body pdb-card-body--pad">
-                  <div class="pdb-loan-row">
-                    <div class="pdb-loan-top"><span class="pdb-loan-label">You lent Alex $600</span><span class="pdb-loan-pct">75%</span></div>
-                    <div class="pdb-progress-track pdb-progress-track--lent"><div class="pdb-progress-fill pdb-progress-fill--lent" style="width:75%"></div></div>
-                    <div class="pdb-loan-detail">$450 of $600 repaid</div>
-                  </div>
-                  <div class="pdb-loan-row">
-                    <div class="pdb-loan-top"><span class="pdb-loan-label">Jordan lent you $500</span><span class="pdb-loan-pct">30%</span></div>
-                    <div class="pdb-progress-track pdb-progress-track--borrow"><div class="pdb-progress-fill pdb-progress-fill--borrow" style="width:30%"></div></div>
-                    <div class="pdb-loan-detail">$150 of $500 paid back</div>
-                  </div>
+                <div class="pdb-card-hdr"><span class="pdb-section-title">Upcoming</span><span class="pdb-header-right">Full schedule &rarr;</span></div>
+                <div class="pdb-upcoming-row">
+                  <span class="pdb-badge pdb-badge--neutral">7d</span>
+                  <div class="pdb-upcoming-info"><div class="pdb-upcoming-name">Pay Alex <span class="pdb-upcoming-purpose">&middot; rent</span></div></div>
+                  <span class="pdb-upcoming-amt">-$150</span>
                 </div>
-              </div>
-
-            </div><!-- /pdb-left -->
-
-            <!-- RIGHT COLUMN -->
-            <div class="pdb-right">
-
-              <!-- Owed to You -->
-              <div class="pdb-card">
-                <div class="pdb-card-header">OWED TO YOU</div>
-                <div class="pdb-card-body">
-                  <div class="pdb-card-inner">
-                    <div class="pdb-amount pdb-amount--blue">$850</div>
-                    <div class="pdb-sub">between 2 loans</div>
-                  </div>
+                <div class="pdb-upcoming-row">
+                  <span class="pdb-badge pdb-badge--late">2d late</span>
+                  <div class="pdb-upcoming-info"><div class="pdb-upcoming-name">Jordan pays you</div></div>
+                  <span class="pdb-upcoming-amt pdb-upcoming-amt--in">+$80</span>
                 </div>
-              </div>
-
-              <!-- You Owe -->
-              <div class="pdb-card">
-                <div class="pdb-card-header">YOU OWE</div>
-                <div class="pdb-card-body">
-                  <div class="pdb-card-inner">
-                    <div class="pdb-amount pdb-amount--dark">$350</div>
-                    <div class="pdb-sub">between 1 loan</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- How April is Going -->
-              <div class="pdb-card">
-                <div class="pdb-card-header">HOW APRIL IS GOING</div>
-                <div class="pdb-card-body pdb-card-body--pad">
-                  <div class="pdb-month-grid">
-                    <div class="pdb-month-col pdb-month-col--left">
-                      <div class="pdb-month-label">RECEIVED</div>
-                      <div class="pdb-month-amt pdb-month-amt--blue">$200</div>
-                      <div class="pdb-mini-track pdb-mini-track--blue"><div class="pdb-mini-fill pdb-mini-fill--blue" style="width:50%"></div></div>
-                      <div class="pdb-month-exp">of $400 expected</div>
-                    </div>
-                    <div class="pdb-month-col pdb-month-col--right">
-                      <div class="pdb-month-label">PAID OUT</div>
-                      <div class="pdb-month-amt pdb-month-amt--dark">$150</div>
-                      <div class="pdb-mini-track pdb-mini-track--light"><div class="pdb-mini-fill pdb-mini-fill--light" style="width:50%"></div></div>
-                      <div class="pdb-month-exp">of $300 expected</div>
-                    </div>
-                  </div>
+                <div class="pdb-upcoming-row">
+                  <span class="pdb-badge pdb-badge--neutral">12d</span>
+                  <div class="pdb-upcoming-info"><div class="pdb-upcoming-name">Sam pays you <span class="pdb-upcoming-purpose">&middot; travel</span></div></div>
+                  <span class="pdb-upcoming-amt pdb-upcoming-amt--in">+$200</span>
                 </div>
               </div>
 
               <!-- Recent Activity -->
               <div class="pdb-card">
-                <div class="pdb-card-header">RECENT ACTIVITY <span class="pdb-header-right">View all</span></div>
+                <div class="pdb-card-hdr"><span class="pdb-section-title">Recent Activity</span><span class="pdb-header-right">View all &rarr;</span></div>
                 <div class="pdb-card-body pdb-card-body--pad">
                   <div class="pdb-activity-row">
-                    <div class="pdb-activity-icon" style="background:rgba(84,166,207,0.12)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#54A6CF" stroke-width="2" stroke-linecap="round"><polyline points="7 13 12 18 17 13"></polyline><line x1="12" y1="18" x2="12" y2="6"></line></svg></div>
-                    <div class="pdb-activity-info"><div class="pdb-activity-desc">You made a $150 payment to Alex</div><div class="pdb-activity-date">Apr 1</div></div>
+                    <div class="pdb-activity-icon" style="background:rgba(29,91,148,0.12)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1D5B94" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
+                    <div class="pdb-activity-desc">You paid Alex $150</div>
+                    <span class="pdb-activity-date">Apr 1</span>
                   </div>
                   <div class="pdb-activity-row">
-                    <div class="pdb-activity-icon" style="background:rgba(22,163,74,0.12)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                    <div class="pdb-activity-info"><div class="pdb-activity-desc">Sam accepted your $200 loan</div><div class="pdb-activity-date">Mar 28</div></div>
+                    <div class="pdb-activity-icon" style="background:rgba(3,172,234,0.12)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2.5" stroke-linecap="round"><polyline points="17 11 12 6 7 11"/><line x1="12" y1="6" x2="12" y2="18"/></svg></div>
+                    <div class="pdb-activity-desc">Received $80 from Jordan</div>
+                    <span class="pdb-activity-date">Mar 28</span>
                   </div>
                   <div class="pdb-activity-row">
-                    <div class="pdb-activity-icon" style="background:rgba(124,58,237,0.12)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><polyline points="17 11 12 6 7 11"></polyline><line x1="12" y1="6" x2="12" y2="18"></line></svg></div>
-                    <div class="pdb-activity-info"><div class="pdb-activity-desc">Received $80 payment from Jordan</div><div class="pdb-activity-date">Mar 25</div></div>
+                    <div class="pdb-activity-icon" style="background:rgba(22,163,74,0.12)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="pdb-activity-desc">Sam accepted your $200 loan</div>
+                    <span class="pdb-activity-date">Mar 25</span>
+                  </div>
+                  <div class="pdb-activity-row">
+                    <div class="pdb-activity-icon" style="background:rgba(29,91,148,0.12)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1D5B94" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
+                    <div class="pdb-activity-desc">Sent $200 loan offer to Sam</div>
+                    <span class="pdb-activity-date">Mar 24</span>
+                  </div>
+                  <div class="pdb-activity-row">
+                    <div class="pdb-activity-icon" style="background:rgba(3,172,234,0.12)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2.5" stroke-linecap="round"><polyline points="17 11 12 6 7 11"/><line x1="12" y1="6" x2="12" y2="18"/></svg></div>
+                    <div class="pdb-activity-desc">Received $150 from Alex</div>
+                    <span class="pdb-activity-date">Mar 15</span>
                   </div>
                 </div>
               </div>
 
-            </div><!-- /pdb-right -->
-          </div><!-- /pdb-layout -->
+              <!-- Active Lending -->
+              <div class="pdb-card">
+                <div class="pdb-card-hdr"><span class="pdb-section-title">Active Lending</span><span class="pdb-header-right">View all &rarr;</span></div>
+                <div class="pdb-card-body pdb-card-body--pad">
+                  <div class="pdb-loan-row">
+                    <div class="pdb-loan-top"><span class="pdb-avatar pdb-avatar--blue">A</span><span class="pdb-loan-label">You lent Alex $600 for rent</span><span class="pdb-loan-pct">75%</span></div>
+                    <div class="pdb-progress-track pdb-progress-track--lent"><div class="pdb-progress-fill pdb-progress-fill--lent" style="width:75%"></div></div>
+                    <div class="pdb-loan-detail">$450 of $600 paid back</div>
+                  </div>
+                  <div class="pdb-loan-row">
+                    <div class="pdb-loan-top"><span class="pdb-avatar pdb-avatar--green">S</span><span class="pdb-loan-label">You lent Sam $200 for travel</span><span class="pdb-loan-pct">0%</span></div>
+                    <div class="pdb-progress-track pdb-progress-track--lent"><div class="pdb-progress-fill pdb-progress-fill--lent" style="width:0%"></div></div>
+                    <div class="pdb-loan-detail">$0 of $200 paid back</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right column -->
+            <div class="pdb-masonry-col">
+
+              <!-- How April is Going -->
+              <div class="pdb-card">
+                <div class="pdb-card-hdr"><span class="pdb-section-title">How April is going</span></div>
+                <div class="pdb-card-body pdb-card-body--pad">
+                  <div class="pdb-progress-section">
+                    <div class="pdb-progress-meta"><span>Received</span><span class="pdb-progress-val pdb-progress-val--cyan">$200</span></div>
+                    <div class="pdb-progress-track pdb-progress-track--lent"><div class="pdb-progress-fill pdb-progress-fill--lent" style="width:50%"></div></div>
+                    <div class="pdb-loan-detail">of $400 expected</div>
+                  </div>
+                  <div class="pdb-progress-section">
+                    <div class="pdb-progress-meta"><span>Paid out</span><span class="pdb-progress-val pdb-progress-val--navy">$150</span></div>
+                    <div class="pdb-progress-track pdb-progress-track--borrow"><div class="pdb-progress-fill pdb-progress-fill--borrow" style="width:50%"></div></div>
+                    <div class="pdb-loan-detail">of $300 expected</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Your Loans Over Time -->
+              <div class="pdb-card">
+                <div class="pdb-card-hdr"><span class="pdb-section-title">Your Loans Over Time</span></div>
+                <div class="pdb-card-body pdb-card-body--pad">
+                  <div class="pdb-chart-legend">
+                    <span class="pdb-legend-item"><span class="pdb-legend-dot pdb-legend-dot--owed"></span>Lending</span>
+                    <span class="pdb-legend-item"><span class="pdb-legend-dot pdb-legend-dot--owe"></span>Borrowing</span>
+                    <span class="pdb-legend-item"><span class="pdb-legend-dot pdb-legend-dot--predicted"></span>Predicted</span>
+                  </div>
+                  <div class="pdb-chart">
+                    <div class="pdb-chart-bars">
+                      <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:35%"></div><div class="pdb-bar pdb-bar--owe" style="height:20%"></div></div>
+                      <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:55%"></div><div class="pdb-bar pdb-bar--owe" style="height:30%"></div></div>
+                      <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:70%"></div><div class="pdb-bar pdb-bar--owe" style="height:45%"></div></div>
+                      <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:60%"></div><div class="pdb-bar pdb-bar--owe" style="height:55%"></div></div>
+                      <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed" style="height:80%"></div><div class="pdb-bar pdb-bar--owe" style="height:35%"></div></div>
+                      <div class="pdb-bar-group"><div class="pdb-bar pdb-bar--owed pdb-bar--predicted" style="height:65%"></div><div class="pdb-bar pdb-bar--owe pdb-bar--predicted" style="height:25%"></div></div>
+                    </div>
+                    <div class="pdb-chart-labels">
+                      <span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span class="pdb-chart-label--current">Mar</span><span class="pdb-chart-label--future">Apr</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Active Borrowing -->
+              <div class="pdb-card">
+                <div class="pdb-card-hdr"><span class="pdb-section-title">Active Borrowing</span><span class="pdb-header-right">View all &rarr;</span></div>
+                <div class="pdb-card-body pdb-card-body--pad">
+                  <div class="pdb-loan-row">
+                    <div class="pdb-loan-top"><span class="pdb-avatar pdb-avatar--purple">J</span><span class="pdb-loan-label">Jordan lent you $500</span><span class="pdb-loan-pct">30%</span></div>
+                    <div class="pdb-progress-track pdb-progress-track--borrow"><div class="pdb-progress-fill pdb-progress-fill--borrow" style="width:30%"></div></div>
+                    <div class="pdb-loan-detail">$150 of $500 repaid</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div><!-- /pdb-box -->
 
       </div>
@@ -758,133 +765,183 @@
     <div class="feature-stacked">
       <h2 class="contracts-title" style="text-align:center;">Track Your Loan Progress</h2>
       <p class="contracts-subtitle" style="text-align:center; margin: 0 auto;">See every loan's status at a glance: payments made, upcoming milestones, and how close you are to being fully repaid.</p>
-      <!-- Card fan: 4 overlapping cards -->
-      <div class="tylp-fan">
+      <!-- Loan details mockup (matches VonyPortal YourLoans detail page) -->
+      <div class="tylp-detail-box">
 
-        <!-- Payment Progress (donut) + Payment History stacked on left -->
-        <div class="pdb-card tylp-card tylp-card--progress">
-          <div class="pdb-card-header">PAYMENT PROGRESS</div>
-          <div class="pdb-card-body" style="padding:10px 12px 12px; text-align:center;">
-            <svg width="120" height="120" viewBox="0 0 120 120">
-              <circle cx="60" cy="60" r="46" fill="none" stroke="#E5E4E2" stroke-width="8" stroke-linecap="round"/>
-              <circle cx="60" cy="60" r="46" fill="none" stroke="#03ACEA" stroke-width="8" stroke-dasharray="187.87 101.16" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-              <text x="60" y="54" text-anchor="middle" dominant-baseline="middle" style="font-size:18px;font-weight:700;fill:#1A1918;font-family:'DM Sans',sans-serif;">65%</text>
-              <text x="60" y="71" text-anchor="middle" dominant-baseline="middle" style="font-size:10px;font-weight:500;fill:#787776;font-family:'DM Sans',sans-serif;">repaid</text>
-            </svg>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:#1A1918;margin-top:2px;"><span style="font-weight:700;">$390.00</span> <span style="color:#787776;">of $600.00 repaid</span></p>
-          </div>
-        </div>
-
-        <!-- Payment History (bar chart) — under Payment Progress -->
-        <div class="pdb-card tylp-card tylp-card--history">
-          <div class="pdb-card-header">PAYMENT HISTORY</div>
-          <div class="pdb-card-body pdb-card-body--pad">
-            <div class="ldd-chart-area">
-              <div class="ldd-chart-yaxis">
-                <span>$150</span>
-                <span>$75</span>
-                <span>$0</span>
-              </div>
-              <div class="ldd-chart-main">
-                <div class="ldd-chart-bars">
-                  <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--done" style="height:80px;"></div></div>
-                  <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--done" style="height:80px;"></div></div>
-                  <div class="ldd-chart-col">
-                    <div class="ldd-chart-bar-partial" style="height:80px;">
-                      <div class="ldd-chart-bar-partial-outer" style="height:80px;"></div>
-                      <div class="ldd-chart-bar-partial-inner" style="height:48px;"></div>
-                    </div>
+        <!-- Section 1: Aurora NP cards + Loan Terms | Payment Progress donut -->
+        <div class="tylp-top-row">
+          <!-- Left: NP cards + terms -->
+          <div class="tylp-top-left">
+            <!-- Aurora NP cards -->
+            <div class="tylp-np-grid">
+              <!-- Next Payment Date -->
+              <div class="pdb-card pdb-aurora pdb-aurora--due">
+                <div class="pdb-aurora-glow pdb-aurora-glow--due"></div>
+                <div class="pdb-aurora-inner">
+                  <div class="tylp-np-hdr">
+                    <div class="pdb-section-icon pdb-section-icon--blue"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1D5B94" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
+                    <span class="pdb-section-label">Next Payment</span>
                   </div>
-                  <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--proj" style="height:80px;"></div></div>
-                </div>
-                <div class="ldd-chart-labels">
-                  <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#787776;">P1</span>
-                  <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#787776;">P2</span>
-                  <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#54A6CF;">P3</span>
-                  <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#54A6CF;">P4</span>
+                  <div class="tylp-np-val">
+                    <span class="tylp-np-date">Apr 8</span>
+                    <span class="pdb-badge pdb-badge--neutral">3d</span>
+                  </div>
                 </div>
               </div>
+              <!-- Next Payment Amount -->
+              <div class="pdb-card pdb-aurora pdb-aurora--due">
+                <div class="pdb-aurora-glow pdb-aurora-glow--due"></div>
+                <div class="pdb-aurora-inner">
+                  <div class="tylp-np-hdr">
+                    <div class="pdb-section-icon pdb-section-icon--blue"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1D5B94" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
+                    <span class="pdb-section-label">Amount Due</span>
+                  </div>
+                  <div class="tylp-np-val">
+                    <span class="tylp-np-date">$150.00</span>
+                    <span class="tylp-np-sub">to Jordan</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="ldd-chart-legend">
-              <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:#03ACEA;"></div>Completed</div>
-              <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:rgba(3,172,234,0.08);border:1px dashed rgba(3,172,234,0.2);"></div>Partial</div>
-              <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:rgba(84,166,207,0.28);border:1px dashed rgba(84,166,207,0.5);"></div>Expected</div>
+            <!-- Loan Terms row -->
+            <div class="tylp-terms-grid">
+              <div class="tylp-term"><div class="tylp-term-label">Loan Amount</div><div class="tylp-term-val">$600</div></div>
+              <div class="tylp-term"><div class="tylp-term-label">Interest</div><div class="tylp-term-val">0%</div></div>
+              <div class="tylp-term"><div class="tylp-term-label">Period</div><div class="tylp-term-val">4 months</div></div>
+              <div class="tylp-term"><div class="tylp-term-label">Payment</div><div class="tylp-term-val">$150/mo</div></div>
+            </div>
+          </div>
+          <!-- Right: Payment Progress donut -->
+          <div class="pdb-card tylp-detail-card tylp-donut-card">
+            <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payment Progress</span></div>
+            <div class="tylp-donut-wrap">
+              <svg width="140" height="140" viewBox="0 0 140 140">
+                <circle cx="70" cy="70" r="54" fill="none" stroke="#E5E4E2" stroke-width="9" stroke-linecap="round"/>
+                <circle cx="70" cy="70" r="54" fill="none" stroke="#03ACEA" stroke-width="9" stroke-dasharray="220.35 118.65" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                <text x="70" y="64" text-anchor="middle" dominant-baseline="middle" style="font-size:20px;font-weight:700;fill:#1A1918;font-family:'DM Sans',sans-serif;">65%</text>
+                <text x="70" y="82" text-anchor="middle" dominant-baseline="middle" style="font-size:11px;font-weight:500;fill:#787776;font-family:'DM Sans',sans-serif;">repaid</text>
+              </svg>
+              <p class="tylp-donut-sub"><span style="font-weight:700;">$390.00</span> <span style="color:#787776;">of $600.00</span></p>
             </div>
           </div>
         </div>
 
-        <!-- Payments (circle rows) — center, largest -->
-        <div class="pdb-card tylp-card tylp-card--payments">
-          <div class="pdb-card-header">PAYMENTS</div>
-          <div class="pdb-card-body pdb-card-body--pad">
-            <div class="ldd-pmt-circle-row">
-              <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
-                <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
-                <circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/>
-                <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">1</text>
-              </svg>
-              <div class="ldd-pmt-info">
-                <p class="ldd-pmt-info-title">Amount Due for Payment 1: $150.00</p>
-                <p class="ldd-pmt-info-paid">You paid: $150.00</p>
-                <p class="ldd-pmt-info-due">Due: Feb 8, 2026</p>
+        <!-- Section 2: Payment History + Docs | Payments -->
+        <div class="tylp-two-col">
+          <!-- Left: Payment History + Doc buttons -->
+          <div class="tylp-left-stack">
+            <div class="pdb-card tylp-detail-card">
+              <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payment History</span></div>
+              <div class="ldd-chart-area" style="height:140px;">
+                <div class="ldd-chart-yaxis"><span>$150</span><span>$75</span><span>$0</span></div>
+                <div class="ldd-chart-main">
+                  <div class="ldd-chart-bars">
+                    <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--done" style="height:100%;"></div></div>
+                    <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--done" style="height:100%;"></div></div>
+                    <div class="ldd-chart-col">
+                      <div class="ldd-chart-bar-partial" style="height:100%;">
+                        <div class="ldd-chart-bar-partial-outer" style="height:100%;"></div>
+                        <div class="ldd-chart-bar-partial-inner" style="height:60%;"></div>
+                      </div>
+                    </div>
+                    <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--proj" style="height:100%;"></div></div>
+                  </div>
+                  <div class="ldd-chart-labels">
+                    <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#787776;">P1</span>
+                    <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#787776;">P2</span>
+                    <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#03ACEA;">P3</span>
+                    <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#C5C3C0;">P4</span>
+                  </div>
+                </div>
               </div>
-              <span class="ldd-pmt-status ldd-pmt-status--done">Completed</span>
+              <div class="ldd-chart-legend" style="border-top:1px solid rgba(0,0,0,0.06);padding-top:8px;margin-top:8px;">
+                <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:#03ACEA;border-radius:2px;"></div>Completed</div>
+                <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:rgba(245,158,11,0.6);border-radius:2px;"></div>Partial</div>
+                <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:rgba(84,166,207,0.28);border:1px dashed rgba(84,166,207,0.5);border-radius:2px;"></div>Expected</div>
+              </div>
             </div>
-            <div class="ldd-pmt-circle-row">
-              <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
-                <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
-                <circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/>
-                <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">2</text>
-              </svg>
-              <div class="ldd-pmt-info">
-                <p class="ldd-pmt-info-title">Amount Due for Payment 2: $150.00</p>
-                <p class="ldd-pmt-info-paid">You paid: $150.00</p>
-                <p class="ldd-pmt-info-due">Due: Mar 8, 2026</p>
-              </div>
-              <span class="ldd-pmt-status ldd-pmt-status--done">Completed</span>
+            <!-- Document buttons -->
+            <div class="tylp-doc-buttons">
+              <span class="tylp-doc-btn">Promissory Note</span>
+              <span class="tylp-doc-btn">Amortization Schedule</span>
+              <span class="tylp-doc-btn">Loan Summary</span>
             </div>
-            <div class="ldd-pmt-circle-row">
-              <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
-                <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
-                <circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="49.01 32.67" stroke-linecap="round" transform="rotate(-90 16 16)"/>
-                <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">3</text>
-              </svg>
-              <div class="ldd-pmt-info">
-                <p class="ldd-pmt-info-title">Amount Due for Payment 3: $150.00</p>
-                <p class="ldd-pmt-info-paid">You paid: $90.00</p>
-                <p class="ldd-pmt-info-remaining">Remaining: $60.00</p>
-                <p class="ldd-pmt-info-due">Due: Apr 8, 2026</p>
+          </div>
+
+          <!-- Right: Payments list -->
+          <div class="pdb-card tylp-detail-card">
+            <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payments</span></div>
+            <div class="tylp-pmt-list">
+              <div class="tylp-pmt-row">
+                <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">1</text></svg>
+                <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 1: $150.00</p><p class="tylp-pmt-paid">Paid: $150.00</p></div>
+                <span class="tylp-pmt-badge tylp-pmt-badge--done">Completed</span>
               </div>
-              <span class="ldd-pmt-status" style="background:rgba(3,172,234,0.18);color:#0288CE;">Partial</span>
-            </div>
-            <div class="ldd-pmt-circle-row">
-              <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;">
-                <circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/>
-                <text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">4</text>
-              </svg>
-              <div class="ldd-pmt-info">
-                <p class="ldd-pmt-info-title">Amount Due for Payment 4: $150.00</p>
-                <p class="ldd-pmt-info-due">Due: May 8, 2026</p>
+              <div class="tylp-pmt-row">
+                <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">2</text></svg>
+                <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 2: $150.00</p><p class="tylp-pmt-paid">Paid: $150.00</p></div>
+                <span class="tylp-pmt-badge tylp-pmt-badge--done">Completed</span>
               </div>
-              <span class="ldd-pmt-status ldd-pmt-status--upcoming">Upcoming</span>
+              <div class="tylp-pmt-row">
+                <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="49.01 32.67" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">3</text></svg>
+                <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 3: $150.00</p><p class="tylp-pmt-paid">Paid: $90.00</p><p class="tylp-pmt-remaining">Remaining: $60.00</p></div>
+                <span class="tylp-pmt-badge tylp-pmt-badge--partial">Partial</span>
+              </div>
+              <div class="tylp-pmt-row">
+                <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">4</text></svg>
+                <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 4: $150.00</p><p class="tylp-pmt-due">Due: May 8, 2026</p></div>
+                <span class="tylp-pmt-badge tylp-pmt-badge--upcoming">Upcoming</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Loan Progress — top right, overlapping Payments -->
-        <div class="pdb-card tylp-card tylp-card--loan-progress">
-          <div class="pdb-card-header">LOAN PROGRESS</div>
-          <div class="pdb-card-body pdb-card-body--pad">
-            <div class="ldd-stat-grid">
-              <div class="ldd-stat-item"><div class="ldd-stat-label">Total Owed</div><div class="ldd-stat-value">$600.00</div></div>
-              <div class="ldd-stat-item"><div class="ldd-stat-label">Amount Paid</div><div class="ldd-stat-value">$390.00</div></div>
-              <div class="ldd-stat-item"><div class="ldd-stat-label">Payments Made</div><div class="ldd-stat-value">2/4</div><div class="ldd-stat-sub">full payments</div></div>
-              <div class="ldd-stat-item"><div class="ldd-stat-label">Monthly Payments</div><div class="ldd-stat-value">$150.00</div><div class="ldd-stat-sub">to Jordan</div></div>
+        <!-- Section 3: Activity | Loan Progress -->
+        <div class="tylp-two-col">
+          <!-- Activity timeline -->
+          <div class="pdb-card tylp-detail-card">
+            <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Activity</span></div>
+            <div class="tylp-timeline">
+              <div class="tylp-timeline-item">
+                <div class="tylp-timeline-dot" style="background:rgba(3,172,234,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+                <div class="tylp-timeline-line"></div>
+                <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Loan created</span><span class="tylp-timeline-date">Jan 8</span></div>
+              </div>
+              <div class="tylp-timeline-item">
+                <div class="tylp-timeline-dot" style="background:rgba(124,58,237,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M11 4H4v14h14v-7"/><path d="M18.5 2.5l-9.5 9.5L8 15l3-1 9.5-9.5-2-2Z"/></svg></div>
+                <div class="tylp-timeline-line"></div>
+                <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Both parties signed</span><span class="tylp-timeline-date">Jan 8</span></div>
+              </div>
+              <div class="tylp-timeline-item">
+                <div class="tylp-timeline-dot" style="background:rgba(22,163,74,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
+                <div class="tylp-timeline-line"></div>
+                <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Payment 1 completed ($150)</span><span class="tylp-timeline-date">Feb 8</span></div>
+              </div>
+              <div class="tylp-timeline-item">
+                <div class="tylp-timeline-dot" style="background:rgba(22,163,74,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
+                <div class="tylp-timeline-line"></div>
+                <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Payment 2 completed ($150)</span><span class="tylp-timeline-date">Mar 8</span></div>
+              </div>
+              <div class="tylp-timeline-item">
+                <div class="tylp-timeline-dot" style="background:rgba(3,172,234,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
+                <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Partial payment ($90)</span><span class="tylp-timeline-date">Apr 3</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Loan Progress -->
+          <div class="pdb-card tylp-detail-card">
+            <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Loan Progress</span></div>
+            <div class="tylp-stat-grid">
+              <div class="tylp-stat"><div class="tylp-stat-label">Total Owed</div><div class="tylp-stat-val">$600.00</div></div>
+              <div class="tylp-stat"><div class="tylp-stat-label">Amount Paid</div><div class="tylp-stat-val">$390.00</div></div>
+              <div class="tylp-stat"><div class="tylp-stat-label">Payments Made</div><div class="tylp-stat-val">2/4</div><div class="tylp-stat-sub">full payments</div></div>
+              <div class="tylp-stat"><div class="tylp-stat-label">Monthly</div><div class="tylp-stat-val">$150.00</div><div class="tylp-stat-sub">to Jordan</div></div>
             </div>
           </div>
         </div>
 
-      </div><!-- /tylp-fan -->
+      </div><!-- /tylp-detail-box -->
     </div>
   </section>
 
