@@ -179,33 +179,8 @@
      * No freeze needed — CSS handles the responsive layout.         */
 
     /* ── 2. Track Your Loan Progress ───────────────────────────
-     * tylp-detail-box layout: top-row (2fr 1fr) + two-col (1fr 1fr).
-     * Freeze at 940px, lock to 860px, scale down.                   */
-
-    var loanSection = document.querySelector('.feature-section-stacked');
-    var loanInner   = loanSection && loanSection.querySelector('.feature-stacked');
-    var tylpTopRow  = loanSection && loanSection.querySelector('.tylp-top-row');
-    var tylpTwoCols = loanSection ? Array.from(loanSection.querySelectorAll('.tylp-two-col')) : [];
-
-    if (loanSection && loanInner) {
-      var loanOvr = [];
-      if (tylpTopRow) {
-        loanOvr.push(
-          { el: tylpTopRow, prop: 'gridTemplateColumns', val: '2fr 1fr' },
-          { el: tylpTopRow, prop: 'gap',                 val: '16px'   }
-        );
-      }
-      tylpTwoCols.forEach(function (col, i) {
-        /* Last row (Activity | Loan Progress): narrower activity, wider loan progress */
-        var cols = (i === tylpTwoCols.length - 1) ? '2fr 3fr' : '1fr 1fr';
-        loanOvr.push(
-          { el: col, prop: 'gridTemplateColumns', val: cols },
-          { el: col, prop: 'gap',                 val: '24px' }
-        );
-      });
-
-      freeze(loanSection, loanInner, 940, 500, loanOvr);
-    }
+     * On mobile, cards stack vertically with scrollable box (like home).
+     * On desktop (>940px), no freeze needed — CSS handles layout.    */
 
     /* ── 3. Payments at a Glance ─────────────────────────────────
      * feature-inner is a 2-column grid (text | image).
