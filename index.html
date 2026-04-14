@@ -578,6 +578,65 @@
                 </div>
               </div>
 
+              <!-- Your Friends -->
+              <div class="pdb-card">
+                <div class="pdb-card-hdr"><span class="pdb-section-title">Your Friends</span><span class="pdb-header-right">View all &rarr;</span></div>
+                <div class="pdb-card-body pdb-card-body--pad">
+                  <div class="pdb-friends-row">
+                    <div class="pdb-friend">
+                      <span class="pdb-avatar pdb-avatar--blue">A</span>
+                      <span class="pdb-friend-name">Alex</span>
+                    </div>
+                    <div class="pdb-friend">
+                      <span class="pdb-avatar pdb-avatar--green">S</span>
+                      <span class="pdb-friend-name">Sam</span>
+                    </div>
+                    <div class="pdb-friend">
+                      <span class="pdb-avatar pdb-avatar--purple">J</span>
+                      <span class="pdb-friend-name">Jordan</span>
+                    </div>
+                    <div class="pdb-friend">
+                      <span class="pdb-avatar pdb-avatar--pink">M</span>
+                      <span class="pdb-friend-name">Maya</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Invite Friends -->
+              <div class="pdb-card pdb-invite-card">
+                <div class="pdb-invite-content">
+                  <div class="pdb-invite-text">
+                    <div class="pdb-invite-title">Invite Friends</div>
+                    <div class="pdb-invite-sub">Lend with people you trust</div>
+                  </div>
+                  <button class="pdb-invite-btn" type="button" onclick="document.getElementById('pdbInviteMenu').classList.toggle('open')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Invite
+                  </button>
+                </div>
+                <div class="pdb-invite-menu" id="pdbInviteMenu">
+                  <button class="pdb-invite-option" type="button">
+                    <span class="pdb-invite-option-icon" style="background:rgba(34,197,94,0.12);color:#16A34A;">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </span>
+                    <span>Phone</span>
+                  </button>
+                  <button class="pdb-invite-option" type="button">
+                    <span class="pdb-invite-option-icon" style="background:rgba(3,172,234,0.12);color:#03ACEA;">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </span>
+                    <span>Email</span>
+                  </button>
+                  <button class="pdb-invite-option" type="button">
+                    <span class="pdb-invite-option-icon" style="background:rgba(124,58,237,0.12);color:#7C3AED;">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    </span>
+                    <span>Copy Link</span>
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -834,10 +893,16 @@
           </div>
         </div>
 
-        <!-- Section 2: Payment History + Docs | Payments -->
+        <!-- Section 2: Payment History + Docs | Payments + Activity -->
         <div class="tylp-two-col">
-          <!-- Left: Payment History + Doc buttons -->
+          <!-- Left: Doc buttons (top) + Payment History -->
           <div class="tylp-left-stack">
+            <!-- Document buttons (above Payment History) -->
+            <div class="tylp-doc-buttons">
+              <span class="tylp-doc-btn">Promissory Note</span>
+              <span class="tylp-doc-btn">Amortization Schedule</span>
+              <span class="tylp-doc-btn">Loan Summary</span>
+            </div>
             <div class="pdb-card tylp-detail-card">
               <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payment History</span></div>
               <div class="ldd-chart-area" style="height:140px;">
@@ -848,8 +913,8 @@
                     <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--done" style="height:100%;"></div></div>
                     <div class="ldd-chart-col">
                       <div class="ldd-chart-bar-partial" style="height:100%;">
-                        <div class="ldd-chart-bar-partial-outer" style="height:100%;"></div>
-                        <div class="ldd-chart-bar-partial-inner" style="height:60%;"></div>
+                        <div class="ldd-chart-bar-partial-expected" style="height:100%;"></div>
+                        <div class="ldd-chart-bar-partial-paid" style="height:60%;"></div>
                       </div>
                     </div>
                     <div class="ldd-chart-col"><div class="ldd-chart-bar ldd-chart-bar--expected" style="height:100%;"></div></div>
@@ -857,95 +922,87 @@
                   <div class="ldd-chart-labels">
                     <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#787776;">P1</span>
                     <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#787776;">P2</span>
-                    <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#F59E0B;">P3</span>
+                    <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#03ACEA;">P3</span>
                     <span class="ldd-chart-col" style="text-align:center;font-family:'DM Sans',sans-serif;font-size:9px;color:#C5C3C0;">P4</span>
                   </div>
                 </div>
               </div>
               <div class="ldd-chart-legend" style="border-top:1px solid rgba(0,0,0,0.06);padding-top:8px;margin-top:8px;">
                 <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:#03ACEA;border-radius:2px;"></div>Completed</div>
-                <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:#F59E0B;border-radius:2px;"></div>Partial</div>
                 <div class="ldd-legend-item"><div class="ldd-legend-dot" style="background:rgba(3,172,234,0.18);border:1px dashed rgba(3,172,234,0.5);border-radius:2px;"></div>Expected</div>
               </div>
             </div>
-            <!-- Document buttons -->
-            <div class="tylp-doc-buttons">
-              <span class="tylp-doc-btn">Promissory Note</span>
-              <span class="tylp-doc-btn">Amortization Schedule</span>
-              <span class="tylp-doc-btn">Loan Summary</span>
-            </div>
           </div>
 
-          <!-- Right: Payments list -->
-          <div class="pdb-card tylp-detail-card">
-            <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payments</span></div>
-            <div class="tylp-pmt-list">
-              <div class="tylp-pmt-row">
-                <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">1</text></svg>
-                <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 1: $150.00</p><p class="tylp-pmt-paid">Paid: $150.00</p></div>
-                <span class="tylp-pmt-badge tylp-pmt-badge--done">Completed</span>
+          <!-- Right: Payments + Activity stacked -->
+          <div class="tylp-left-stack">
+            <div class="pdb-card tylp-detail-card">
+              <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payments</span></div>
+              <div class="tylp-pmt-list">
+                <div class="tylp-pmt-row">
+                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">1</text></svg>
+                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 1: $150.00</p><p class="tylp-pmt-paid">Paid: $150.00</p></div>
+                  <span class="tylp-pmt-badge tylp-pmt-badge--done">Completed</span>
+                </div>
+                <div class="tylp-pmt-row">
+                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">2</text></svg>
+                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 2: $150.00</p><p class="tylp-pmt-paid">Paid: $150.00</p></div>
+                  <span class="tylp-pmt-badge tylp-pmt-badge--done">Completed</span>
+                </div>
+                <div class="tylp-pmt-row">
+                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="49.01 32.67" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">3</text></svg>
+                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 3: $150.00</p><p class="tylp-pmt-paid">Paid: $90.00</p><p class="tylp-pmt-remaining">Remaining: $60.00</p></div>
+                  <span class="tylp-pmt-badge tylp-pmt-badge--partial">Partial</span>
+                </div>
+                <div class="tylp-pmt-row">
+                  <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">4</text></svg>
+                  <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 4: $150.00</p><p class="tylp-pmt-due">Due: May 8, 2026</p></div>
+                  <span class="tylp-pmt-badge tylp-pmt-badge--upcoming">Upcoming</span>
+                </div>
               </div>
-              <div class="tylp-pmt-row">
-                <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="81.68 0.01" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">2</text></svg>
-                <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 2: $150.00</p><p class="tylp-pmt-paid">Paid: $150.00</p></div>
-                <span class="tylp-pmt-badge tylp-pmt-badge--done">Completed</span>
-              </div>
-              <div class="tylp-pmt-row">
-                <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><circle cx="16" cy="16" r="13" fill="none" stroke="#03ACEA" stroke-width="4" stroke-dasharray="49.01 32.67" stroke-linecap="round" transform="rotate(-90 16 16)"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">3</text></svg>
-                <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 3: $150.00</p><p class="tylp-pmt-paid">Paid: $90.00</p><p class="tylp-pmt-remaining">Remaining: $60.00</p></div>
-                <span class="tylp-pmt-badge tylp-pmt-badge--partial">Partial</span>
-              </div>
-              <div class="tylp-pmt-row">
-                <svg width="32" height="32" viewBox="0 0 32 32" style="flex-shrink:0;"><circle cx="16" cy="16" r="13" fill="none" stroke="#E5E4E2" stroke-width="4"/><text x="16" y="16" text-anchor="middle" dominant-baseline="central" fill="#1A1918" font-size="11" font-weight="bold" font-family="'DM Sans',sans-serif">4</text></svg>
-                <div class="tylp-pmt-info"><p class="tylp-pmt-title">Payment 4: $150.00</p><p class="tylp-pmt-due">Due: May 8, 2026</p></div>
-                <span class="tylp-pmt-badge tylp-pmt-badge--upcoming">Upcoming</span>
+            </div>
+
+            <!-- Activity timeline (moved up next to Payments) -->
+            <div class="pdb-card tylp-detail-card">
+              <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Activity</span></div>
+              <div class="tylp-timeline">
+                <div class="tylp-timeline-item">
+                  <div class="tylp-timeline-dot" style="background:rgba(3,172,234,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+                  <div class="tylp-timeline-line"></div>
+                  <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Loan created</span><span class="tylp-timeline-date">Jan 8</span></div>
+                </div>
+                <div class="tylp-timeline-item">
+                  <div class="tylp-timeline-dot" style="background:rgba(124,58,237,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M11 4H4v14h14v-7"/><path d="M18.5 2.5l-9.5 9.5L8 15l3-1 9.5-9.5-2-2Z"/></svg></div>
+                  <div class="tylp-timeline-line"></div>
+                  <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Both parties signed</span><span class="tylp-timeline-date">Jan 8</span></div>
+                </div>
+                <div class="tylp-timeline-item">
+                  <div class="tylp-timeline-dot" style="background:rgba(22,163,74,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
+                  <div class="tylp-timeline-line"></div>
+                  <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Payment 1 completed ($150)</span><span class="tylp-timeline-date">Feb 8</span></div>
+                </div>
+                <div class="tylp-timeline-item">
+                  <div class="tylp-timeline-dot" style="background:rgba(22,163,74,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
+                  <div class="tylp-timeline-line"></div>
+                  <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Payment 2 completed ($150)</span><span class="tylp-timeline-date">Mar 8</span></div>
+                </div>
+                <div class="tylp-timeline-item">
+                  <div class="tylp-timeline-dot" style="background:rgba(3,172,234,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
+                  <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Partial payment ($90)</span><span class="tylp-timeline-date">Apr 3</span></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Section 3: Activity | Loan Progress -->
-        <div class="tylp-two-col">
-          <!-- Activity timeline -->
-          <div class="pdb-card tylp-detail-card">
-            <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Activity</span></div>
-            <div class="tylp-timeline">
-              <div class="tylp-timeline-item">
-                <div class="tylp-timeline-dot" style="background:rgba(3,172,234,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-                <div class="tylp-timeline-line"></div>
-                <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Loan created</span><span class="tylp-timeline-date">Jan 8</span></div>
-              </div>
-              <div class="tylp-timeline-item">
-                <div class="tylp-timeline-dot" style="background:rgba(124,58,237,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M11 4H4v14h14v-7"/><path d="M18.5 2.5l-9.5 9.5L8 15l3-1 9.5-9.5-2-2Z"/></svg></div>
-                <div class="tylp-timeline-line"></div>
-                <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Both parties signed</span><span class="tylp-timeline-date">Jan 8</span></div>
-              </div>
-              <div class="tylp-timeline-item">
-                <div class="tylp-timeline-dot" style="background:rgba(22,163,74,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
-                <div class="tylp-timeline-line"></div>
-                <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Payment 1 completed ($150)</span><span class="tylp-timeline-date">Feb 8</span></div>
-              </div>
-              <div class="tylp-timeline-item">
-                <div class="tylp-timeline-dot" style="background:rgba(22,163,74,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
-                <div class="tylp-timeline-line"></div>
-                <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Payment 2 completed ($150)</span><span class="tylp-timeline-date">Mar 8</span></div>
-              </div>
-              <div class="tylp-timeline-item">
-                <div class="tylp-timeline-dot" style="background:rgba(3,172,234,0.12);"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2.5" stroke-linecap="round"><polyline points="7 13 12 18 17 13"/><line x1="12" y1="18" x2="12" y2="6"/></svg></div>
-                <div class="tylp-timeline-text"><span class="tylp-timeline-desc">Partial payment ($90)</span><span class="tylp-timeline-date">Apr 3</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Loan Progress -->
-          <div class="pdb-card tylp-detail-card">
-            <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Loan Progress</span></div>
-            <div class="tylp-stat-grid">
-              <div class="tylp-stat"><div class="tylp-stat-label">Total Owed</div><div class="tylp-stat-val">$600.00</div></div>
-              <div class="tylp-stat"><div class="tylp-stat-label">Amount Paid</div><div class="tylp-stat-val">$390.00</div></div>
-              <div class="tylp-stat"><div class="tylp-stat-label">Payments Made</div><div class="tylp-stat-val">2/4</div><div class="tylp-stat-sub">full payments</div></div>
-              <div class="tylp-stat"><div class="tylp-stat-label">Monthly</div><div class="tylp-stat-val">$150.00</div><div class="tylp-stat-sub">to Jordan</div></div>
-            </div>
+        <!-- Section 3: Loan Progress (full-width strip) -->
+        <div class="pdb-card tylp-detail-card">
+          <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Loan Progress</span></div>
+          <div class="tylp-stat-grid">
+            <div class="tylp-stat"><div class="tylp-stat-label">Total Owed</div><div class="tylp-stat-val">$600.00</div></div>
+            <div class="tylp-stat"><div class="tylp-stat-label">Amount Paid</div><div class="tylp-stat-val">$390.00</div></div>
+            <div class="tylp-stat"><div class="tylp-stat-label">Payments Made</div><div class="tylp-stat-val">2/4</div><div class="tylp-stat-sub">full payments</div></div>
+            <div class="tylp-stat"><div class="tylp-stat-label">Monthly</div><div class="tylp-stat-val">$150.00</div><div class="tylp-stat-sub">to Jordan</div></div>
           </div>
         </div>
 
@@ -962,7 +1019,35 @@
         <a href="loan-documents.html" class="contracts-learn-more">Learn more &nbsp;&rarr;</a>
       </div>
       <div class="contracts-right">
-        <img src="Images/promissoryNote.png" alt="Promissory note document" style="max-width:340px; width:100%; border-radius:16px; box-shadow: 0 12px 40px rgba(0,0,0,0.08);">
+        <div class="lap-doc lap-doc--shadow" style="max-width:340px;margin:0 auto;">
+          <div class="lap-doc-amount">$300.00</div>
+          <p class="lap-doc-intro">The lender agrees to lend <strong>Maya Chen</strong> $300.00 before <strong>May 1, 2026</strong> at an interest rate of <strong>0%</strong>. The loan will be repaid over <strong>3 months</strong> in <strong>monthly</strong> payments of <strong>$100.00</strong>. Payments will be due on the <strong>5th</strong> at <strong>9:00 AM EST</strong>, with the first of the <strong>3</strong> payments due on <strong>Jun 5, 2026</strong> and the last payment due on <strong>Aug 5, 2026</strong>.</p>
+          <div class="lap-doc-terms">
+            <div class="lap-doc-terms-title">Terms of Repayment</div>
+            <div class="lap-doc-terms-grid">
+              <div><span class="lap-doc-label">Total Amount Due:</span> <strong>$300.00</strong></div>
+              <div><span class="lap-doc-label">Interest Rate:</span> <strong>0%</strong></div>
+              <div><span class="lap-doc-label">Payment:</span> <strong>$100.00 monthly</strong></div>
+              <div><span class="lap-doc-label">Term:</span> <strong>3 months</strong></div>
+            </div>
+          </div>
+          <div class="lap-doc-parties">
+            <div class="lap-doc-party">
+              <div class="lap-doc-party-label">Borrower</div>
+              <div class="lap-doc-party-name">Maya Chen</div>
+              <div class="lap-doc-party-date">Signed May 1, 2026</div>
+            </div>
+            <div class="lap-doc-party">
+              <div class="lap-doc-party-label">Lender</div>
+              <div class="lap-doc-party-name">Anya Von Diessl</div>
+              <div class="lap-doc-party-date">Signed May 1, 2026</div>
+            </div>
+          </div>
+          <button class="lap-doc-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download PDF
+          </button>
+        </div>
       </div>
     </div>
   </section>

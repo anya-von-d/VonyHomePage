@@ -862,6 +862,113 @@ body {
   color: #787776;
 }
 
+/* Your Friends row */
+.pdb-friends-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 0;
+  flex-wrap: wrap;
+}
+.pdb-friend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.pdb-friend .pdb-avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+.pdb-friend-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: #4B4A48;
+}
+
+/* Invite Friends card */
+.pdb-invite-card {
+  background: linear-gradient(135deg, rgba(3,172,234,0.06) 0%, rgba(124,58,237,0.06) 100%) !important;
+  border: 1px solid rgba(3,172,234,0.15) !important;
+}
+.pdb-invite-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.pdb-invite-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pdb-invite-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1A1918;
+}
+.pdb-invite-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #787776;
+}
+.pdb-invite-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #03ACEA;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.pdb-invite-btn:hover { background: #029CD5; }
+.pdb-invite-menu {
+  display: none;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  flex-direction: column;
+  gap: 4px;
+}
+.pdb-invite-menu.open { display: flex; }
+.pdb-invite-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  padding: 8px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #1A1918;
+  text-align: left;
+  transition: background 0.15s;
+}
+.pdb-invite-option:hover { background: rgba(0,0,0,0.03); }
+.pdb-invite-option-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 /* Avatar circles */
 .pdb-avatar {
   width: 20px;
@@ -1397,8 +1504,21 @@ body {
   box-sizing: border-box;
 }
 .ldd-chart-bar-partial { position: relative; width: 14px; }
-.ldd-chart-bar-partial-outer { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: rgba(245,158,11,0.35); box-sizing: border-box; }
-.ldd-chart-bar-partial-inner { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: #F59E0B; }
+/* Expected (full bar height) — dashed cyan outline on top */
+.ldd-chart-bar-partial-expected {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  border-radius: 3px 3px 0 0;
+  background: rgba(3,172,234,0.18);
+  border: 1.5px dashed rgba(3,172,234,0.5);
+  border-bottom: none;
+  box-sizing: border-box;
+}
+/* Paid portion in standard blue, sits over the expected fill */
+.ldd-chart-bar-partial-paid {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  border-radius: 3px 3px 0 0;
+  background: #03ACEA;
+}
 .ldd-chart-lbl { font-family: 'DM Sans', sans-serif; font-size: 8px; color: #787776; margin-top: 4px; text-align: center; }
 .ldd-chart-lbl--active { color: #54A6CF; }
 .ldd-chart-legend { display: flex; align-items: center; gap: 10px; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 8px; margin-top: 8px; justify-content: center; flex-wrap: wrap; }
@@ -10000,6 +10120,118 @@ a.help-card {
 .ldd-stack-right {
   transform: translateX(calc(-50% + 140px)) rotate(9deg) translateY(20px);
   z-index: 1;
+}
+
+/* ── Loan Agreement Document mockup (replaces promissory note image) ── */
+.lap-doc {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 16px 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: #1A1918;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.lap-doc--shadow {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.lap-doc-amount {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1A1918;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.025);
+}
+.lap-doc-intro {
+  font-size: 11px;
+  line-height: 1.55;
+  color: #4B4A48;
+  margin: 0;
+}
+.lap-doc-intro strong { color: #1A1918; font-weight: 600; }
+.lap-doc-terms {
+  background: rgba(0,0,0,0.025);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.lap-doc-terms-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1A1918;
+  margin-bottom: 2px;
+}
+.lap-doc-terms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+  font-size: 11px;
+  color: #4B4A48;
+}
+.lap-doc-terms-grid strong { color: #1A1918; font-weight: 600; }
+.lap-doc-label { color: #787776; }
+.lap-doc-parties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.lap-doc-party {
+  background: rgba(0,0,0,0.025);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.lap-doc-party-label {
+  font-size: 10px;
+  color: #787776;
+  margin-bottom: 4px;
+}
+.lap-doc-party-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1A1918;
+  letter-spacing: -0.01em;
+}
+.lap-doc-party-date {
+  font-size: 9px;
+  color: #9B9A98;
+  margin-top: 4px;
+}
+.lap-doc-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  background: #54A6CF;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+.lap-doc-btn:hover { background: #4596C0; }
+
+/* When inside the fan stack, scale to fit */
+.ldd-stack-center .lap-doc {
+  transform: scale(0.55);
+  transform-origin: top center;
+  width: 345px;
+}
+.ldd-stack-center {
+  overflow: visible;
+  box-shadow: none;
 }
 
 /* Fan activity: scale the full activity card down to fit */
