@@ -1377,8 +1377,10 @@ body {
 .ldd-chart-main { display: flex; flex-direction: column; gap: 4px; flex: 1; }
 .ldd-chart-bars { display: flex; align-items: stretch; gap: 4px; height: 80px; }
 .ldd-chart-labels { display: flex; gap: 4px; }
-.ldd-chart-col { flex: 1; display: flex; align-items: flex-end; position: relative; }
-.ldd-chart-bar { width: 100%; border-radius: 3px 3px 0 0; }
+.ldd-chart-col { flex: 1; display: flex; align-items: flex-end; justify-content: center; position: relative; }
+.ldd-chart-labels .ldd-chart-col { justify-content: center; text-align: center; }
+.ldd-chart-bar { width: 14px; border-radius: 3px 3px 0 0; }
+.ldd-chart-bar-partial { width: 14px; }
 .ldd-chart-bar--done { background: #03ACEA; }
 .ldd-chart-bar--proj { background: rgba(3,172,234,0.28); box-sizing: border-box; }
 .ldd-chart-bar--pending {
@@ -1394,7 +1396,7 @@ body {
   border-bottom: none;
   box-sizing: border-box;
 }
-.ldd-chart-bar-partial { position: relative; width: 100%; }
+.ldd-chart-bar-partial { position: relative; width: 14px; }
 .ldd-chart-bar-partial-outer { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: rgba(245,158,11,0.35); box-sizing: border-box; }
 .ldd-chart-bar-partial-inner { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: #F59E0B; }
 .ldd-chart-lbl { font-family: 'DM Sans', sans-serif; font-size: 8px; color: #787776; margin-top: 4px; text-align: center; }
