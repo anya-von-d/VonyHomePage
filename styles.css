@@ -1292,6 +1292,7 @@ body {
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 6px;
+  gap: 8px;
 }
 
 .pdb-loan-label {
