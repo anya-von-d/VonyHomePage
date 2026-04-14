@@ -173,8 +173,8 @@
       var dashOvr = [];
       if (summaryRow) {
         dashOvr.push(
-          { el: summaryRow, prop: 'gridTemplateColumns', val: '1fr 1fr 1fr' },
-          { el: summaryRow, prop: 'gap',                 val: '24px'        }
+          { el: summaryRow, prop: 'gridTemplateColumns', val: '1fr 1fr' },
+          { el: summaryRow, prop: 'gap',                 val: '24px'    }
         );
       }
       if (masonry) {
