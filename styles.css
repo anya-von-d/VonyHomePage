@@ -10677,4 +10677,11 @@ a.help-card {
     padding: 40px 20px;
     overflow: hidden;
   }
+  /* Match the spacing between Payments/Notifications to other sections */
+  .feature-section:not(.feature-section-stacked) {
+    padding-bottom: 40px;
+  }
+  .notif-section {
+    padding: 40px 20px 40px;
+  }
 }
