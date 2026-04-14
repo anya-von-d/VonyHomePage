@@ -29,11 +29,9 @@
   function scrollToCard(index) {
     var carouselCards = carousel.querySelectorAll('.carousel-card');
     if (!carouselCards[index]) return;
-    carouselCards[index].scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center'
-    });
+    var card = carouselCards[index];
+    var scrollLeft = card.offsetLeft - (carousel.offsetWidth - card.offsetWidth) / 2;
+    carousel.scrollTo({ left: scrollLeft, behavior: 'smooth' });
     updatePills(index);
     currentIndex = index;
   }
