@@ -1282,9 +1282,15 @@ body {
 
 .pdb-loan-label {
   font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: #1A1918;
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .pdb-loan-pct {
@@ -1313,9 +1319,10 @@ body {
 
 .pdb-loan-detail {
   font-family: 'DM Sans', sans-serif;
-  font-size: 10px;
-  color: #787776;
-  margin-top: 5px;
+  font-size: 11px;
+  color: #9B9A98;
+  margin-top: 3px;
+  text-align: left;
 }
 
 /* Month grid */
