@@ -161,52 +161,55 @@
   document.addEventListener('DOMContentLoaded', function () {
 
     /* ── 1. Dashboard ──────────────────────────────────────────
-     * pdb-layout CSS breakpoint: max-width 900px
-     * dashboard-section horizontal padding: 80px (40 × 2)
-     * Frozen container width at 900vw: 900 − 80 = 820px          */
+     * New VonyPortal layout: summary-row (3 cols) + masonry (2 cols).
+     * Freeze at 900px, lock to 820px natural width, scale down.     */
 
-    var dashSection = document.querySelector('.dashboard-section');
-    var dashInner   = document.querySelector('.dashboard-container');
-    var pdbLayout   = document.querySelector('.dashboard-section .pdb-layout');
-    var pdbRight    = document.querySelector('.dashboard-section .pdb-right');
-    var pdbPairs    = Array.from(document.querySelectorAll('.dashboard-section .pdb-pair'));
+    var dashSection  = document.querySelector('.dashboard-section');
+    var dashInner    = document.querySelector('.dashboard-container');
+    var summaryRow   = document.querySelector('.pdb-summary-row');
+    var masonry      = document.querySelector('.pdb-masonry');
 
-    if (dashSection && dashInner && pdbLayout) {
-      var dashOvr = [
-        { el: pdbLayout, prop: 'gridTemplateColumns', val: '2fr 0.82fr' },
-        { el: pdbLayout, prop: 'gap',                 val: '16px'       }
-      ];
-      if (pdbRight) {
+    if (dashSection && dashInner && (summaryRow || masonry)) {
+      var dashOvr = [];
+      if (summaryRow) {
         dashOvr.push(
-          { el: pdbRight, prop: 'display',             val: 'flex'   },
-          { el: pdbRight, prop: 'flexDirection',       val: 'column' },
-          { el: pdbRight, prop: 'gridTemplateColumns', val: ''       }
+          { el: summaryRow, prop: 'gridTemplateColumns', val: '1fr 1fr 1fr' },
+          { el: summaryRow, prop: 'gap',                 val: '24px'        }
         );
       }
-      pdbPairs.forEach(function (p) {
+      if (masonry) {
         dashOvr.push(
-          { el: p, prop: 'gridTemplateColumns', val: '1fr 1fr' },
-          { el: p, prop: 'gap',                 val: '16px'   }
+          { el: masonry, prop: 'gridTemplateColumns', val: '1fr 1fr' },
+          { el: masonry, prop: 'gap',                 val: '24px'   }
         );
-      });
+      }
 
       freeze(dashSection, dashInner, 900, 820, dashOvr);
     }
 
     /* ── 2. Track Your Loan Progress ───────────────────────────
-     * "Amount Due for Payment 3: $150.00" wraps at approx 940px vw.
-     * feature-section horizontal padding: 80px (40 × 2)
-     * Frozen inner width at 940vw: min(940 − 80, 900) = 860px     */
+     * tylp-detail-box layout: top-row (2fr 1fr) + two-col (1fr 1fr).
+     * Freeze at 940px, lock to 860px, scale down.                   */
 
     var loanSection = document.querySelector('.feature-section-stacked');
     var loanInner   = loanSection && loanSection.querySelector('.feature-stacked');
-    var lddGrid     = loanSection && loanSection.querySelector('.ldd-content-grid');
+    var tylpTopRow  = loanSection && loanSection.querySelector('.tylp-top-row');
+    var tylpTwoCols = loanSection ? Array.from(loanSection.querySelectorAll('.tylp-two-col')) : [];
 
     if (loanSection && loanInner) {
-      var loanOvr = lddGrid ? [
-        { el: lddGrid, prop: 'gridTemplateColumns', val: '1fr 1fr' },
-        { el: lddGrid, prop: 'gap',                 val: '10px'   }
-      ] : [];
+      var loanOvr = [];
+      if (tylpTopRow) {
+        loanOvr.push(
+          { el: tylpTopRow, prop: 'gridTemplateColumns', val: '2fr 1fr' },
+          { el: tylpTopRow, prop: 'gap',                 val: '16px'   }
+        );
+      }
+      tylpTwoCols.forEach(function (col) {
+        loanOvr.push(
+          { el: col, prop: 'gridTemplateColumns', val: '1fr 1fr' },
+          { el: col, prop: 'gap',                 val: '24px'   }
+        );
+      });
 
       freeze(loanSection, loanInner, 940, 860, loanOvr);
     }
