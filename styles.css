@@ -10576,6 +10576,9 @@ a.help-card {
   .tylp-two-col {
     gap: 8px;
   }
+  .tylp-two-col:last-child {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
   .tylp-detail-card {
     padding: 8px 10px;
   }

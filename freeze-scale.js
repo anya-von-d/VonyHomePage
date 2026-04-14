@@ -195,10 +195,12 @@
           { el: tylpTopRow, prop: 'gap',                 val: '16px'   }
         );
       }
-      tylpTwoCols.forEach(function (col) {
+      tylpTwoCols.forEach(function (col, i) {
+        /* Last row (Activity | Loan Progress): narrower activity, wider loan progress */
+        var cols = (i === tylpTwoCols.length - 1) ? '2fr 3fr' : '1fr 1fr';
         loanOvr.push(
-          { el: col, prop: 'gridTemplateColumns', val: '1fr 1fr' },
-          { el: col, prop: 'gap',                 val: '24px'   }
+          { el: col, prop: 'gridTemplateColumns', val: cols },
+          { el: col, prop: 'gap',                 val: '24px' }
         );
       });
 
