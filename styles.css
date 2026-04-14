@@ -7904,6 +7904,25 @@ a.help-card {
   }
 }
 
+/* ─── Payments at a Glance: mobile title outside freeze area ─── */
+.paag-title-wrap {
+  display: none;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.paag-title-wrap .contracts-subtitle {
+  max-width: 400px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .paag-title-wrap {
+    display: block;
+  }
+  .paag-title-desktop {
+    display: none !important;
+  }
+}
+
 /* ─── Payments Section — match Contracts section style ─────────── */
 .feature-section:not(.feature-section-stacked) .contracts-title {
   font-size: clamp(26px, 3vw, 44px);
