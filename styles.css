@@ -7978,6 +7978,25 @@ a.help-card {
   color: #787776;
 }
 
+/* ─── Track Your Loan Progress: mobile title outside freeze area ─── */
+.tylp-title-wrap {
+  display: none;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.tylp-title-wrap .contracts-subtitle {
+  max-width: 400px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .tylp-title-wrap {
+    display: block;
+  }
+  .tylp-title-desktop {
+    display: none !important;
+  }
+}
+
 /* ─── Track Your Loan Progress — match Notifications text style ─── */
 .feature-section-stacked .contracts-title {
   font-size: clamp(26px, 3vw, 44px);
