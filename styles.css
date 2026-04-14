@@ -3229,11 +3229,27 @@ body {
   border: 2px solid #fff;
 }
 
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 44px;
+}
+
 .card-name {
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #1A1918;
+  line-height: 1.2;
+}
+
+.card-profession {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #9B9A98;
+  margin-top: 2px;
 }
 
 .card-handle {
@@ -7025,7 +7041,16 @@ a.help-card {
 .story-meta {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 44px;
   gap: 2px;
+}
+
+.story-profession {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #9B9A98;
 }
 
 .story-name {
@@ -10494,7 +10519,8 @@ a.help-card {
   position: relative;
   border-radius: 32px 32px 0 0;
   overflow: hidden;
-  background: #fff;
+  background: #03ACEA;
+  padding-top: 26px;
 }
 
 .apps-iphone-screen img {

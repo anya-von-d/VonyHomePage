@@ -785,20 +785,7 @@
 
         <!-- Section 1: Payment Progress donut | Aurora NP cards + Loan Terms -->
         <div class="tylp-top-row">
-          <!-- Left: Payment Progress donut -->
-          <div class="pdb-card tylp-detail-card tylp-donut-card">
-            <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payment Progress</span></div>
-            <div class="tylp-donut-wrap">
-              <svg width="140" height="140" viewBox="0 0 140 140">
-                <circle cx="70" cy="70" r="54" fill="none" stroke="#E5E4E2" stroke-width="9" stroke-linecap="round"/>
-                <circle cx="70" cy="70" r="54" fill="none" stroke="#03ACEA" stroke-width="9" stroke-dasharray="220.35 118.65" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-                <text x="70" y="64" text-anchor="middle" dominant-baseline="middle" style="font-size:20px;font-weight:700;fill:#1A1918;font-family:'DM Sans',sans-serif;">65%</text>
-                <text x="70" y="82" text-anchor="middle" dominant-baseline="middle" style="font-size:11px;font-weight:500;fill:#787776;font-family:'DM Sans',sans-serif;">repaid</text>
-              </svg>
-              <p class="tylp-donut-sub"><span style="font-weight:700;">$390.00</span> <span style="color:#787776;">of $600.00</span></p>
-            </div>
-          </div>
-          <!-- Right: NP cards + terms -->
+          <!-- Left: NP cards + terms (2fr) -->
           <div class="tylp-top-left">
             <!-- Aurora NP cards -->
             <div class="tylp-np-grid">
@@ -837,6 +824,19 @@
               <div class="tylp-term"><div class="tylp-term-label">Interest</div><div class="tylp-term-val">0%</div></div>
               <div class="tylp-term"><div class="tylp-term-label">Period</div><div class="tylp-term-val">4 months</div></div>
               <div class="tylp-term"><div class="tylp-term-label">Payment</div><div class="tylp-term-val">$150/mo</div></div>
+            </div>
+          </div>
+          <!-- Right: Payment Progress donut (1fr) -->
+          <div class="pdb-card tylp-detail-card tylp-donut-card">
+            <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payment Progress</span></div>
+            <div class="tylp-donut-wrap">
+              <svg width="140" height="140" viewBox="0 0 140 140">
+                <circle cx="70" cy="70" r="54" fill="none" stroke="#E5E4E2" stroke-width="9" stroke-linecap="round"/>
+                <circle cx="70" cy="70" r="54" fill="none" stroke="#03ACEA" stroke-width="9" stroke-dasharray="220.35 118.65" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                <text x="70" y="64" text-anchor="middle" dominant-baseline="middle" style="font-size:20px;font-weight:700;fill:#1A1918;font-family:'DM Sans',sans-serif;">65%</text>
+                <text x="70" y="82" text-anchor="middle" dominant-baseline="middle" style="font-size:11px;font-weight:500;fill:#787776;font-family:'DM Sans',sans-serif;">repaid</text>
+              </svg>
+              <p class="tylp-donut-sub"><span style="font-weight:700;">$390.00</span> <span style="color:#787776;">of $600.00</span></p>
             </div>
           </div>
         </div>
@@ -1009,7 +1009,10 @@
             <div class="avatar-wrap">
               <div class="avatar-circle" style="background:#E8D5F5; font-family:'DM Sans',sans-serif; font-weight:700; font-size:18px; color:#6B5B8A;">1</div>
             </div>
-            <div class="card-name">Student</div>
+            <div class="card-info">
+              <div class="card-name">Priya</div>
+              <div class="card-profession">Student</div>
+            </div>
           </div>
           <p class="card-body">Lent my roommate $300 for rent. <b>Vony made it so simple.</b> She got a schedule, I got updates. No awkward conversations needed.</p>
         </div>
@@ -1018,7 +1021,10 @@
             <div class="avatar-wrap">
               <div class="avatar-circle" style="background:#D5E8F5; font-family:'DM Sans',sans-serif; font-weight:700; font-size:18px; color:#5B7A8A;">2</div>
             </div>
-            <div class="card-name">Software Engineer</div>
+            <div class="card-info">
+              <div class="card-name">Marcus</div>
+              <div class="card-profession">Software Engineer</div>
+            </div>
           </div>
           <p class="card-body">I lend to family a lot. <b>Having real contracts changes everything.</b> No more "I thought we said..." moments. It's all there in writing.</p>
         </div>
@@ -1031,7 +1037,10 @@
             <div class="avatar-wrap">
               <div class="avatar-circle" style="background:#F5E8D5; font-family:'DM Sans',sans-serif; font-weight:700; font-size:18px; color:#8A7A5B;">3</div>
             </div>
-            <div class="card-name">Student</div>
+            <div class="card-info">
+              <div class="card-name">Lily</div>
+              <div class="card-profession">Student</div>
+            </div>
           </div>
           <p class="card-body">My brother needed help with tuition. Now we have a real agreement and automatic reminders. <b>Zero drama.</b> It actually brought us closer.</p>
         </div>
@@ -1040,7 +1049,10 @@
             <div class="avatar-wrap">
               <div class="avatar-circle" style="background:#D5F5E8; font-family:'DM Sans',sans-serif; font-weight:700; font-size:18px; color:#5B8A6B;">4</div>
             </div>
-            <div class="card-name">Student</div>
+            <div class="card-info">
+              <div class="card-name">Theo</div>
+              <div class="card-profession">Student</div>
+            </div>
           </div>
           <p class="card-body">Split a group trip with 6 friends using Vony. <b>Everyone knew what they owed</b> and could pay at their own pace. Way better than spreadsheets.</p>
         </div>
@@ -1053,7 +1065,10 @@
             <div class="avatar-wrap">
               <div class="avatar-circle" style="background:#F5D5D5; font-family:'DM Sans',sans-serif; font-weight:700; font-size:18px; color:#8A5B5B;">5</div>
             </div>
-            <div class="card-name">Researcher</div>
+            <div class="card-info">
+              <div class="card-name">Zoe</div>
+              <div class="card-profession">Researcher</div>
+            </div>
           </div>
           <p class="card-body">Was nervous asking my best friend to sign a contract. But <b>Vony makes it feel normal</b>, not transactional. Clean interface, doesn't feel like a bank.</p>
         </div>
@@ -1062,7 +1077,10 @@
             <div class="avatar-wrap">
               <div class="avatar-circle" style="background:#E8E5D5; font-family:'DM Sans',sans-serif; font-weight:700; font-size:18px; color:#7A785B;">6</div>
             </div>
-            <div class="card-name">Teacher</div>
+            <div class="card-info">
+              <div class="card-name">Sam</div>
+              <div class="card-profession">Teacher</div>
+            </div>
           </div>
           <p class="card-body">Lent a coworker money for car repairs. <b>The smart interest feature is great</b>, fair for both of us. Got paid back on time, no weirdness at work.</p>
         </div>
