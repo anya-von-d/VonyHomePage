@@ -777,9 +777,28 @@
       <!-- Loan details mockup (matches VonyPortal YourLoans detail page) -->
       <div class="tylp-detail-box">
 
-        <!-- Section 1: Aurora NP cards + Loan Terms | Payment Progress donut -->
+        <!-- Loan label bar -->
+        <div class="tylp-loan-bar">
+          <div class="pdb-section-icon pdb-section-icon--cyan"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#03ACEA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <span class="tylp-loan-bar-text">Borrowed $600 from Jordan for car repairs</span>
+        </div>
+
+        <!-- Section 1: Payment Progress donut | Aurora NP cards + Loan Terms -->
         <div class="tylp-top-row">
-          <!-- Left: NP cards + terms -->
+          <!-- Left: Payment Progress donut -->
+          <div class="pdb-card tylp-detail-card tylp-donut-card">
+            <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payment Progress</span></div>
+            <div class="tylp-donut-wrap">
+              <svg width="140" height="140" viewBox="0 0 140 140">
+                <circle cx="70" cy="70" r="54" fill="none" stroke="#E5E4E2" stroke-width="9" stroke-linecap="round"/>
+                <circle cx="70" cy="70" r="54" fill="none" stroke="#03ACEA" stroke-width="9" stroke-dasharray="220.35 118.65" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                <text x="70" y="64" text-anchor="middle" dominant-baseline="middle" style="font-size:20px;font-weight:700;fill:#1A1918;font-family:'DM Sans',sans-serif;">65%</text>
+                <text x="70" y="82" text-anchor="middle" dominant-baseline="middle" style="font-size:11px;font-weight:500;fill:#787776;font-family:'DM Sans',sans-serif;">repaid</text>
+              </svg>
+              <p class="tylp-donut-sub"><span style="font-weight:700;">$390.00</span> <span style="color:#787776;">of $600.00</span></p>
+            </div>
+          </div>
+          <!-- Right: NP cards + terms -->
           <div class="tylp-top-left">
             <!-- Aurora NP cards -->
             <div class="tylp-np-grid">
@@ -818,19 +837,6 @@
               <div class="tylp-term"><div class="tylp-term-label">Interest</div><div class="tylp-term-val">0%</div></div>
               <div class="tylp-term"><div class="tylp-term-label">Period</div><div class="tylp-term-val">4 months</div></div>
               <div class="tylp-term"><div class="tylp-term-label">Payment</div><div class="tylp-term-val">$150/mo</div></div>
-            </div>
-          </div>
-          <!-- Right: Payment Progress donut -->
-          <div class="pdb-card tylp-detail-card tylp-donut-card">
-            <div class="tylp-card-hdr"><span class="tylp-card-hdr-text">Payment Progress</span></div>
-            <div class="tylp-donut-wrap">
-              <svg width="140" height="140" viewBox="0 0 140 140">
-                <circle cx="70" cy="70" r="54" fill="none" stroke="#E5E4E2" stroke-width="9" stroke-linecap="round"/>
-                <circle cx="70" cy="70" r="54" fill="none" stroke="#03ACEA" stroke-width="9" stroke-dasharray="220.35 118.65" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-                <text x="70" y="64" text-anchor="middle" dominant-baseline="middle" style="font-size:20px;font-weight:700;fill:#1A1918;font-family:'DM Sans',sans-serif;">65%</text>
-                <text x="70" y="82" text-anchor="middle" dominant-baseline="middle" style="font-size:11px;font-weight:500;fill:#787776;font-family:'DM Sans',sans-serif;">repaid</text>
-              </svg>
-              <p class="tylp-donut-sub"><span style="font-weight:700;">$390.00</span> <span style="color:#787776;">of $600.00</span></p>
             </div>
           </div>
         </div>

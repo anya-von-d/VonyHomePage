@@ -2374,7 +2374,7 @@ body {
 }
 
 .mini-cal-day--in {
-  background: rgba(84,166,207,0.08);
+  background: rgba(3,172,234,0.08);
 }
 
 .mini-cal-day--in::after {
@@ -2383,12 +2383,12 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #54A6CF;
+  background: #03ACEA;
   margin: 1px auto 0;
 }
 
 .mini-cal-day--pay {
-  background: rgba(126,192,234,0.1);
+  background: rgba(29,91,148,0.1);
 }
 
 .mini-cal-day--pay::after {
@@ -2397,7 +2397,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7EC0EA;
+  background: #1D5B94;
   margin: 1px auto 0;
 }
 
@@ -2431,8 +2431,8 @@ body {
   flex-shrink: 0;
 }
 
-.mini-cal-dot--in  { background: #54A6CF; }
-.mini-cal-dot--pay { background: #7EC0EA; }
+.mini-cal-dot--in  { background: #03ACEA; }
+.mini-cal-dot--pay { background: #1D5B94; }
 
 /* ─── Upcoming payment cards (Payments at a Glance) ─── */
 .upcard-stack {
@@ -2683,7 +2683,8 @@ body {
   align-items: center;
   height: 40px;
   flex-shrink: 0;
-  width: 100%;
+  width: 97%;
+  margin: 0 auto;
   box-shadow:
     0 0 0 1px rgba(0,0,0,0.04),
     0 0 18px rgba(0,0,0,0.13),
@@ -10560,6 +10561,26 @@ a.help-card {
 }
 
 /* ── Track Your Loan Progress: detail box layout ── */
+.tylp-loan-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.04),
+    0 0 18px rgba(0,0,0,0.08),
+    0 2px 8px rgba(0,0,0,0.06);
+}
+
+.tylp-loan-bar-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1A1918;
+}
+
 .tylp-detail-box {
   max-width: 900px;
   margin: 40px auto 0;
