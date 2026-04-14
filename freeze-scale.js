@@ -53,7 +53,17 @@
         innerEl.style.transform       = '';
         innerEl.style.transformOrigin = '';
         void innerEl.offsetHeight;           /* force layout recalc */
+
+        /* Use the tallest visible child's full height (scrollHeight),
+         * since the grid container's scrollHeight may not capture
+         * children that overflow their grid cell.                  */
         var naturalH = innerEl.scrollHeight;
+        Array.from(innerEl.children).forEach(function (child) {
+          if (getComputedStyle(child).display !== 'none') {
+            var h = Math.max(child.scrollHeight, child.offsetHeight);
+            if (h > naturalH) naturalH = h;
+          }
+        });
 
         /* 3 — Scale down to fit available content width */
         var availW = sectionEl.offsetWidth - pl - pr;
