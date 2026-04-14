@@ -118,15 +118,19 @@
     function apply() {
       if (window.innerWidth < breakVW) {
 
+        /* Measure available width BEFORE the wrap forces the parent wider */
+        wrap.style.width = '0';
+        void outerEl.offsetWidth;
+        var availW = outerEl.offsetWidth;
+
         /* Fix the wrap at its natural content width */
         wrap.style.width           = frozenW + 'px';
         wrap.style.transform       = '';
         wrap.style.transformOrigin = '';
         void wrap.offsetHeight;
-        var naturalH = wrap.scrollHeight;
+        var naturalH = Math.max(wrap.scrollHeight, wrap.getBoundingClientRect().height);
 
         /* Scale from the top-centre so centred layouts stay centred */
-        var availW = outerEl.offsetWidth;
         var scale  = Math.min(1, availW / frozenW);
 
         wrap.style.transformOrigin = 'top center';
@@ -214,21 +218,18 @@
       freeze(loanSection, loanInner, 940, 860, loanOvr);
     }
 
-    /* ── 3. Payments at a Glance — feature-image ───────────────
-     * mini-cal (190px) + upcard-stack (max 420px) – 18px overlap ≈ 592px.
-     * Scale both together from the mobile breakpoint so the mini-cal
-     * (a reminder widget) always scales at the same rate as the cards. */
+    /* ── 3. Payments at a Glance ─────────────────────────────────
+     * feature-inner is a 2-column grid (text | image).
+     * Freeze the entire section so both text and image scale together. */
 
     var paymentsSection = document.querySelector('.feature-section:not(.feature-section-stacked)');
-    var featureImage    = paymentsSection && paymentsSection.querySelector('.feature-image');
+    var featureInner    = paymentsSection && paymentsSection.querySelector('.feature-inner');
 
-    if (featureImage) {
-      scaleImageWrap(
-        featureImage,
-        900,
-        592,
-        'display:flex;align-items:flex-end;position:relative;'
-      );
+    if (paymentsSection && featureInner) {
+      freeze(paymentsSection, featureInner, 900, 820, [
+        { el: featureInner, prop: 'gridTemplateColumns', val: '1fr 1fr' },
+        { el: featureInner, prop: 'gap',                 val: '72px'   }
+      ]);
     }
 
     /* ── 4. Notifications — notif-left ─────────────────────────
