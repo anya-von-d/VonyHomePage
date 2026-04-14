@@ -37,6 +37,8 @@
    * overrides  — [{el, prop, val}] inline styles to force while frozen,
    *              counteracting CSS media-query changes
    */
+  var lastWidth = window.innerWidth;
+
   function freeze(sectionEl, innerEl, breakVW, frozenW, overrides) {
     var cs = getComputedStyle(sectionEl);
     var pt = parseFloat(cs.paddingTop)    || 0;
@@ -80,7 +82,12 @@
       }
     }
 
-    window.addEventListener('resize', apply);
+    window.addEventListener('resize', function () {
+      if (window.innerWidth !== lastWidth) {
+        lastWidth = window.innerWidth;
+        apply();
+      }
+    });
     apply();
   }
 
@@ -140,7 +147,12 @@
       }
     }
 
-    window.addEventListener('resize', apply);
+    window.addEventListener('resize', function () {
+      if (window.innerWidth !== lastWidth) {
+        lastWidth = window.innerWidth;
+        apply();
+      }
+    });
     apply();
   }
 
