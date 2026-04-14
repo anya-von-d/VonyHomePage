@@ -18,11 +18,7 @@
 (function () {
   'use strict';
 
-  /* Prevent the browser from restoring a previous scroll position,
-   * which would cause the page to jump on load after freeze adjusts heights. */
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
+  /* scrollRestoration left as browser default — no forced scroll-to-top */
 
   /* ─────────────────────────────────────────────────────────── */
 
@@ -226,10 +222,16 @@
     var featureInner    = paymentsSection && paymentsSection.querySelector('.feature-inner');
 
     if (paymentsSection && featureInner) {
-      freeze(paymentsSection, featureInner, 900, 820, [
-        { el: featureInner, prop: 'gridTemplateColumns', val: '1fr 1fr' },
-        { el: featureInner, prop: 'gap',                 val: '72px'   }
-      ]);
+      var featureText  = featureInner.querySelector('.feature-text');
+      var featureImg   = featureInner.querySelector('.feature-image');
+      var payOvr = [
+        { el: featureInner, prop: 'gridTemplateColumns', val: '1fr' },
+        { el: featureInner, prop: 'gap',                 val: '32px' }
+      ];
+      if (featureImg)  payOvr.push({ el: featureImg,  prop: 'order', val: '-1' });
+      if (featureText) payOvr.push({ el: featureText, prop: 'textAlign', val: 'center' });
+
+      freeze(paymentsSection, featureInner, 900, 640, payOvr);
     }
 
     /* ── 4. Notifications — notif-left ─────────────────────────
@@ -247,12 +249,7 @@
       );
     }
 
-    /* ── Scroll to top after layout settles ────────────────────
-     * Prevents any residual browser scroll restoration from jumping
-     * the page down after freeze-scale adjusts section heights.    */
-    requestAnimationFrame(function () {
-      window.scrollTo(0, 0);
-    });
+    /* No forced scroll — let the browser handle scroll position naturally */
 
   });
 
