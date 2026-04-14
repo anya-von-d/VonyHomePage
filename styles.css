@@ -10564,14 +10564,11 @@ a.help-card {
 .tylp-stat-val { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; color: #1A1918; margin: 0; }
 .tylp-stat-sub { font-family: 'DM Sans', sans-serif; font-size: 9px; color: #787776; margin-top: 2px; }
 
-/* Responsive: stack cards vertically on mobile, scrollable */
+/* Responsive: stack cards vertically on mobile */
 @media (max-width: 900px) {
   .tylp-detail-box {
     padding: 12px;
     gap: 10px;
-    max-height: 70vh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
   }
   .tylp-top-row {
     grid-template-columns: 1fr;
