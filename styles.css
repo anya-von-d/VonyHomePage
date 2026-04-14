@@ -673,19 +673,19 @@ body {
   transform: translate(-50%, -50%);
   width: calc(100% + 10px);
   height: calc(100% + 10px);
-  filter: blur(5px) saturate(1.2);
-  opacity: 0.35;
+  filter: blur(5px) saturate(1.1);
+  opacity: 0.85;
   border-radius: 18px;
   z-index: 0;
   pointer-events: none;
 }
-/* Due (borrowing) — blue/purple */
+/* Due — soft pastel lavender/lilac */
 .pdb-aurora-glow--due {
-  background: linear-gradient(135deg, #03ACEA 0%, rgb(99,102,241) 25%, rgb(139,92,246) 50%, rgb(124,58,237) 75%, rgb(29,91,148) 100%);
+  background: linear-gradient(135deg, rgb(196,213,255) 0%, rgb(220,210,255) 35%, rgb(230,205,245) 70%, rgb(200,215,245) 100%);
 }
-/* Incoming (lending) — cyan/teal */
+/* Incoming — soft pastel cyan/mint */
 .pdb-aurora-glow--incoming {
-  background: linear-gradient(135deg, #03ACEA 0%, #06B6D4 30%, #14B8A6 60%, #03ACEA 100%);
+  background: linear-gradient(135deg, rgb(200,238,252) 0%, rgb(205,240,240) 40%, rgb(210,242,235) 70%, rgb(200,238,252) 100%);
 }
 .pdb-aurora-inner {
   position: relative;
@@ -10568,37 +10568,7 @@ a.help-card {
 .tylp-stat-val { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; color: #1A1918; margin: 0; }
 .tylp-stat-sub { font-family: 'DM Sans', sans-serif; font-size: 9px; color: #787776; margin-top: 2px; }
 
-/* Responsive: stack cards vertically on mobile */
-@media (max-width: 900px) {
-  .tylp-detail-box {
-    padding: 12px;
-    gap: 10px;
-  }
-  .tylp-top-row {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .tylp-top-left {
-    gap: 10px;
-  }
-  .tylp-np-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .tylp-two-col {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .tylp-left-stack {
-    gap: 10px;
-  }
-  .tylp-stat-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-  .tylp-terms-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* No mobile stacking — freeze-scale.js handles scaling instead */
 
 /* ── Track Your Loan Progress: overlapping card fan (legacy) ── */
 .tylp-fan {
