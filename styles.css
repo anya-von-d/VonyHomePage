@@ -1375,15 +1375,15 @@ body {
 .ldd-chart-yaxis { display: flex; flex-direction: column; justify-content: space-between; height: 80px; padding-right: 4px; flex-shrink: 0; }
 .ldd-chart-yaxis span { font-family: 'DM Sans', sans-serif; font-size: 9px; color: #787776; }
 .ldd-chart-main { display: flex; flex-direction: column; gap: 4px; flex: 1; }
-.ldd-chart-bars { display: flex; align-items: flex-end; gap: 4px; height: 80px; }
+.ldd-chart-bars { display: flex; align-items: stretch; gap: 4px; height: 80px; }
 .ldd-chart-labels { display: flex; gap: 4px; }
-.ldd-chart-col { flex: 1; }
+.ldd-chart-col { flex: 1; display: flex; align-items: flex-end; position: relative; }
 .ldd-chart-bar { width: 100%; border-radius: 3px 3px 0 0; }
 .ldd-chart-bar--done { background: #03ACEA; }
-.ldd-chart-bar--proj { background: rgba(84,166,207,0.28); border: 1px dashed rgba(84,166,207,0.5); border-bottom: none; box-sizing: border-box; }
+.ldd-chart-bar--proj { background: rgba(3,172,234,0.28); box-sizing: border-box; }
 .ldd-chart-bar-partial { position: relative; width: 100%; }
-.ldd-chart-bar-partial-outer { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: rgba(3,172,234,0.08); border: 1px dashed rgba(3,172,234,0.2); box-sizing: border-box; }
-.ldd-chart-bar-partial-inner { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: #03ACEA; }
+.ldd-chart-bar-partial-outer { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: rgba(245,158,11,0.35); box-sizing: border-box; }
+.ldd-chart-bar-partial-inner { position: absolute; bottom: 0; left: 0; right: 0; border-radius: 3px 3px 0 0; background: #F59E0B; }
 .ldd-chart-lbl { font-family: 'DM Sans', sans-serif; font-size: 8px; color: #787776; margin-top: 4px; text-align: center; }
 .ldd-chart-lbl--active { color: #54A6CF; }
 .ldd-chart-legend { display: flex; align-items: center; gap: 10px; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 8px; margin-top: 8px; justify-content: center; flex-wrap: wrap; }
