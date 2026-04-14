@@ -171,31 +171,8 @@
   document.addEventListener('DOMContentLoaded', function () {
 
     /* ── 1. Dashboard ──────────────────────────────────────────
-     * New VonyPortal layout: summary-row (3 cols) + masonry (2 cols).
-     * Freeze at 900px, lock to 820px natural width, scale down.     */
-
-    var dashSection  = document.querySelector('.dashboard-section');
-    var dashInner    = document.querySelector('.dashboard-container');
-    var summaryRow   = document.querySelector('.pdb-summary-row');
-    var masonry      = document.querySelector('.pdb-masonry');
-
-    if (dashSection && dashInner && (summaryRow || masonry)) {
-      var dashOvr = [];
-      if (summaryRow) {
-        dashOvr.push(
-          { el: summaryRow, prop: 'gridTemplateColumns', val: '1fr 1fr' },
-          { el: summaryRow, prop: 'gap',                 val: '24px'    }
-        );
-      }
-      if (masonry) {
-        dashOvr.push(
-          { el: masonry, prop: 'gridTemplateColumns', val: '1fr 1fr' },
-          { el: masonry, prop: 'gap',                 val: '24px'   }
-        );
-      }
-
-      freeze(dashSection, dashInner, 900, 820, dashOvr);
-    }
+     * On mobile, cards stack vertically via CSS with scrollable box.
+     * No freeze needed — CSS handles the responsive layout.         */
 
     /* ── 2. Track Your Loan Progress ───────────────────────────
      * tylp-detail-box layout: top-row (2fr 1fr) + two-col (1fr 1fr).

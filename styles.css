@@ -888,14 +888,23 @@ body {
   color: #03ACEA;
 }
 
-/* Responsive: shrink to fit, never stack */
+/* Responsive: stack cards vertically on mobile, scrollable box */
 @media (max-width: 900px) {
-  .pdb-overview-card {
-    display: none !important;
+  .pdb-box {
+    max-height: 70vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: y proximity;
   }
   .pdb-summary-row {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .pdb-masonry {
+    grid-template-columns: 1fr;
+  }
+  .pdb-masonry-col {
+    gap: 10px;
   }
   .pdb-masonry {
     gap: 12px;
@@ -909,130 +918,24 @@ body {
     padding: 0 12px 40px;
   }
   .pdb-box {
-    padding: 6px;
-    border-radius: 12px;
+    padding: 12px;
+    border-radius: 14px;
   }
   .pdb-summary-row {
-    gap: 4px;
-    margin-bottom: 6px;
+    gap: 8px;
+    margin-bottom: 10px;
   }
   .pdb-masonry {
-    gap: 4px;
+    gap: 8px;
   }
   .pdb-masonry-col {
-    gap: 4px;
+    gap: 8px;
   }
   .pdb-card {
-    padding: 6px 7px;
-    border-radius: 8px;
+    padding: 12px 14px;
   }
   .pdb-aurora-inner {
-    padding: 6px 7px;
-    border-radius: 8px;
-  }
-  .pdb-aurora-glow {
-    width: calc(100% + 6px);
-    height: calc(100% + 4px);
-    filter: blur(6px);
-    opacity: 0.12;
-    border-radius: 10px;
-  }
-  .pdb-section-hdr {
-    gap: 4px;
-    margin-bottom: 4px;
-  }
-  .pdb-section-label,
-  .pdb-section-title {
-    font-size: 6px;
-    letter-spacing: 0.06em;
-  }
-  .pdb-date {
-    font-size: 10px;
-  }
-  .pdb-sub--right {
-    font-size: 7px;
-  }
-  .pdb-section-icon {
-    width: 12px; height: 12px;
-    border-radius: 3px;
-  }
-  .pdb-section-icon svg {
-    width: 8px; height: 8px;
-  }
-  .pdb-overview-label {
-    font-size: 6px;
-  }
-  .pdb-overview-val {
-    font-size: 8px;
-  }
-  .pdb-overview-row {
-    gap: 6px;
-  }
-  .pdb-badge {
-    font-size: 6px;
-    padding: 1px 3px;
-    border-radius: 3px;
-  }
-  .pdb-card-hdr {
-    padding-bottom: 4px;
-    margin-bottom: 2px;
-  }
-  .pdb-header-right {
-    font-size: 6px;
-  }
-  .pdb-upcoming-row {
-    padding: 4px 0;
-    gap: 4px;
-  }
-  .pdb-upcoming-name,
-  .pdb-activity-desc,
-  .pdb-loan-label {
-    font-size: 8px;
-  }
-  .pdb-upcoming-amt,
-  .pdb-activity-date,
-  .pdb-loan-pct,
-  .pdb-loan-detail {
-    font-size: 7px;
-  }
-  .pdb-activity-row {
-    padding: 3px 0;
-    gap: 4px;
-  }
-  .pdb-activity-icon {
-    width: 14px; height: 14px;
-    border-radius: 3px;
-  }
-  .pdb-activity-icon svg {
-    width: 8px; height: 8px;
-  }
-  .pdb-progress-meta {
-    font-size: 8px;
-    margin-bottom: 3px;
-  }
-  .pdb-progress-val {
-    font-size: 9px;
-  }
-  .pdb-progress-track {
-    height: 4px;
-  }
-  .pdb-loan-row {
-    padding: 3px 0;
-  }
-  .pdb-avatar {
-    width: 14px; height: 14px;
-    font-size: 7px;
-    border-radius: 3px;
-  }
-  .pdb-chart-bars {
-    height: 40px;
-  }
-  .pdb-chart-labels span,
-  .pdb-legend-item {
-    font-size: 6px;
-  }
-  .pdb-legend-dot {
-    width: 6px; height: 6px;
+    padding: 12px 14px;
   }
 }
 
