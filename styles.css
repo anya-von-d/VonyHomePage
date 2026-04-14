@@ -7961,13 +7961,13 @@ a.help-card {
 
 /* ─── Track Your Loan Progress — match Notifications text style ─── */
 .feature-section-stacked .contracts-title {
-  font-size: clamp(36px, 4.5vw, 56px);
+  font-size: clamp(26px, 3vw, 44px);
   margin-bottom: 0;
 }
 
 .feature-section-stacked .contracts-subtitle {
   font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
   color: #787776;
@@ -7980,7 +7980,8 @@ a.help-card {
   }
   .everyday-section .everyday-subtitle,
   .feature-section-stacked .contracts-subtitle {
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 1.7;
   }
 }
 
